@@ -19,7 +19,7 @@ list_items = []         #Store every item defined below
 #def __init__(self,
 #        name,               
 #        production_place,   
-#        time_production,    
+#        production_time,    
 #        price_sell          
 #        ):
 #Crops
@@ -28,7 +28,7 @@ wheat = hayday(
        name = "wheat",
        production_place = "farm",
        level = 1,
-       time_production = td(minutes=2),
+       production_time = td(minutes=2),
        price_sell = 3
         )
 list_items.append(wheat)
@@ -37,7 +37,7 @@ corn = hayday(
        name = "corn",
        production_place = "farm",
        level = 2,
-       time_production = td(minutes=5),
+       production_time = td(minutes=5),
        price_sell = 7
         )
 list_items.append(corn)
@@ -46,7 +46,7 @@ soybean = hayday(
        name = "soybean",
        production_place = "farm",
        level = 5,
-       time_production = td(minutes=20),
+       production_time = td(minutes=20),
        price_sell = 10
         )
 list_items.append(soybean)
@@ -55,7 +55,7 @@ sugarcane = hayday(
        name = "sugarcane",
        production_place = "farm",
        level = 7,
-       time_production = td(minutes=30),
+       production_time = td(minutes=30),
        price_sell = 14
         )
 list_items.append(sugarcane)
@@ -64,7 +64,7 @@ carrot = hayday(
        name = "carrot",
        production_place = "farm",
        level = 9,
-       time_production = td(minutes=10),
+       production_time = td(minutes=10),
        price_sell = 7
         )
 list_items.append(carrot)
@@ -73,7 +73,7 @@ indigo = hayday(
        name = "indigo",
        production_place = "farm",
        level = 13,
-       time_production = td(hours=2),
+       production_time = td(hours=2),
        price_sell = 25
         )
 list_items.append(indigo)
@@ -82,7 +82,7 @@ apple = hayday(
        name = "apple",
        production_place = "farm",
        level = 15,
-       time_production = td(hours=16),
+       production_time = td(hours=16),
        price_sell = 39
         )
 list_items.append(apple)
@@ -91,7 +91,7 @@ pumpkin  = hayday(
        name = "pumpkin",
        production_place = "farm",
        level = 15,
-       time_production = td(hours=3),
+       production_time = td(hours=3),
        price_sell = 32
         )
 list_items.append(pumpkin)
@@ -100,7 +100,7 @@ cotton = hayday(
        name = "cotton",
        production_place = "farm",
        level = 18,
-       time_production = td(hours=2,minutes=30),
+       production_time = td(hours=2,minutes=30),
        price_sell = 28
         )
 list_items.append(cotton)
@@ -109,7 +109,7 @@ raspberry = hayday(
        name = "raspberry",
        production_place = "farm",
        level = 19,
-       time_production = td(hours=18),
+       production_time = td(hours=18),
        price_sell = 46
         )
 list_items.append(raspberry)
@@ -118,7 +118,7 @@ cherry = hayday(
        name = "cherry",
        production_place = "farm",
        level = 22,
-       time_production = td(hours=24+3),
+       production_time = td(days=1,hours=3),
        price_sell = 68
         )
 list_items.append(cherry)
@@ -127,7 +127,7 @@ chili_pepper = hayday(
        name = "chili pepper",
        production_place = "farm",
        level = 25,
-       time_production = td(hours=4),
+       production_time = td(hours=4),
        price_sell = 36
         )
 list_items.append(chili_pepper)
@@ -136,7 +136,7 @@ blackberry = hayday(
        name = "blackberry",
        production_place = "farm",
        level = 26,
-       time_production = td(hours=24+8),
+       production_time = td(days=1,hours=8),
        price_sell = 82
         )
 list_items.append(blackberry)
@@ -145,7 +145,7 @@ tomato = hayday(
        name = "tomato",
        production_place = "farm",
        level = 30,
-       time_production = td(hours=6),
+       production_time = td(hours=6),
        price_sell = 43
         )
 list_items.append(tomato)
@@ -154,7 +154,7 @@ strawberry = hayday(
        name = "strawberry",
        production_place = "farm",
        level = 34,
-       time_production = td(hours=8),
+       production_time = td(hours=8),
        price_sell = 50
         )
 list_items.append(strawberry)
@@ -163,7 +163,7 @@ potato = hayday(
        name = "potato",
        production_place = "farm",
        level = 35,
-       time_production = td(hours=3, minutes=40),
+       production_time = td(hours=3, minutes=40),
        price_sell = 36
         )
 list_items.append(potato)
@@ -172,7 +172,7 @@ cacao = hayday(
        name = "cacao",
        production_place = "farm",
        level = 36,
-       time_production = td(hours=24+11),
+       production_time = td(days=1,hours=11),
        price_sell = 86
         )
 list_items.append(cacao)
@@ -181,7 +181,7 @@ coffee_bean = hayday(
        name = "coffee bean",
        production_place = "farm",
        level = 42,
-       time_production = td(hours=24),
+       production_time = td(days=1),
        price_sell = 64
         )
 list_items.append(coffee_bean)
@@ -193,7 +193,7 @@ chicken_food = hayday(
        name = "chicken food",
        production_place = "feed mill",
        level = 3,
-       time_production = td(minutes=5),
+       production_time = td(minutes=5),
        price_sell = 7.
         )
 chicken_food.add_component(wheat,2)
@@ -204,7 +204,7 @@ cow_food = hayday(
        name = "cow food",
        production_place = "feed mill",
        level = 6,
-       time_production = td(minutes=10),
+       production_time = td(minutes=10),
        price_sell = 14
         )
 cow_food.add_component(soybean,2)
@@ -216,7 +216,7 @@ pig_food = hayday(
        name = "pig food",
        production_place = "feed mill",
        level = 10,
-       time_production = td(minutes=10),
+       production_time = td(minutes=10),
        price_sell = 14
         )
 pig_food.add_component(soybean,1)
@@ -228,7 +228,7 @@ sheep_food = hayday(
        name = "sheep food",
        production_place = "feed mill",
        level = 16,
-       time_production = td(minutes=10),
+       production_time = td(minutes=10),
        price_sell = 14
         )
 sheep_food.add_component(soybean,1)
@@ -240,7 +240,7 @@ goat_food = hayday(
        name = "goat food",
        production_place = "feed mill",
        level = 32,
-       time_production = td(minutes=10),
+       production_time = td(minutes=10),
        price_sell = 14
         )
 goat_food.add_component(corn,1)
@@ -254,7 +254,7 @@ egg = hayday(
        name = "egg",
        production_place = "farm",
        level = 1,
-       time_production = td(minutes=20),
+       production_time = td(minutes=20),
        price_sell = 18
         )
 egg.add_component(chicken_food,1)
@@ -264,7 +264,7 @@ milk = hayday(
        name = "milk",
        production_place = "farm",
        level = 6,
-       time_production = td(hours=1),
+       production_time = td(hours=1),
        price_sell = 32
         )
 milk.add_component(cow_food,1)
@@ -274,7 +274,7 @@ goat_milk = hayday(
        name = "goat milk",
        production_place = "farm",
        level = 32,
-       time_production = td(hours=8),
+       production_time = td(hours=8),
        price_sell = 64
         )
 goat_milk.add_component(goat_food,1)
@@ -284,7 +284,7 @@ honeycomb = hayday(
        name = "honeycomb",
        production_place = "farm",
        level = 39,
-       time_production = td(minutes=35),
+       production_time = td(minutes=35),
        price_sell = 68
         )
 list_items.append(honeycomb)
@@ -293,7 +293,7 @@ honey = hayday(
        name = "honey",
        production_place = "honey extractor",
        level = 39,
-       time_production = td(minutes=20),
+       production_time = td(minutes=20),
        price_sell = 154 
         )
 honey.add_component(honeycomb,2)
@@ -303,7 +303,7 @@ bacon = hayday(
        name = "bacon",
        production_place = "farm",
        level = 10,
-       time_production = td(hours=4),
+       production_time = td(hours=4),
        price_sell = 50
         )
 bacon.add_component(pig_food,1)
@@ -313,7 +313,7 @@ wool = hayday(
        name = "wool",
        production_place = "farm",
        level = 16,
-       time_production = td(hours=6),
+       production_time = td(hours=6),
        price_sell = 54
         )
 wool.add_component(sheep_food,1)
@@ -327,7 +327,7 @@ fish_fillet = hayday(
        name = "fish fillet",
        production_place = "fishing lake",
        level = 27,
-       time_production = td(minutes=0),
+       production_time = td(minutes=0),
        price_sell = 54
         )
 list_items.append(fish_fillet)
@@ -336,7 +336,7 @@ lobster_tail = hayday(
        name = "lobster tail",
        production_place = "fishing lake",
        level = 44,
-       time_production = td(hours=6),
+       production_time = td(hours=6),
        price_sell = 201
         )
 list_items.append(lobster_tail)
@@ -347,7 +347,7 @@ brown_sugar = hayday(
        name = "brown sugar",
        production_place = "sugar mill",
        level = 7,
-       time_production = td(minutes=20),
+       production_time = td(minutes=20),
        price_sell = 32
         )
 brown_sugar.add_component(sugarcane,1)
@@ -357,20 +357,20 @@ white_sugar = hayday(
        name = "white sugar",
        production_place = "sugar mill",
        level = 13,
-       time_production = td(minutes=40),
+       production_time = td(minutes=40),
        price_sell = 50
         )
-brown_sugar.add_component(sugarcane,2)
+white_sugar.add_component(sugarcane,2)
 list_items.append(white_sugar)
 
 syrup = hayday(
        name = "syrup",
        production_place = "sugar mill",
        level = 18,
-       time_production = td(hours=1,minutes=30),
+       production_time = td(hours=1,minutes=30),
        price_sell = 90
         )
-brown_sugar.add_component(sugarcane,4)
+syrup.add_component(sugarcane,4)
 list_items.append(syrup)
 ############################################################
 #Dairy
@@ -378,7 +378,7 @@ cream = hayday(
        name = "cream",
        production_place = "dairy",
        level = 6,
-       time_production = td(minutes=20),
+       production_time = td(minutes=20),
        price_sell = 50
         )
 cream.add_component(milk,1)
@@ -388,7 +388,7 @@ butter = hayday(
        name = "butter",
        production_place = "dairy",
        level = 9,
-       time_production = td(minutes=30),
+       production_time = td(minutes=30),
        price_sell = 82
         )
 butter.add_component(milk,2)
@@ -398,7 +398,7 @@ cheese = hayday(
        name = "cheese",
        production_place = "dairy",
        level = 12,
-       time_production = td(hours=1),
+       production_time = td(hours=1),
        price_sell = 122
         )
 cheese.add_component(milk,3)
@@ -408,7 +408,7 @@ goat_cheese = hayday(
        name = "goat cheese",
        production_place = "dairy",
        level = 33,
-       time_production = td(hours=1,minutes=30),
+       production_time = td(hours=1,minutes=30),
        price_sell = 162
         )
 goat_cheese.add_component(goat_milk,2)
@@ -424,7 +424,7 @@ bread = hayday(
        name = "bread",
        production_place = "bakery",
        level = 2,
-       time_production = td(minutes=5),
+       production_time = td(minutes=5),
        price_sell = 21
         )
 bread.add_component(wheat,3)
@@ -434,17 +434,18 @@ corn_bread = hayday(
        name = "corn bread",
        production_place = "bakery",
        level = 7,
-       time_production = td(minutes=30),
+       production_time = td(minutes=30),
        price_sell = 72
         )
-bread.add_component(wheat,3)
+corn_bread.add_component(corn,2)
+corn_bread.add_component(egg,2)
 list_items.append(corn_bread)
 
 cookie = hayday(
        name = "cookie",
        production_place = "bakery",
        level = 10,
-       time_production = td(hours=1),
+       production_time = td(hours=1),
        price_sell = 104
         )
 cookie.add_component(wheat,2)
@@ -457,7 +458,7 @@ raspberry_muffin = hayday(
        production_place = "bakery",
        
        level = 19,
-       time_production = td(minutes=45),
+       production_time = td(minutes=45),
        price_sell =140
         )
 raspberry_muffin.add_component(wheat,2)
@@ -469,7 +470,7 @@ blackbery_muffin = hayday(
        name = "blackberry muffin",
        production_place = "bakery",
        level = 26,
-       time_production = td(minutes=45),
+       production_time = td(minutes=45),
        price_sell = 226
         )
 blackbery_muffin.add_component(wheat,1)
@@ -481,19 +482,19 @@ pizza = hayday(
        name = "pizza",
        production_place = "bakery",
        level = 33,
-       time_production = td(minutes=15),
+       production_time = td(minutes=15),
        price_sell = 190
         )
 pizza.add_component(wheat,2)
 pizza.add_component(tomato,1)
-pizza.add_component(cheese,2)
+pizza.add_component(cheese,1)
 list_items.append(pizza)
 
 spicy_pizza = hayday(
        name = "spicy pizza",
        production_place = "bakery",
        level = 37,
-       time_production = td(minutes=15),
+       production_time = td(minutes=15),
        price_sell = 226
         )
 spicy_pizza.add_component(wheat,2)
@@ -506,7 +507,7 @@ potato_bread = hayday(
        name = "potato bread",
        production_place = "bakery",
        level = 39,
-       time_production = td(minutes=45),
+       production_time = td(minutes=45),
        price_sell = 284
         )
 potato_bread.add_component(potato,2)
@@ -519,7 +520,7 @@ frutti_di_mare_pizza = hayday(
        name = "frutti di mare pizza",
        production_place = "bakery",
        level = 45,
-       time_production = td(minutes=15),
+       production_time = td(minutes=15),
        price_sell = 403
         )
 frutti_di_mare_pizza.add_component(wheat,2)
@@ -532,7 +533,7 @@ list_items.append(frutti_di_mare_pizza)
 #       name = "banana bread",
 #       production_place = "bakery",
 #       level = 91,
-#       time_production = td(minutes=30),
+#       production_time = td(minutes=30),
 #       price_sell = 424
 #        )
 #banana_bread.add_component(wheat,2)
@@ -545,7 +546,7 @@ popcorn = hayday(
        name = "popcorn",
        production_place = "popcorn pot",
        level = 8,
-       time_production = td(minutes=30),
+       production_time = td(minutes=30),
        price_sell = 32
         )
 popcorn.add_component(corn,2)
@@ -555,7 +556,7 @@ buttered_popcorn = hayday(
        name = "buttered popcorn",
        production_place = "popcorn pot",
        level = 16,
-       time_production = td(minutes=60),
+       production_time = td(minutes=60),
        price_sell = 126
         )
 buttered_popcorn.add_component(corn,2)
@@ -566,7 +567,7 @@ chili_popcorn = hayday(
        name = "chili popcorn",
        production_place = "popcorn pot",
        level = 25,
-       time_production = td(hours=2),
+       production_time = td(hours=2),
        price_sell = 122
         )
 chili_popcorn.add_component(corn,2)
@@ -577,7 +578,7 @@ honey_popcorn = hayday(
        name = "honey popcorn",
        production_place = "popcorn pot",
        level = 40,
-       time_production = td(hours=1,minutes=30),
+       production_time = td(hours=1,minutes=30),
        price_sell = 360
         )
 honey_popcorn.add_component(corn,2)
@@ -586,9 +587,9 @@ list_items.append(honey_popcorn)
 
 chocolate_popcorn = hayday(
        name = "chocolate popcorn",
-       production_place = "potcorn pot",
+       production_place = "popcorn pot",
        level = 44,
-       time_production = td(hours=2,minutes=30),
+       production_time = td(hours=2,minutes=30),
        price_sell = 248
         )
 chocolate_popcorn.add_component(corn,2)
@@ -602,7 +603,7 @@ pancake = hayday(
        name = "pancake",
        production_place = "bbq grill",
        level = 9,
-       time_production = td(minutes=30),
+       production_time = td(minutes=30),
        price_sell = 108
         )
 pancake.add_component(egg,3)
@@ -613,7 +614,7 @@ bacon_and_eggs = hayday(
        name = "bakon and eggs",
        production_place = "bbq grill",
        level = 11,
-       time_production = td(minutes=60),
+       production_time = td(minutes=60),
        price_sell = 201
         )
 bacon_and_eggs.add_component(egg,4)
@@ -624,7 +625,7 @@ hamburger = hayday(
        name = "hamburger",
        production_place = "bbq grill",
        level = 18,
-       time_production = td(hours=2),
+       production_time = td(hours=2),
        price_sell = 180
         )
 hamburger.add_component(bread,2)
@@ -635,7 +636,7 @@ fish_burger = hayday(
        name = "fish burger",
        production_place = "bbq grill",
        level = 27,
-       time_production = td(hours=2),
+       production_time = td(hours=2),
        price_sell = 226
         )
 fish_burger.add_component(fish_fillet,2)
@@ -647,7 +648,7 @@ roasted_tomatoes = hayday(
        name = "roasted tomatoes",
        production_place = "bbq grill",
        level = 30,
-       time_production = td(hours=1, minutes=30),
+       production_time = td(hours=1, minutes=30),
        price_sell = 118
         )
 roasted_tomatoes.add_component(tomato,2)
@@ -657,7 +658,7 @@ baked_potato = hayday(
        name = "baked potato",
        production_place = "bbq grill",
        level = 35,
-       time_production = td(minutes=35),
+       production_time = td(minutes=35),
        price_sell = 298
         )
 baked_potato.add_component(potato,2)
@@ -670,7 +671,7 @@ fish_and_chips = hayday(
        name = "fish and chips",
        production_place = "bbq grill",
        level = 41,
-       time_production = td(hours=1,minutes=30),
+       production_time = td(hours=1,minutes=30),
        price_sell = 244
         )
 fish_and_chips.add_component(fish_fillet,2)
@@ -681,7 +682,7 @@ lobster_skewer = hayday(
        name = "lobster skewer",
        production_place = "bbq grill",
        level = 48,
-       time_production = td(minutes=40),
+       production_time = td(minutes=40),
        price_sell = 417
         )
 lobster_skewer.add_component(lobster_tail,1)
@@ -696,7 +697,7 @@ carrot_pie = hayday(
        name = "carrot pie",
        production_place = "pie oven",
        level = 14,
-       time_production = td(hours=1),
+       production_time = td(hours=1),
        price_sell = 82
         )
 carrot_pie.add_component(carrot,3)
@@ -708,7 +709,7 @@ pumpkin_pie = hayday(
        name = "pumpkin pie",
        production_place = "pie oven",
        level = 15,
-       time_production = td(hours=2),
+       production_time = td(hours=2),
        price_sell = 158
         )
 pumpkin_pie.add_component(pumpkin,3)
@@ -720,7 +721,7 @@ bacon_pie = hayday(
        name = "bacon pie",
        production_place = "pie oven",
        level = 18,
-       time_production = td(hours=3),
+       production_time = td(hours=3),
        price_sell = 219
         )
 bacon_pie.add_component(bacon,3)
@@ -732,7 +733,7 @@ apple_pie = hayday(
        name = "apple pie",
        production_place = "pie oven",
        level = 28,
-       time_production = td(hours=2,minutes=30),
+       production_time = td(hours=2,minutes=30),
        price_sell = 270
         )
 apple_pie.add_component(apple,3)
@@ -745,7 +746,7 @@ fish_pie = hayday(
        name = "fish pie",
        production_place = "pie oven",
        level = 28,
-       time_production = td(hours=2),
+       production_time = td(hours=2),
        price_sell = 226
         )
 fish_pie.add_component(fish_fillet,3)
@@ -757,7 +758,7 @@ feta_pie = hayday(
        name = "feta pie",
        production_place = "pie oven",
        level = 34,
-       time_production = td(hours=1,minutes=30),
+       production_time = td(hours=1,minutes=30),
        price_sell = 223
         )
 feta_pie.add_component(goat_cheese,1)
@@ -769,7 +770,7 @@ casserole = hayday(
        name = "casserole",
        production_place = "pie oven",
        level = 36,
-       time_production = td(hours=2),
+       production_time = td(hours=2),
        price_sell = 367
         )
 casserole.add_component(potato,2)
@@ -782,7 +783,7 @@ shepherds_pie = hayday(
        name = "shepherds pie",
        production_place = "pie oven",
        level = 39,
-       time_production = td(hours=1,minutes=40),
+       production_time = td(hours=1,minutes=40),
        price_sell = 280
         )
 shepherds_pie.add_component(potato,2)
@@ -797,7 +798,7 @@ sweater = hayday(
        name = "sweater",
        production_place = "loom",
        level = 17,
-       time_production = td(hours=2),
+       production_time = td(hours=2),
        price_sell = 158
         )
 sweater.add_component(wool,2)
@@ -807,7 +808,7 @@ cotton_fabric = hayday(
        name = "cotton fabric",
        production_place = "loom",
        level = 18,
-       time_production = td(minutes=30),
+       production_time = td(minutes=30),
        price_sell = 108
         )
 cotton_fabric.add_component(cotton,3)
@@ -817,7 +818,7 @@ blue_woolly_hat = hayday(
        name = "blue woolly hat",
        production_place = "loom",
        level = 19,
-       time_production = td(hours=1),
+       production_time = td(hours=1),
        price_sell = 111
         )
 blue_woolly_hat.add_component(wool,1)
@@ -828,7 +829,7 @@ red_scarf = hayday(
        name = "red scarf",
        production_place = "loom",
        level = 48,
-       time_production = td(hours=2,minutes=30),
+       production_time = td(hours=2,minutes=30),
        price_sell = 288
         )
 red_scarf.add_component(wool,2)
@@ -842,7 +843,7 @@ cotton_shirt = hayday(
        name = "cotton shirt",
        production_place = "sewing machine",
        level = 19,
-       time_production = td(minutes=45),
+       production_time = td(minutes=45),
        price_sell = 241
         )
 cotton_shirt.add_component(cotton_fabric,2)
@@ -852,11 +853,11 @@ wooly_chaps = hayday(
        name = "wooly chaps",
        production_place = "sewing machine",
        level = 21,
-       time_production = td(hours=1,minutes=30),
+       production_time = td(hours=1,minutes=30),
        price_sell = 309
         )
-cotton_shirt.add_component(cotton_fabric,1)
-cotton_shirt.add_component(wool,3)
+wooly_chaps.add_component(cotton_fabric,1)
+wooly_chaps.add_component(wool,3)
 list_items.append(wooly_chaps)
 
 
