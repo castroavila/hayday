@@ -15,7 +15,7 @@ from datetime import timedelta as td
 #from datetime  import datetime as td
 
 list_items = []         #Store every item defined below
-############################################################
+#-----------------------------------------------------------
 #def __init__(self,
 #        name,               
 #        production_place,   
@@ -186,7 +186,7 @@ coffee_bean = hayday(
         )
 list_items.append(coffee_bean)
 
-############################################################
+#-----------------------------------------------------------
 #Animals food
 
 chicken_food = hayday(
@@ -248,7 +248,7 @@ goat_food.add_component(corn,1)
 goat_food.add_component(carrot,2)
 list_items.append(goat_food)
 
-############################################################
+#-----------------------------------------------------------
 #Animals
 egg = hayday(
        name = "egg",
@@ -321,7 +321,7 @@ list_items.append(wool)
 
 
 
-############################################################
+#-----------------------------------------------------------
 #Fish 
 fish_fillet = hayday(
        name = "fish fillet",
@@ -341,7 +341,7 @@ lobster_tail = hayday(
         )
 list_items.append(lobster_tail)
 
-############################################################
+#-----------------------------------------------------------
 #Sugar mill
 brown_sugar = hayday(
        name = "brown sugar",
@@ -372,7 +372,7 @@ syrup = hayday(
         )
 syrup.add_component(sugarcane,4)
 list_items.append(syrup)
-############################################################
+#-----------------------------------------------------------
 #Dairy
 cream = hayday(
        name = "cream",
@@ -417,7 +417,7 @@ list_items.append(goat_cheese)
 
 
 
-############################################################
+#-----------------------------------------------------------
 
 #Bakery 
 bread = hayday(
@@ -539,7 +539,7 @@ list_items.append(frutti_di_mare_pizza)
 #banana_bread.add_component(wheat,2)
 #list_items.append(banana_bread)
 
-############################################################
+#-----------------------------------------------------------
 #Popcorn pot
 
 popcorn = hayday(
@@ -596,7 +596,7 @@ chocolate_popcorn.add_component(corn,2)
 chocolate_popcorn.add_component(cacao,2)
 list_items.append(chocolate_popcorn)
 
-############################################################
+#-----------------------------------------------------------
 #BBQ grill
 
 pancake = hayday(
@@ -690,7 +690,7 @@ lobster_skewer.add_component(chili_pepper,1)
 lobster_skewer.add_component(honey,1)
 list_items.append(lobster_skewer)
 
-############################################################
+#-----------------------------------------------------------
 #Pie oven
 
 carrot_pie = hayday(
@@ -792,7 +792,7 @@ shepherds_pie.add_component(carrot,2)
 shepherds_pie.add_component(pumpkin,2)
 list_items.append(shepherds_pie)
 
-############################################################
+#-----------------------------------------------------------
 #Loom
 sweater = hayday(
        name = "sweater",
@@ -836,7 +836,7 @@ red_scarf.add_component(wool,2)
 red_scarf.add_component(strawberry,2)
 list_items.append(red_scarf)
 
-############################################################
+#-----------------------------------------------------------
 #Sewing machine
 
 cotton_shirt = hayday(
@@ -860,12 +860,553 @@ wooly_chaps.add_component(cotton_fabric,1)
 wooly_chaps.add_component(wool,3)
 list_items.append(wooly_chaps)
 
+violet_dress = hayday(
+       name = "violet dress",
+       production_place = "sewing machine",
+       level = 25,
+       production_time = td(hours=2,minutes=15),
+       price_sell = 327
+        )
+violet_dress.add_component(cotton_fabric,2)
+violet_dress.add_component(raspberry,1)
+violet_dress.add_component(indigo,1)
+list_items.append(violet_dress)
+
+#--------------------------------------------------------------------------------
+#Cake oven
+
+carrot_cake = hayday(
+       name = "carrot cake",
+       production_place = "cake oven",
+       level = 21,
+       production_time = td(hours=1,minutes=30),
+       price_sell = 165
+        )
+carrot_cake.add_component(carrot,2)
+carrot_cake.add_component(butter,1)
+carrot_cake.add_component(brown_sugar,1)
+list_items.append(carrot_cake)
+
+cream_cake = hayday(
+       name = "cream cake",
+       production_place = "cake oven",
+       level = 23,
+       production_time = td(hours=3),
+       price_sell = 219
+        )
+cream_cake.add_component(wheat,5)
+cream_cake.add_component(cream,1)
+cream_cake.add_component(white_sugar,1)
+list_items.append(cream_cake)
+
+red_berry_cake = hayday(
+       name = "red berry cake",
+       production_place = "cake oven",
+       level = 23,
+       production_time = td(hours=1),
+       price_sell = 255
+        )
+red_berry_cake.add_component(raspberry,1)
+red_berry_cake.add_component(cherry,2)
+red_berry_cake.add_component(milk,1)
+red_berry_cake.add_component(egg,1)
+list_items.append(red_berry_cake)
+
+cheesecake = hayday(
+       name = "cheesecake",
+       production_place = "cake oven",
+       level = 24,
+       production_time = td(hours=4),
+       price_sell = 248
+        )
+cheesecake.add_component(cheese,1)
+cheesecake.add_component(cookie,1)
+list_items.append(cheesecake)
+
+strawberry_cake = hayday(
+       name = "strawberry  cake",
+       production_place = "cake oven",
+       level = 35,
+       production_time = td(hours=3),
+       price_sell = 316
+        )
+strawberry_cake.add_component(wheat,3)
+strawberry_cake.add_component(cream,1)
+strawberry_cake.add_component(white_sugar,1)
+strawberry_cake.add_component(strawberry,2)
+list_items.append(strawberry_cake)
+
+chocolate_cake = hayday(
+       name = "chocolate cake",
+       production_place = "cake oven",
+       level = 36,
+       production_time = td(hours=2),
+       price_sell = 320
+        )
+chocolate_cake.add_component(cacao,2)
+chocolate_cake.add_component(brown_sugar,1)
+chocolate_cake.add_component(butter,1)
+list_items.append(chocolate_cake)
+
+potato_feta_cake = hayday(
+       name = "potato feta cake",
+       production_place = "cake oven",
+       level = 38,
+       production_time = td(hours=2),
+       price_sell = 309
+        )
+potato_feta_cake.add_component(potato,1)
+potato_feta_cake.add_component(egg,4)
+potato_feta_cake.add_component(goat_cheese,1)
+list_items.append(potato_feta_cake)
+
+honey_apple_cake = hayday(
+       name = "honey apple cake",
+       production_place = "cake oven",
+       level = 42,
+       production_time = td(hours=3,minutes=20),
+       price_sell = 482
+        )
+honey_apple_cake.add_component(wheat,2)
+honey_apple_cake.add_component(egg,2)
+honey_apple_cake.add_component(apple,2)
+honey_apple_cake.add_component(honey,2)
+list_items.append(honey_apple_cake)
+
+#--------------------------------------------------------------------------------
+#Mine
+silver_ore = hayday(
+       name = "silver ore",
+       production_place = "mine",
+       level = 24,
+       production_time = td(hours=0),
+       price_sell = 18
+        )
+list_items.append(silver_ore)
+
+gold_ore = hayday(
+       name = "gold ore",
+       production_place = "mine",
+       level = 24,
+       production_time = td(hours=0),
+       price_sell = 21
+        )
+list_items.append(gold_ore)
+
+platinum_ore = hayday(
+       name = "platinum ore",
+       production_place = "mine",
+       level = 25,
+       production_time = td(hours=0),
+       price_sell = 32
+        )
+list_items.append(platinum_ore)
+
+coal = hayday(
+       name = "coal",
+       production_place = "mine",
+       level = 33,
+       production_time = td(hours=0),
+       price_sell = 10
+        )
+list_items.append(coal)
+
+iron_ore = hayday(
+       name = "iron ore",
+       production_place = "mine",
+       level = 34,
+       production_time = td(hours=0),
+       price_sell = 14
+        )
+list_items.append(iron_ore)
+
+#--------------------------------------------------------------------------------
+#Smelter
+
+silver_bar = hayday(
+       name = "silver bar",
+       production_place = "smelter",
+       level = 24,
+       production_time = td(hours=8),
+       price_sell = 147
+        )
+silver_bar.add_component(silver_ore,3)
+list_items.append(silver_bar)
+
+gold_bar = hayday(
+       name = "gold bar",
+       production_place = "smelter",
+       level = 25,
+       production_time = td(hours=12),
+       price_sell = 180
+        )
+gold_bar.add_component(gold_ore,3)
+list_items.append(gold_bar)
+
+platinum_bar = hayday(
+       name = "platinum  bar",
+       production_place = "smelter",
+       level = 25,
+       production_time = td(hours=16),
+       price_sell = 250
+        )
+platinum_bar.add_component(platinum_ore,3)
+list_items.append(platinum_bar)
+
+refined_coal = hayday(
+       name = "refined coal",
+       production_place = "smelter",
+       level = 33,
+       production_time = td(hours=6),
+       price_sell = 108
+        )
+refined_coal.add_component(coal,3)
+list_items.append(refined_coal)
+
+iron_bar = hayday(
+       name = "iron bar",
+       production_place = "smelter",
+       level = 34,
+       production_time = td(hours=7),
+       price_sell = 129
+        )
+iron_bar.add_component(iron_ore,3)
+list_items.append(iron_bar)
+
+#------------------------------------------------------------
+#Juice press
+carrot_juice = hayday(
+       name = "carrot juice",
+       production_place = "juice press",
+       level = 26,
+       production_time = td(minutes=30),
+       price_sell = 46
+        )
+carrot_juice.add_component(carrot,3)
+list_items.append(carrot_juice)
+
+apple_juice = hayday(
+       name = "apple juice",
+       production_place = "juice press",
+       level = 28,
+       production_time = td(hours=2),
+       price_sell = 129
+        )
+apple_juice.add_component(apple,2)
+list_items.append(apple_juice)
+
+cherry_juice = hayday(
+       name = "cherry juice",
+       production_place = "juice press",
+       level = 30,
+       production_time = td(hours=2,minutes=30),
+       price_sell = 216
+        )
+cherry_juice.add_component(cherry,2)
+list_items.append(cherry_juice)
+
+tomato_juice = hayday(
+       name = "tomato juice",
+       production_place = "juice press",
+       level = 31,
+       production_time = td(hours=1,minutes=30),
+       price_sell = 162
+        )
+tomato_juice.add_component(tomato,3)
+list_items.append(tomato_juice)
+
+berry_juice = hayday(
+       name = "berry juice",
+       production_place = "juice press",
+       level = 31,
+       production_time = td(hours=3),
+       price_sell = 205
+        )
+berry_juice.add_component(blackberry,1)
+berry_juice.add_component(raspberry,1)
+list_items.append(berry_juice)
+
+#------------------------------------------------------------
+#Ice cream maker
+
+vanilla_ice_cream = hayday(
+       name = "vanilla ice cream",
+       production_place = "ice cream maker",
+       level = 29,
+       production_time = td(hours=2),
+       price_sell = 172
+        )
+vanilla_ice_cream.add_component(milk,1)
+vanilla_ice_cream.add_component(cream,1)
+vanilla_ice_cream.add_component(white_sugar,1)
+list_items.append(vanilla_ice_cream)
+
+cherry_popsicle = hayday(
+       name = "cherry popsicle",
+       production_place = "ice cream maker",
+       level = 33,
+       production_time = td(hours=3),
+       price_sell = 352
+        )
+cherry_popsicle.add_component(syrup,1)
+cherry_popsicle.add_component(cherry_juice,1)
+list_items.append(cherry_popsicle)
+
+strawberry_ice_cream = hayday(
+       name = "strawberry ice cream",
+       production_place = "ice cream maker",
+       level = 34,
+       production_time = td(hours=4),
+       price_sell = 331
+        )
+strawberry_ice_cream.add_component(milk,1)
+strawberry_ice_cream.add_component(cream,1)
+strawberry_ice_cream.add_component(white_sugar,1)
+strawberry_ice_cream.add_component(strawberry,3)
+list_items.append(strawberry_ice_cream)
+
+chocolate_ice_cream = hayday(
+       name = "chocolate ice cream",
+       production_place = "ice cream maker",
+       level = 39,
+       production_time = td(hours=2,minutes=30),
+       price_sell = 342
+        )
+chocolate_ice_cream.add_component(milk,1)
+chocolate_ice_cream.add_component(cream,1)
+chocolate_ice_cream.add_component(white_sugar,1)
+chocolate_ice_cream.add_component(cacao,2)
+list_items.append(chocolate_ice_cream)
+
+#------------------------------------------------------------
+#Jam maker
+
+apple_jam = hayday(
+       name = "apple jam",
+       production_place = "jam maker",
+       level = 35,
+       production_time = td(hours=6),
+       price_sell = 219
+        )
+apple_jam.add_component(apple,3)
+list_items.append(apple_jam)
+
+raspberry_jam = hayday(
+       name = "raspberry jam",
+       production_place = "jam maker",
+       level = 36,
+       production_time = td(hours=7),
+       price_sell = 252
+        )
+raspberry_jam.add_component(raspberry,3)
+list_items.append(raspberry_jam)
+
+blackberry_jam = hayday(
+       name = "blackberry jam",
+       production_place = "jam maker",
+       level = 37,
+       production_time = td(hours=8),
+       price_sell = 388
+        )
+blackberry_jam.add_component(blackberry,3)
+list_items.append(blackberry_jam)
+
+cherry_jam = hayday(
+       name = "cherry jam",
+       production_place = "jam maker",
+       level = 38,
+       production_time = td(hours=7),
+       price_sell = 334
+        )
+cherry_jam.add_component(cherry,3)
+list_items.append(cherry_jam)
+ 
+strawberry_jam = hayday(
+       name = "strawberry jam",
+       production_place = "jam maker",
+       level = 50,
+       production_time = td(hours=7, minutes=30),
+       price_sell = 270
+        )
+strawberry_jam.add_component(strawberry,3)
+list_items.append(strawberry_jam)
+
+#------------------------------------------------------------
+#Jeweler
+
+bracelet = hayday(
+       name = "bracelet",
+       production_place = "jeweler",
+       level = 38,
+       production_time = td(hours=2),
+       price_sell = 514
+        )
+bracelet.add_component(silver_bar,2)
+bracelet.add_component(gold_bar,1)
+list_items.append(bracelet)
+
+necklace = hayday(
+       name = "necklace",
+       production_place = "jeweler",
+       level = 39,
+       production_time = td(hours=3),
+       price_sell = 727
+        )
+necklace.add_component(silver_bar,2)
+necklace.add_component(gold_bar,1)
+necklace.add_component(platinum_bar,1)
+list_items.append(necklace)
+
+diamond_ring = hayday(
+       name = "diamond ring",
+       production_place = "jeweler",
+       level = 40,
+       production_time = td(hours=4),
+       price_sell = 824
+        )
+diamond_ring.add_component(platinum_bar,2)
+diamond_ring.add_component(gold_bar,2)
+#Diamond missing - no definition
+list_items.append(diamond_ring)
+
+iron_bracelet = hayday(
+       name = "iron bracelet",
+       production_place = "jeweler",
+       level = 41,
+       production_time = td(hours=1,minutes=30),
+       price_sell = 658
+        )
+iron_bracelet.add_component(silver_bar,1)
+iron_bracelet.add_component(refined_coal,2)
+iron_bracelet.add_component(iron_bar,2)
+list_items.append(iron_bracelet)
+
+#------------------------------------------------------------
+#Honey extractor
+
+honey = hayday(
+       name = "honey",
+       production_place = "honey extractor",
+       level = 39,
+       production_time = td(minutes=20),
+       price_sell = 154
+        )
+honey.add_component(honeycomb,2)
+list_items.append(honey)
+
+beeswax = hayday(
+       name = "beeswax",
+       production_place = "honey extractor",
+       level = 48,
+       production_time = td(minutes=45),
+       price_sell = 234
+        )
+beeswax.add_component(honeycomb,3)
+list_items.append(beeswax)
+
+#------------------------------------------------------------
+#Coffee kiosk
+
+expresso = hayday(
+       name = "expresso",
+       production_place = "coffee kiosk",
+       level = 42,
+       production_time = td(minutes=5),
+       price_sell = 248
+        )
+expresso.add_component(coffee_bean,3)
+expresso.add_component(white_sugar,1)
+list_items.append(expresso)
+
+caffe_latte = hayday(
+       name = "caffe latte",
+       production_place = "coffee kiosk",
+       level = 43,
+       production_time = td(minutes=10),
+       price_sell = 219
+        )
+caffe_latte.add_component(coffee_bean,2)
+caffe_latte.add_component(white_sugar,1)
+caffe_latte.add_component(mill,1)
+list_items.append(caffe_latte)
+
+caffe_mocha = hayday(
+       name = "caffe mocha",
+       production_place = "coffee kiosk",
+       level = 45,
+       production_time = td(minutes=15),
+       price_sell = 291
+        )
+caffe_mocha.add_component(coffee_bean,1)
+caffe_mocha.add_component(cream,1)
+caffe_mocha.add_component(cacao,2)
+list_items.append(caffe_mocha)
+
+raspberry_mocha = hayday(
+       name = "raspberry mocha",
+       production_place = "coffee kiosk",
+       level = 46,
+       production_time = td(minutes=30),
+       price_sell = 259
+        )
+raspberry_mocha.add_component(coffee_bean,1)
+raspberry_mocha.add_component(cream,1)
+raspberry_mocha.add_component(cacao,1)
+raspberry_mocha.add_component(raspberry,1)
+list_items.append(raspberry_mocha)
+
+hot_chocolate = hayday(
+       name = "hot chocolate",
+       production_place = "coffee kiosk",
+       level = 47,
+       production_time = td(minutes=25),
+       price_sell = 316
+        )
+hot_chocolate.add_component(cacao,2)
+hot_chocolate.add_component(white_sugar,1)
+hot_chocolate.add_component(cream,1)
+hot_chocolate.add_component(milk,1)
+list_items.append(hot_chocolate)
+
+#------------------------------------------------------------
+#Soup kitchen
+
+lobster_soup = hayday(
+       name = "lobster soup",
+       production_place = "soup kitchen",
+       level = 46,
+       production_time = td(hours=2,minutes=30),
+       price_sell = 612
+        )
+lobster_soup.add_component(lobster_tail,2)
+lobster_soup.add_component(tomato,1)
+lobster_soup.add_component(chili_pepper,2)
+lobster_soup.add_component(cream,1)
+list_items.append(lobster_soup)
+
+tomato_soup = hayday(
+       name = "tomato soup",
+       production_place = "soup kitchen",
+       level = 47,
+       production_time = td(hours=1,minutes=30),
+       price_sell = 478
+        )
+tomato_soup.add_component(tomato,2)
+tomato_soup.add_component(tomato_juice,1)
+tomato_soup.add_component(chili_pepper,1)
+tomato_soup.add_component(goat_cheese,1)
+list_items.append(tomato_soup)
 
 
-
-
-
-
-
-
-
+pumpkin_soup = hayday(
+       name = "pumpkin soup",
+       production_place = "soup kitchen",
+       level = 49,
+       production_time = td(hours=2),
+       price_sell = 392
+        )
+pumpkin_soup.add_component(pumpkin,3)
+pumpkin_soup.add_component(cheese,1)
+pumpkin_soup.add_component(honey,1)
+pumpkin_soup.add_component(carrot,2)
+list_items.append(pumpkin_soup)
