@@ -195,6 +195,41 @@ sesame = hayday(
         )
 list_items.append(sesame)
 
+pineapple = hayday(
+       name = 'pineapple',
+       production_place = 'farm',
+       level = 52,
+       production_time = td(minutes=30),
+       price_sell = 14
+        )
+list_items.append(pineapple)
+
+lily = hayday(
+       name = 'lily',
+       production_place = 'farm',
+       level = 53,
+       production_time = td(hours=1, minutes=30),
+       price_sell = 21
+        )
+list_items.append(lily)
+
+rice = hayday(
+       name = 'rice',
+       production_place = 'farm',
+       level = 56,
+       production_time = td(minutes=45),
+       price_sell = 18
+        )
+list_items.append(rice)
+
+olive = hayday(
+       name = 'olive',
+       production_place = 'farm',
+       level = 57,
+       production_time = td(hours=24),
+       price_sell = 82
+        )
+list_items.append(olive)
 #-----------------------------------------------------------
 #Animals food
 
@@ -298,16 +333,6 @@ honeycomb = hayday(
         )
 list_items.append(honeycomb)
 
-honey = hayday(
-       name = 'honey',
-       production_place = 'honey extractor',
-       level = 39,
-       production_time = td(minutes=20),
-       price_sell = 154
-        )
-honey.add_component(honeycomb, 2)
-list_items.append(honey)
-
 bacon = hayday(
        name = 'bacon',
        production_place = 'farm',
@@ -328,7 +353,28 @@ wool = hayday(
 wool.add_component(sheep_food, 1)
 list_items.append(wool)
 
+#------------------------------------------------------------
+#Honey extractor
 
+honey = hayday(
+       name = 'honey',
+       production_place = 'honey extractor',
+       level = 39,
+       production_time = td(minutes=20),
+       price_sell = 154
+        )
+honey.add_component(honeycomb, 2)
+list_items.append(honey)
+
+beeswax = hayday(
+       name = 'beeswax',
+       production_place = 'honey extractor',
+       level = 48,
+       production_time = td(minutes=45),
+       price_sell = 234
+        )
+beeswax.add_component(honeycomb, 3)
+list_items.append(beeswax)
 
 #-----------------------------------------------------------
 #Fish
@@ -336,7 +382,7 @@ fish_fillet = hayday(
        name = 'fish fillet',
        production_place = 'fishing lake',
        level = 27,
-       production_time = td(minutes=0),
+       production_time = td(hours=7),
        price_sell = 54
         )
 list_items.append(fish_fillet)
@@ -349,6 +395,28 @@ lobster_tail = hayday(
        price_sell = 201
         )
 list_items.append(lobster_tail)
+
+duck = hayday(
+       name = 'duck',
+       production_place = 'fishing lake',
+       level = 50,
+       production_time = td(hours=2),
+       price_sell = 1
+        )
+list_items.append(duck)
+
+#-----------------------------------------------------------
+#Duck Salon
+
+duck_feather  = hayday(
+       name = 'duck feather',
+       production_place = 'duck salon',
+       level = 50,
+       production_time = td(hours=3),
+       price_sell = 140
+        )
+duck_feather.add_component(duck, 1)
+list_items.append(duck_feather)
 
 #-----------------------------------------------------------
 #Sugar mill
@@ -880,17 +948,77 @@ violet_dress.add_component(raspberry, 1)
 violet_dress.add_component(indigo, 1)
 list_items.append(violet_dress)
 
-#pillow = hayday(
-#       name = 'pillow',
-#       production_place = 'sewing machine',
-#       level = 51,
-#       production_time = td(hours=3),
-#       price_sell = 676
-#        )
-#violet_dress.add_component(cotton_fabric, 2)
-#violet_dress.add_component(raspberry, 1)
-#violet_dress.add_component(indigo, 1)
-#list_items.append(violet_dress)
+pillow = hayday(
+       name = 'pillow',
+       production_place = 'sewing machine',
+       level = 51,
+       production_time = td(hours=3),
+       price_sell = 676
+        )
+pillow.add_component(cotton_fabric, 2)
+pillow.add_component(duck_feather, 3)
+list_items.append(pillow)
+
+
+blanket = hayday(
+       name = 'blanket',
+       production_place = 'sewing machine',
+       level = 59,
+       production_time = td(hours=3, minutes=30,
+       price_sell = 1098
+        )
+blanket.add_component(cotton_fabric, 3)
+blanket.add_component(duck_feather, 5)
+blanket.add_component(pumpkin, 1)
+list_items.append(blanket)
+
+#--------------------------------------------------------------------------------
+#Mine
+silver_ore = hayday(
+       name = 'silver ore',
+       production_place = 'mine',
+       level = 24,
+       production_time = td(minutes=1),
+       price_sell = 18
+        )
+list_items.append(silver_ore)
+
+gold_ore = hayday(
+       name = 'gold ore',
+       production_place = 'mine',
+       level = 24,
+       production_time = td(minutes=1),
+       price_sell = 21
+        )
+list_items.append(gold_ore)
+
+platinum_ore = hayday(
+       name = 'platinum ore',
+       production_place = 'mine',
+       level = 25,
+       production_time = td(minutes=1),
+       price_sell = 32
+        )
+list_items.append(platinum_ore)
+
+coal = hayday(
+       name = 'coal',
+       production_place = 'mine',
+       level = 33,
+       production_time = td(minutes=1),
+       price_sell = 10
+        )
+list_items.append(coal)
+
+iron_ore = hayday(
+       name = 'iron ore',
+       production_place = 'mine',
+       level = 34,
+       production_time = td(minutes=1),
+       price_sell = 14
+        )
+list_items.append(iron_ore)
+
 #--------------------------------------------------------------------------------
 #Cake oven
 
@@ -992,52 +1120,18 @@ honey_apple_cake.add_component(apple, 2)
 honey_apple_cake.add_component(honey, 2)
 list_items.append(honey_apple_cake)
 
-#--------------------------------------------------------------------------------
-#Mine
-silver_ore = hayday(
-       name = 'silver ore',
-       production_place = 'mine',
-       level = 24,
-       production_time = td(hours=0),
-       price_sell = 18
+fancy_cake = hayday(
+       name = 'fancy cake',
+       production_place = 'cake oven',
+       level = 54,
+       production_time = td(minutes=15),
+       price_sell = 450
         )
-list_items.append(silver_ore)
-
-gold_ore = hayday(
-       name = 'gold ore',
-       production_place = 'mine',
-       level = 24,
-       production_time = td(hours=0),
-       price_sell = 21
-        )
-list_items.append(gold_ore)
-
-platinum_ore = hayday(
-       name = 'platinum ore',
-       production_place = 'mine',
-       level = 25,
-       production_time = td(hours=0),
-       price_sell = 32
-        )
-list_items.append(platinum_ore)
-
-coal = hayday(
-       name = 'coal',
-       production_place = 'mine',
-       level = 33,
-       production_time = td(hours=0),
-       price_sell = 10
-        )
-list_items.append(coal)
-
-iron_ore = hayday(
-       name = 'iron ore',
-       production_place = 'mine',
-       level = 34,
-       production_time = td(hours=0),
-       price_sell = 14
-        )
-list_items.append(iron_ore)
+fancy_cake.add_component(cream_cake, 1)
+fancy_cake.add_component(lily, 3)
+fancy_cake.add_component(raspberry, 3)
+fancy_cake.add_component(gold_ore, 1)
+list_items.append(fancy_cake)
 
 #--------------------------------------------------------------------------------
 #Smelter
@@ -1144,6 +1238,16 @@ berry_juice = hayday(
 berry_juice.add_component(blackberry, 1)
 berry_juice.add_component(raspberry, 1)
 list_items.append(berry_juice)
+
+pineapple_juice = hayday(
+       name = 'pineapple juice',
+       production_place = 'juice press',
+       level = 52,
+       production_time = td(minutes=45),
+       price_sell = 68
+        )
+pineapple_juice.add_component(pineapple, 3)
+list_items.append(pineapple_juice)
 
 #------------------------------------------------------------
 #Ice cream maker
@@ -1313,29 +1417,6 @@ iron_bracelet.add_component(iron_bar, 2)
 list_items.append(iron_bracelet)
 
 #------------------------------------------------------------
-#Honey extractor
-
-honey = hayday(
-       name = 'honey',
-       production_place = 'honey extractor',
-       level = 39,
-       production_time = td(minutes=20),
-       price_sell = 154
-        )
-honey.add_component(honeycomb, 2)
-list_items.append(honey)
-
-beeswax = hayday(
-       name = 'beeswax',
-       production_place = 'honey extractor',
-       level = 48,
-       production_time = td(minutes=45),
-       price_sell = 234
-        )
-beeswax.add_component(honeycomb, 3)
-list_items.append(beeswax)
-
-#------------------------------------------------------------
 #Coffee kiosk
 
 expresso = hayday(
@@ -1442,6 +1523,19 @@ pumpkin_soup.add_component(honey, 1)
 pumpkin_soup.add_component(carrot, 2)
 list_items.append(pumpkin_soup)
 
+fish_soup = hayday(
+       name = 'fish soup',
+       production_place = 'soup kitchen',
+       level = 53,
+       production_time = td(hours=3),
+       price_sell = 298
+        )
+fish_soup.add_component(potato, 3)
+fish_soup.add_component(fish_fillet, 2)
+fish_soup.add_component(milk, 1)
+fish_soup.add_component(carrot, 1)
+list_items.append(fish_soup)
+
 #------------------------------------------------------------
 #Candle maker
 strawberry_candle = hayday(
@@ -1456,3 +1550,140 @@ strawberry_candle.add_component(beeswax, 1)
 strawberry_candle.add_component(strawberry, 2)
 list_items.append(strawberry_candle)
 
+raspberry_candle = hayday(
+        name= 'raspberry candle',
+        production_place = 'candle maker',
+        level = 52,
+        production_time = td(hours=1, minutes=45),
+        price_sell = 360
+        )
+
+raspberry_candle.add_component(beeswax, 1)
+raspberry_candle.add_component(raspberry, 2)
+list_items.append(raspberry_candle)
+
+#------------------------------------------------------------
+#Flower shop
+
+rustic_bouquet = hayday(
+        name= 'rustic bouquet',
+        production_place = 'flower shop',
+        level = 49,
+        production_time = td(minutes=54),
+        price_sell = 208
+        )
+rustic_bouquet.add_component(wheat, 5)
+rustic_bouquet.add_component(indigo, 3)
+rustic_bouquet.add_component(cotton, 3)
+list_items.append(rustic_bouquet)
+
+#------------------------------------------------------------
+#Candy machine
+
+caramel_apple = hayday(
+        name= 'caramel apple',
+        production_place = 'candy machine',
+        level = 51,
+        production_time = td(hours=2),
+        price_sell = 255
+        )
+caramel_apple.add_component(syrup, 2)
+caramel_apple.add_component(apple, 1)
+list_items.append(caramel_apple)
+
+toffee = hayday(
+        name= 'toffee',
+        production_place = 'candy machine',
+        level = 52,
+        production_time = td(hours=1, minutes=30),
+        price_sell = 176
+        )
+toffee.add_component(butter, 1)
+toffee.add_component(wheat, 1)
+toffee.add_component(white_sugar, 1)
+list_items.append(toffee)
+
+chocolate = hayday(
+        name= 'chocolate',
+        production_place = 'candy machine',
+        level = 54,
+        production_time = td(hours=20),
+        price_sell = 460
+        )
+chocolate.add_component(cacao, 3)
+chocolate.add_component(cream, 1)
+chocolate.add_component(white_sugar, 1)
+list_items.append(chocolate)
+
+lollipop = hayday(
+        name= 'lollipop',
+        production_place = 'candy machine',
+        level = 57,
+        production_time = td(hours=12),
+        price_sell = 342
+        )
+lollipop.add_component(syrup, 1)
+lollipop.add_component(cherry, 1)
+lollipop.add_component(strawberry, 2)
+list_items.append(lollipop)
+
+jelly_beans = hayday(
+        name= 'jelly beans',
+        production_place = 'candy machine',
+        level = 60,
+        production_time = td(hours=24),
+        price_sell = 684
+        )
+jelly_beans.add_component(blackberry_jam, 1)
+jelly_beans.add_component(raspberry_jam, 1)
+jelly_beans.add_component(white_sugar, 1)
+list_items.append(jelly_beans)
+#------------------------------------------------------------
+#Sauce Maker
+
+soy_sauce = hayday(
+        name= 'soy sauce',
+        production_place = 'sauce maker',
+        level = 54,
+        production_time = td(hours=3),
+        price_sell = 154
+        )
+soy_sauce.add_component(soybean, 9)
+soy_sauce.add_component(wheat, 1)
+list_items.append(soy_sauce)
+
+olive_oil = hayday(
+        name= 'olive oil',
+        production_place = 'sauce maker',
+        level = 60,
+        production_time = td(minutes=45),
+        price_sell = 277
+        )
+olive_oil.add_component(olive, 3)
+list_items.append(olive_oil)
+#------------------------------------------------------------
+#Sushi bar
+
+sushi_roll = hayday(
+        name= 'sushi roll',
+        production_place = 'sushi bar',
+        level = 56,
+        production_time = td(hours=1),
+        price_sell = 489
+        )
+sushi_roll.add_component(fish_fillet, 1)
+sushi_roll.add_component(rice, 15)
+sushi_roll.add_component(soy_sauce, 1)
+list_items.append(sushi_roll)
+
+lobster_sushi = hayday(
+        name= 'lobster sushi',
+        production_place = 'sushi bar',
+        level = 59,
+        production_time = td(hours=1),
+        price_sell = 637
+        )
+lobster_sushi.add_component(lobster_tail, 1)
+lobster_sushi.add_component(rice, 15)
+lobster_sushi.add_component(soy_sauce, 1)
+list_items.append(lobster_sushi)
