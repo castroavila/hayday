@@ -1,8 +1,8 @@
 #! /usr/bin/env python
 # -*- coding: utf-8 -*-
 # @author           : Manuel Castro Avila <castroavila_2004@hotmail.com>
-# @file             : hayday.py	
-# 
+# @file             : hayday.py
+#
 
 """
 
@@ -14,7 +14,7 @@ class hayday(object):
     def __init__(self,
             name,               #item's name
             production_place,   #Place of production
-            level,              # Level at which its production is allowed from 
+            level,              # Level at which its production is allowed from
             production_time,    #Time of production
             price_sell          #Max. price for selling
             ):
@@ -52,10 +52,10 @@ class hayday(object):
 #------------------------------------------------------------
 # Return item's production time in hours
     def get_production_time(self):
-        return self.production_time.days*24 + self.production_time.seconds/3600.  
+        return self.production_time.days*24 + self.production_time.seconds/3600.
 
 #------------------------------------------------------------
-#Coompute profit = price_sell - production_price
+#Compute profit = price_sell - production_price
     def get_profit(self):
         return self.price_sell - self.get_production_price()
 

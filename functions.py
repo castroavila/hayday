@@ -1,9 +1,9 @@
 #! /usr/bin/env python
 # -*- coding: utf-8 -*-
 # @author           : Manuel Castro Avila <castroavila_2004@hotmail.com>
-# @file             : functions.py	
+# @file             : functions.py
 # @created          : 18-Nov-2019
-# 
+#
 
 """
 
@@ -16,7 +16,21 @@ import matplotlib.pyplot as plt
 import numpy as np
 import pandas as pd
 
-print("# of item in list_items {:2d}".format(len(list_items)))
+from  matplotlib.backends.backend_pdf import PdfPages
+#pp = PdfPages('producer_wells.pdf')
+#for producer in unique_producers:
+#    fig,_ = well_production(producer)
+#    pp.savefig(fig)
+#
+#pp.close()
+
+#cmap = fig.colorbar(axes, ax=ax )
+#cmap.set_label('DATE')
+
+print('# of item in list_items {:2d}'.format(len(list_items)))
+
+
+
 
 def list_places():
     places = []
@@ -24,43 +38,82 @@ def list_places():
         places.append(item.production_place)
 
     unique_places = set(places)
-    print(unique_places)
+    return unique_places
 
 def list_products_at(place):
-    print("Items produced at {:s}".format(place))
-    print("{:20s} {:20s} {:20s}".format("name","production time","sell price"))
+    print('Items produced at {:s}'.format(place))
+    print('{:20s} {:20s} {:20s}'.format('name', 'production time', 'sell price'))
     number = 1
     for item in list_items:
         if(place == item.production_place):
-            print("{:d} ---> {:20s} {:20d} {:20d}".format(number,item.name,item.price_sell,item.price_sell))
+            print('{:d} ---> {:20s} {:20d} {:20d}'.format(number, item.name, \
+                                                          item.price_sell, \
+                                                          item.price_sell))
             number += 1
 
 def plot_time_vs_profit_at(place):
-    time_and_profit_df = pd.DataFrame(columns=["production_time","profit","item_name"])
+    time_and_profit_df = pd.DataFrame(columns=['production_time', 'profit',
+                                               'item_name', 'price_sell'])
     number = 1
     for item in list_items:
         if (place == item.production_place):
-            print("{:d} ---> {:20s} {:20f} {:20f}".format(number,item.name,item.get_production_time(),item.get_profit()))
-            time_and_profit_df = time_and_profit_df = time_and_profit_df.append({'production_time':item.get_production_time(),"profit":item.get_profit(),"item_name":item.name},ignore_index=True)
+            print('{:d} ---> {:20s} {:20f} {:20f}'.format(number, item.name, \
+                                                item.get_production_time(), \
+                                                item.get_profit()))
+            time_and_profit_df = \
+                time_and_profit_df.append({'production_time':item.get_production_time(), \
+                'profit':item.get_profit(),  'item_name':item.name, \
+                'price_sell':item.price_sell, \
+                'profit_per_hour':item.get_profit()/item.get_production_time(),\
+                                           'prod_cost':item.get_production_price() }, \
+                ignore_index=True)
             number += 1
-#    plt.plot(arr_time_and_profit[:,0],arr_time_and_profit[:,1],"bo",markersize=5)
-    #plt.scatter(arr_time_and_profit[:,0],arr_time_and_profit[:,1])
-    plt.scatter(time_and_profit_df["production_time"],time_and_profit_df["profit"])
+#    plt.plot(arr_time_and_profit[:, 0], arr_time_and_profit[:, 1], 'bo', markersize=5)
+    #plt.scatter(arr_time_and_profit[:, 0], arr_time_and_profit[:, 1])
+    fig, ax = plt.subplots(nrows=1, ncols=1, figsize=(15, 10))
+    axis = ax.scatter(time_and_profit_df['prod_cost'], time_and_profit_df['profit'],
+               c=time_and_profit_df['production_time'], cmap='viridis')
+    cmap = fig.colorbar(axis, ax=ax )
+    cmap.set_label('production time (h)')
 
     #Label each point in scatter plot
     for index, row in time_and_profit_df.iterrows():
-        plt.annotate(row["item_name"],
-                xy=(row['production_time'],row['profit']), # Label's position 
-                xytext=(0,10), textcoords = "offset points", # Label offset from the plotted point
-                ha="center", # alignment
-                va="bottom")
+        ax.annotate('{:s} \n {:.2f}'.format(row['item_name'],row['profit_per_hour']) ,
+                xy=(row['prod_cost'], row['profit']), # Label's position
+                xytext=(0, 10), textcoords = 'offset points', # Label offset from the plotted point
+                ha='center', # alignment
+                va='bottom')
 
-    plt.title(place)
-    plt.xlabel("Production time (h)")
-    plt.ylabel("Profit")
-    plt.show()
+    ax.set_title(place, color='blue')
+    ax.set_xlabel('production cost')
+    ax.set_ylabel('Profit')
+    return fig
+    #plt.show()
 
+##Generate file every place
+#pp = PdfPages('places.pdf')
+#unique_places = list_places()
+#
+#for place in unique_places:
+#    print(place)
+#    fig = plot_time_vs_profit_at(place)
+#    pp.savefig(fig, bbox_inches='tight')
+#
+#pp.close()
+#df.sort_values(by=['place', 'prod_cost'], ascending=[True, False])
+def generate_df():
 
-
-
+    df_items = pd.DataFrame(columns=['production_time', 'profit', 'item_name',
+                                     'price_sell', 'profit_per_hour',
+                                     'prod_cost', 'place'])
+    for item in list_items:
+        df_items = \
+            df_items.append({'production_time':item.get_production_time(), \
+                             'profit':item.get_profit(), 'item_name':item.name,
+                             'price_sell':item.price_sell, \
+                             'profit_per_hour':item.get_profit()/item.get_production_time(),\
+                             'prod_cost':item.get_production_price(), \
+                             'place':item.production_place }, \
+                            ignore_index=True)
+    return df_items
 
