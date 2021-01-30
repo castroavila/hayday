@@ -844,6 +844,66 @@ grilled_onion = hayday(
 grilled_onion.add_component(butter, 1)
 grilled_onion.add_component(onion, 2)
 list_items.append(grilled_onion)
+#------------------------------------------------------------
+#Sauce Maker
+
+soy_sauce = hayday(
+        name= 'soy sauce',
+        production_place = 'sauce maker',
+        level = 54,
+        production_time = td(hours=3),
+        price_sell = 154
+        )
+soy_sauce.add_component(soybean, 9)
+soy_sauce.add_component(wheat, 1)
+list_items.append(soy_sauce)
+
+olive_oil = hayday(
+        name= 'olive oil',
+        production_place = 'sauce maker',
+        level = 60,
+        production_time = td(minutes=45),
+        price_sell = 277
+        )
+olive_oil.add_component(olive, 3)
+list_items.append(olive_oil)
+
+mayonnaise = hayday(
+        name= 'mayonnaise',
+        production_place = 'sauce maker',
+        level = 62,
+        production_time = td(minutes=15),
+        price_sell = 367
+        )
+mayonnaise.add_component(egg, 4)
+mayonnaise.add_component(olive_oil, 1)
+list_items.append(mayonnaise)
+
+olive_dip = hayday(
+        name= 'olive dip',
+        production_place = 'sauce maker',
+        level = 66,
+        production_time = td(minutes=45),
+        price_sell = 468
+        )
+olive_dip.add_component(olive, 3)
+olive_dip.add_component(bread, 2)
+olive_dip.add_component(fish_fillet, 1)
+olive_dip.add_component(lemon, 1)
+list_items.append(olive_dip)
+
+lemon_curd = hayday(
+        name= 'lemon curd',
+        production_place = 'sauce maker',
+        level = 66,
+        production_time = td(minutes=25),
+        price_sell =378
+        )
+lemon_curd.add_component(lemon, 2)
+lemon_curd.add_component(butter, 1)
+lemon_curd.add_component(egg, 2)
+lemon_curd.add_component(white_sugar, 1)
+list_items.append(lemon_curd)
 #-----------------------------------------------------------
 #Pie oven
 
@@ -1825,66 +1885,6 @@ bright_bouquet.add_component(indigo, 3)
 bright_bouquet.add_component(cotton, 1)
 bright_bouquet.add_component(iron_ore, 5)
 list_items.append(bright_bouquet)
-#------------------------------------------------------------
-#Sauce Maker
-
-soy_sauce = hayday(
-        name= 'soy sauce',
-        production_place = 'sauce maker',
-        level = 54,
-        production_time = td(hours=3),
-        price_sell = 154
-        )
-soy_sauce.add_component(soybean, 9)
-soy_sauce.add_component(wheat, 1)
-list_items.append(soy_sauce)
-
-olive_oil = hayday(
-        name= 'olive oil',
-        production_place = 'sauce maker',
-        level = 60,
-        production_time = td(minutes=45),
-        price_sell = 277
-        )
-olive_oil.add_component(olive, 3)
-list_items.append(olive_oil)
-
-mayonnaise = hayday(
-        name= 'mayonnaise',
-        production_place = 'sauce maker',
-        level = 62,
-        production_time = td(minutes=15),
-        price_sell = 367
-        )
-mayonnaise.add_component(egg, 4)
-mayonnaise.add_component(olive_oil, 1)
-list_items.append(mayonnaise)
-
-olive_dip = hayday(
-        name= 'olive dip',
-        production_place = 'sauce maker',
-        level = 66,
-        production_time = td(minutes=45),
-        price_sell = 468
-        )
-olive_dip.add_component(olive, 3)
-olive_dip.add_component(bread, 2)
-olive_dip.add_component(fish_fillet, 1)
-olive_dip.add_component(lemon, 1)
-list_items.append(olive_dip)
-
-lemon_curd = hayday(
-        name= 'lemon curd',
-        production_place = 'sauce maker',
-        level = 66,
-        production_time = td(minutes=25),
-        price_sell =378
-        )
-lemon_curd.add_component(lemon, 2)
-lemon_curd.add_component(butter, 1)
-lemon_curd.add_component(egg, 2)
-lemon_curd.add_component(white_sugar, 1)
-list_items.append(lemon_curd)
 #------------------------------------------------------------
 #Sushi bar
 
