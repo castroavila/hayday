@@ -258,6 +258,15 @@ sunflower = hayday(
         )
 list_items.append(sunflower)
 
+cabbage = hayday(
+       name = 'cabbage',
+       production_place = 'farm',
+       level = 65,
+       production_time = td(minutes=45),
+       price_sell = 18
+        )
+list_items.append(cabbage)
+
 lemon = hayday(
        name = 'lemon',
        production_place = 'farm',
@@ -275,6 +284,33 @@ onion = hayday(
        price_sell = 39
         )
 list_items.append(onion)
+
+cucumber = hayday(
+       name = 'cucumber',
+       production_place = 'farm',
+       level = 70,
+       production_time = td(minutes=35),
+       price_sell = 14
+        )
+list_items.append(cucumber)
+
+orange = hayday(
+       name = 'orange',
+       production_place = 'farm',
+       level = 71,
+       production_time = td(days=1, hours=7),
+       price_sell = 97
+        )
+list_items.append(orange)
+
+beetroot = hayday(
+       name = 'beetroot',
+       production_place = 'farm',
+       level = 72,
+       production_time = td(minutes=50),
+       price_sell = 14
+        )
+list_items.append(beetroot)
 
 
 #-----------------------------------------------------------
@@ -844,6 +880,19 @@ grilled_onion = hayday(
 grilled_onion.add_component(butter, 1)
 grilled_onion.add_component(onion, 2)
 list_items.append(grilled_onion)
+
+winter_veggies = hayday(
+       name = 'winter veggies',
+       production_place = 'bbq grill',
+       level = 72,
+       production_time = td(minutes=25),
+       price_sell =  198
+        )
+winter_veggies.add_component(beetroot, 2)
+winter_veggies.add_component(carrot, 2)
+winter_veggies.add_component(potato, 2)
+winter_veggies.add_component(pumpkin, 2)
+list_items.append(winter_veggies)
 #------------------------------------------------------------
 #Sauce Maker
 
@@ -904,6 +953,18 @@ lemon_curd.add_component(butter, 1)
 lemon_curd.add_component(egg, 2)
 lemon_curd.add_component(white_sugar, 1)
 list_items.append(lemon_curd)
+
+tomato_sauce = hayday(
+        name= 'tomate sauce',
+        production_place = 'sauce maker',
+        level = 69,
+        production_time = td(minutes=30),
+        price_sell =230
+        )
+tomato_sauce.add_component(lemon, 1)
+tomato_sauce.add_component(brown_sugar, 1)
+tomato_sauce.add_component(tomato, 2)
+list_items.append(tomato_sauce)
 #-----------------------------------------------------------
 #Pie oven
 
@@ -1449,6 +1510,16 @@ pineapple_juice = hayday(
 pineapple_juice.add_component(pineapple, 3)
 list_items.append(pineapple_juice)
 
+orange_juice = hayday(
+       name = 'orange juice',
+       production_place = 'juice press',
+       level = 71,
+       production_time = td(hours=2),
+       price_sell = 234
+        )
+orange_juice.add_component(orange, 2)
+list_items.append(orange_juice)
+
 #------------------------------------------------------------
 #Ice cream maker
 
@@ -1832,6 +1903,31 @@ fish_soup.add_component(milk, 1)
 fish_soup.add_component(carrot, 1)
 list_items.append(fish_soup)
 
+cabbage_soup = hayday(
+       name = 'cabbage soup',
+       production_place = 'soup kitchen',
+       level = 65,
+       production_time = td(hours=1, minutes=30),
+       price_sell = 270
+        )
+cabbage_soup.add_component(cabbage, 3)
+cabbage_soup.add_component(bacon, 2)
+cabbage_soup.add_component(potato, 2)
+cabbage_soup.add_component(carrot, 2)
+list_items.append(cabbage_soup)
+
+onion_soup = hayday(
+       name = 'onion soup',
+       production_place = 'soup kitchen',
+       level = 72,
+       production_time = td(hours=2, minutes=30),
+       price_sell = 327
+        )
+onion_soup.add_component(bread, 2)
+onion_soup.add_component(cheese, 1)
+onion_soup.add_component(onion, 3)
+list_items.append(onion_soup)
+
 #------------------------------------------------------------
 #Candle maker
 strawberry_candle = hayday(
@@ -1857,6 +1953,18 @@ raspberry_candle = hayday(
 raspberry_candle.add_component(beeswax, 1)
 raspberry_candle.add_component(raspberry, 2)
 list_items.append(raspberry_candle)
+
+lemon_candle = hayday(
+        name= 'lemon candle',
+        production_place = 'candle maker',
+        level = 72,
+        production_time = td(hours=2, minutes=15),
+        price_sell = 457
+        )
+
+lemon_candle.add_component(beeswax, 1)
+lemon_candle.add_component(lemon, 2)
+list_items.append(lemon_candle)
 
 #------------------------------------------------------------
 #Flower shop
@@ -2047,6 +2155,18 @@ honey_toast.add_component(milk, 1)
 honey_toast.add_component(honey, 1)
 list_items.append(honey_toast)
 
+peanut_butter_and_jelly_sandwich = hayday(
+        name= 'peanut butter and jelly sandwich',
+        production_place = 'sandwich bar',
+        level = 71,
+        production_time = td(minutes=25),
+        price_sell = 601
+        )
+peanut_butter_and_jelly_sandwich.add_component(bread, 2)
+peanut_butter_and_jelly_sandwich.add_component(raspberry_jam, 1)
+peanut_butter_and_jelly_sandwich.add_component(peanuts, 1)
+list_items.append(peanut_butter_and_jelly_sandwich)
+
 
 #------------------------------------------------------------
 #Smoothie Mixer
@@ -2074,3 +2194,83 @@ green_smoothie.add_component(lettuce, 5)
 green_smoothie.add_component(lemon, 1)
 green_smoothie.add_component(apple, 3)
 list_items.append(green_smoothie)
+
+yogurt_smoothie = hayday(
+                name = 'yogurt smoothie',
+                production_place = 'smoothie mixer',
+                level = 70,
+                production_time = td(hours=1),
+                price_sell = 349
+        )
+yogurt_smoothie.add_component(cream, 1)
+yogurt_smoothie.add_component(raspberry, 2)
+yogurt_smoothie.add_component(cherry, 1)
+yogurt_smoothie.add_component(white_sugar, 1)
+list_items.append(yogurt_smoothie)
+
+cucumber_smoothie = hayday(
+                name = 'cucumber smoothie',
+                production_place = 'smoothie mixer',
+                level = 70,
+                production_time = td(minutes=40),
+                price_sell = 266
+        )
+cucumber_smoothie.add_component(cucumber, 3)
+cucumber_smoothie.add_component(honey, 1)
+cucumber_smoothie.add_component(pineapple, 3)
+list_items.append(cucumber_smoothie)
+#------------------------------------------------------------
+# Wok kitchen
+
+fried_rice = hayday(
+                name = 'fried rice',
+                production_place = 'wok kitchen',
+                level = 69,
+                production_time = td(hours=1),
+                price_sell = 205
+        )
+fried_rice.add_component(rice, 5)
+fried_rice.add_component(egg, 1)
+list_items.append(fried_rice)
+
+#------------------------------------------------------------
+# Hat maker
+
+cloche_hat = hayday(
+                name = 'cloche hat',
+                production_place = 'hat maker',
+                level = 70,
+                production_time = td(hours=2),
+                price_sell = 468
+        )
+cloche_hat.add_component(strawberry, 2)
+cloche_hat.add_component(wool, 6)
+list_items.append(cloche_hat)
+
+top_hat = hayday(
+                name = 'top hat',
+                production_place = 'hat maker',
+                level = 72,
+                production_time = td(hours=3, minutes=30),
+                price_sell = 619
+        )
+top_hat.add_component(cotton_fabric, 3)
+top_hat.add_component(refined_coal, 1)
+top_hat.add_component(duck_feather, 1)
+list_items.append(top_hat)
+#------------------------------------------------------------
+# Pasta Kitchen
+
+gnocchi = hayday(
+    name = 'gnocchi',
+    production_place = 'pasta kitchen',
+    level= 72,
+    production_time = td(hours=1, minutes=20),
+    price_sell = 475
+)
+gnocchi.add_component(potato, 4)
+gnocchi.add_component(tomato, 3)
+gnocchi.add_component(wheat, 2)
+gnocchi.add_component(butter, 2)
+list_items.append(gnocchi)
+
