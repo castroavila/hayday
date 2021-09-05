@@ -17,6 +17,7 @@ import dash_html_components as html
 from plotly.subplots import make_subplots
 from dash.dependencies import Input, Output, State
 import random
+import os
 
 from functions import  *
 df = generate_df()
@@ -52,7 +53,10 @@ df = generate_df()
 
 #Save html
 #figure.write_html('first_figure.html', auto_open=True)
-app = dash.Dash(assets_folder='images')
+assets_path = os.getcwd() +'/images/'
+# print(assets_path)
+# app = dash.Dash(assets_folder=assets_path, assets_url_path=assets_path)
+app = dash.Dash()
 app.layout = html.Div([
     html.Div(
         [
@@ -71,24 +75,29 @@ app.layout = html.Div([
         style = {'widht': '50%', 'display':'flex', 'align-items': 'center'}
     ),
     #dcc.Graph(figure=cases), dcc.Graph(figure=deads)
-    dcc.Graph(id='plot_place', figure={})
+    dcc.Graph(id='plot_place', figure={}),
+    html.Div(
+        [
+            html.Img(id='image_item', src='',
+                  style={'width': '25%', 'height':'50%'}
+                  ),
+            html.Pre(id='message', children=[], style={'margin-left': '10%',
+                                                       'margin-top': '5%'})
+        ],
+        style={'width': '100%', 'display': 'flex'}
+    )
 ])
 
 @app.callback(
     Output('plot_place', 'figure'),
     [
-    Input('button', 'n_clicks'),
-    Input('plot_place', 'clickData'),
+    Input('button', 'n_clicks')
     ],
     State('place', 'value')
 )
-def update_plot(button, clickData, places):
+def update_plot(button, places):
 
 
-    if clickData is not None:
-        # {'points': [{'curveNumber': 1, 'pointNumber': 0, 'pointIndex': 0, 'x':
-        #              109, 'y': 80, 'text': 'plain donut'}]}
-        print(clickData['points'][0]['text'])
     figure = make_subplots(rows=1, cols=1)
     random.seed(0)
 
@@ -126,11 +135,32 @@ def generate_color():
     color = "#"+''.join([random.choice('0123456789ABCDEF') for j in range(6)])
     return color
 
-# @app.callback(
-#     Input('plot_place', 'clickData')
-# )
-# def click_on(clickData):
-#     print(clickData)
+@app.callback(
+    [
+    Output('image_item', 'src'),
+    Output('message', 'children')
+    ],
+    Input('plot_place', 'clickData'),
+    prevent_initial_call=True
+)
+def click_on(clickData):
+    if clickData is not None:
+        # {'points': [{'curveNumber': 1, 'pointNumber': 0, 'pointIndex': 0, 'x':
+        #              109, 'y': 80, 'text': 'plain donut'}]}
+        item_name = clickData['points'][0]['text']
+        item = get_object(item_name)
+        item_img = item.img
 
+        message = f'Name: {item.name} \n'
+        message += f'sell. price: {item.price_sell} \n'
+        message += f'time prod.: {item.production_time.seconds/3600} h\n'
+        message += f'prod. cost: {item.get_production_price()} \n'
+        message += '.......COMPONENTS......... \n'
+        for component in item.components:
+            message +=  f'{component[0].name}: {component[0].price_sell} x{component[1]} \n'
+
+
+
+        return item_img, [message]
 
 app.run_server(debug=True, use_reloader=True)  # Turn off reloader if inside Jupyter

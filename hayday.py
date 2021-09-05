@@ -16,7 +16,8 @@ class hayday(object):
             production_place,   #Place of production
             level,              # Level at which its production is allowed from
             production_time,    #Time of production
-            price_sell          #Max. price for selling
+            price_sell,          #Max. price for selling
+            img                 # Item's image path
             ):
 #list to store individual components
         self.name = name
@@ -24,6 +25,7 @@ class hayday(object):
         self.production_time = production_time
         self.price_sell = price_sell
         self.components = []
+        self.img  = img
 
 #-----------------------------------------------------------
 #Function to add components the item is made of

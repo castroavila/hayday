@@ -117,3 +117,9 @@ def generate_df():
                             ignore_index=True)
     return df_items
 
+# Given an item's name, return object
+
+def get_object(name):
+    for item in list_items:
+        if item.name == name:
+            return item
