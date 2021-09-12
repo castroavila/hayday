@@ -198,7 +198,7 @@ coffee_bean = hayday(
 		name = 'coffee bean',
 		production_place = 'farm',
 		level = 42,
-		production_time = td(days=1),
+		production_time = td(days=1, hours=1),
 		price_sell = 64,
 		img = '/assets/items/Coffee_Bean.png'
         )
@@ -298,7 +298,7 @@ lemon = hayday(
 		name = 'lemon',
 		production_place = 'farm',
 		level = 66,
-		production_time = td(days=1, hours=5 ),
+		production_time = td(days=1, hours=5),
 		price_sell = 93,
 		img = '/assets/items/Lemon.png'
         )
@@ -338,7 +338,7 @@ beetroot = hayday(
 		name = 'beetroot',
 		production_place = 'farm',
 		level = 72,
-		production_time = td(minutes=50),
+		production_time = td(minutes=40),
 		price_sell = 14,
 		img = '/assets/items/Beetroot.png'
         )
@@ -407,7 +407,7 @@ pig_food = hayday(
 		name = 'pig food',
 		production_place = 'feed mill',
 		level = 10,
-		production_time = td(minutes=10),
+		production_time = td(minutes=20),
 		price_sell = 14,
 		img = '/assets/items/Pig_Feed.png'
         )
@@ -420,7 +420,7 @@ sheep_food = hayday(
 		name = 'sheep food',
 		production_place = 'feed mill',
 		level = 16,
-		production_time = td(minutes=10),
+		production_time = td(minutes=30),
 		price_sell = 14,
 		img = '/assets/items/Sheep_Feed.png'
         )
@@ -433,15 +433,17 @@ goat_food = hayday(
 		name = 'goat food',
 		production_place = 'feed mill',
 		level = 32,
-		production_time = td(minutes=10),
+		production_time = td(minutes=40),
 		price_sell = 14,
 		img = '/assets/items/Goat_Feed.png'
         )
-goat_food.add_component(corn, 1)
+goat_food.add_component(wheat, 1)
 goat_food.add_component(corn, 1)
 goat_food.add_component(carrot, 2)
 list_items.append(goat_food)
 
+# TODO
+# wheat_bundle
 #-----------------------------------------------------------
 #Animals
 egg = hayday(
@@ -513,8 +515,8 @@ peanuts = hayday(
 		name = 'peanuts',
 		production_place = 'farm',
 		level = 62,
-		production_time = td(hours=2, minutes=30),
-		price_sell = 360,
+		production_time = td(hours=5),
+		price_sell = 234,
 		img = '/assets/items/Peanuts.png'
         )
 
@@ -582,7 +584,7 @@ duck_feather  = hayday(
 		name = 'duck feather',
 		production_place = 'duck salon',
 		level = 50,
-		production_time = td(hours=3),
+		production_time = td(hours=2),
 		price_sell = 140,
 		img = '/assets/items/Duck_Feather.png'
         )
@@ -864,6 +866,19 @@ chocolate_popcorn = hayday(
 chocolate_popcorn.add_component(corn, 2)
 chocolate_popcorn.add_component(cacao, 2)
 list_items.append(chocolate_popcorn)
+
+snack_mix = hayday(
+		name = 'snack mix',
+		production_place = 'popcorn pot',
+		level = 64,
+		production_time = td(minutes=45),
+		price_sell = 309,
+		img = '/assets/items/Snack_Mix.png'
+        )
+snack_mix.add_component(corn, 2)
+snack_mix.add_component(sesame, 1)
+snack_mix.add_component(peanuts, 1)
+list_items.append(snack_mix)
 
 #-----------------------------------------------------------
 #BBQ grill
@@ -1255,7 +1270,7 @@ sweater = hayday(
 		production_place = 'loom',
 		level = 17,
 		production_time = td(hours=2),
-		price_sell = 158,
+		price_sell = 151,
 		img = '/assets/items/Sweater.png'
         )
 sweater.add_component(wool, 2)
@@ -1283,6 +1298,18 @@ blue_woolly_hat = hayday(
 blue_woolly_hat.add_component(wool, 1)
 blue_woolly_hat.add_component(indigo, 1)
 list_items.append(blue_woolly_hat)
+
+blue_sweater = hayday(
+		name = 'blue sweater',
+		production_place = 'loom',
+		level = 20,
+		production_time = td(hours=3),
+		price_sell = 208,
+		img = '/assets/items/Blue_Sweater.png'
+        )
+blue_sweater.add_component(wool, 2)
+blue_sweater.add_component(indigo, 2)
+list_items.append(blue_sweater)
 
 red_scarf = hayday(
 		name = 'red scarf',
@@ -1473,7 +1500,7 @@ cheesecake = hayday(
 		production_place = 'cake oven',
 		level = 24,
 		production_time = td(hours=4),
-		price_sell = 248,
+		price_sell = 284,
 		img = '/assets/items/Cheesecake.png'
         )
 cheesecake.add_component(cheese, 1)
@@ -1606,7 +1633,7 @@ platinum_bar = hayday(
 		production_place = 'smelter',
 		level = 25,
 		production_time = td(hours=16),
-		price_sell = 250,
+		price_sell = 205,
 		img = '/assets/items/Platinum_Bar.png'
         )
 platinum_bar.add_component(platinum_ore, 3)
@@ -1793,7 +1820,7 @@ peanut_butter_milkshake = hayday(
         )
 peanut_butter_milkshake.add_component(peanuts, 1)
 peanut_butter_milkshake.add_component(milk, 1)
-peanut_butter_milkshake.add_component(cream, 3)
+peanut_butter_milkshake.add_component(cream, 1)
 peanut_butter_milkshake.add_component(cacao, 3)
 list_items.append(peanut_butter_milkshake)
 
@@ -2015,7 +2042,7 @@ honey_peanuts = hayday(
 		production_place = 'candy machine',
 		level = 63,
 		production_time = td(minutes=40),
-		price_sell = 540,
+		price_sell = 468,
 		img = '/assets/items/Honey_Peanuts.png'
         )
 honey_peanuts.add_component(honey, 1)
@@ -2193,7 +2220,7 @@ pumpkin_soup = hayday(
 		img = '/assets/items/Pumpkin_Soup.png'
         )
 pumpkin_soup.add_component(pumpkin, 3)
-pumpkin_soup.add_component(cheese, 1)
+pumpkin_soup.add_component(butter, 1)
 pumpkin_soup.add_component(honey, 1)
 pumpkin_soup.add_component(carrot, 2)
 list_items.append(pumpkin_soup)
@@ -2498,10 +2525,10 @@ beetroot_salad = hayday(
 		level = 76,
 		production_time = td(minutes=45),
 		price_sell = 234,
-		img = '/assets/items/Beetroot.png'
+		img = '/assets/items/Beetroot_Salad.png'
         )
 beetroot_salad.add_component(beetroot, 3)
-beetroot_salad.add_component(goat_cheese, 2)
+beetroot_salad.add_component(goat_cheese, 1)
 list_items.append(beetroot_salad)
 
 summer_rolls = hayday(
