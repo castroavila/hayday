@@ -374,6 +374,105 @@ bell_pepper = hayday(
         )
 list_items.append(bell_pepper)
 
+tea_leaf = hayday(
+		name = 'tea leaf',
+		production_place = 'farm',
+		level = 80,
+		production_time = td(hours=6, minutes=30),
+		price_sell = 43,
+		img = '/assets/items/Tea_Leaf.png'
+        )
+list_items.append(tea_leaf)
+
+peony = hayday(
+		name = 'peony',
+		production_place = 'farm',
+		level = 82,
+		production_time = td(hours=4),
+		price_sell = 36,
+		img = '/assets/items/Peony.png'
+        )
+list_items.append(peony)
+
+broccoli = hayday(
+		name = 'broccoli',
+		production_place = 'farm',
+		level = 83,
+		production_time = td(hours=1, minutes=20),
+		price_sell = 21,
+		img = '/assets/items/Broccoli.png'
+        )
+list_items.append(broccoli)
+
+grapes = hayday(
+		name = 'grapes',
+		production_place = 'farm',
+		level = 84,
+		production_time = td(hours=3),
+		price_sell = 32,
+		img = '/assets/items/Grapes.png'
+        )
+list_items.append(grapes)
+
+mint = hayday(
+		name = 'mint',
+		production_place = 'farm',
+		level = 85,
+		production_time = td(hours=3),
+		price_sell = 32,
+		img = '/assets/items/Mint.png'
+        )
+list_items.append(mint)
+
+banana = hayday(
+		name = 'banana',
+		production_place = 'farm',
+		level = 88,
+		production_time = td(hours=27),
+		price_sell = 104,
+		img = '/assets/items/Banana.png'
+        )
+list_items.append(banana)
+
+mushroom = hayday(
+		name = 'mushroom',
+		production_place = 'farm',
+		level = 89,
+		production_time = td(minutes=10),
+		price_sell = 10,
+		img = '/assets/items/Mushroom.png'
+        )
+list_items.append(mushroom)
+
+eggplant = hayday(
+		name = 'eggplant',
+		production_place = 'farm',
+		level = 90,
+		production_time = td(minutes=40),
+		price_sell = 14,
+		img = '/assets/items/Eggplant.png'
+        )
+list_items.append(eggplant)
+
+watermelon = hayday(
+		name = 'watermelon',
+		production_place = 'farm',
+		level = 92,
+		production_time = td(hours=5),
+		price_sell = 39,
+		img = '/assets/items/Watermelon.png'
+        )
+list_items.append(watermelon)
+
+plum = hayday(
+		name = 'plum',
+		production_place = 'farm',
+		level = 94,
+		production_time = td(days=1, hours=1),
+		price_sell = 82,
+		img = '/assets/items/Plum.png'
+        )
+list_items.append(plum)
 
 #-----------------------------------------------------------
 #Animals food
@@ -794,16 +893,33 @@ frutti_di_mare_pizza.add_component(lobster_tail, 1)
 frutti_di_mare_pizza.add_component(cheese, 1)
 list_items.append(frutti_di_mare_pizza)
 
-#banana_bread = hayday(
-#       name = 'banana bread',
-#       production_place = 'bakery',
-#       level = 91,
-#       production_time = td(minutes=30),
-#       price_sell = 424,
-# 	img = ''
-#        )
-#banana_bread.add_component(wheat, 2)
-#list_items.append(banana_bread)
+gingerbread_cookie = hayday(
+      name = 'ginger bread cookie',
+      production_place = 'bakery',
+      level = 86,
+      production_time = td(minutes=30),
+      price_sell = 273,
+    img = '/assets/items/Gingerbread_Cookie.png'
+       )
+gingerbread_cookie.add_component(wheat, 5)
+gingerbread_cookie.add_component(butter, 1)
+gingerbread_cookie.add_component(syrup, 1)
+gingerbread_cookie.add_component(ginger, 2)
+list_items.append(gingerbread_cookie)
+
+banana_bread = hayday(
+    name = 'banana bread',
+    production_place = 'bakery',
+    level = 91,
+    production_time = td(minutes=30),
+    price_sell = 424,
+    img = '/assets/items/Banana_Bread.png'
+)
+banana_bread.add_component(banana, 3)
+banana_bread.add_component(grapes, 2)
+banana_bread.add_component(wheat, 3)
+banana_bread.add_component(egg, 1)
+list_items.append(banana_bread)
 
 #-----------------------------------------------------------
 #Popcorn pot (Every item already included)
@@ -880,6 +996,97 @@ snack_mix.add_component(sesame, 1)
 snack_mix.add_component(peanuts, 1)
 list_items.append(snack_mix)
 
+#------------------------------------------------------------
+#Sauce Maker (Every item already included)
+
+soy_sauce = hayday(
+		name= 'soy sauce',
+		production_place = 'sauce maker',
+		level = 54,
+		production_time = td(hours=3),
+		price_sell = 154,
+		img = '/assets/items/Soy_Sauce.png'
+        )
+soy_sauce.add_component(soybean, 9)
+soy_sauce.add_component(wheat, 1)
+list_items.append(soy_sauce)
+
+olive_oil = hayday(
+		name= 'olive oil',
+		production_place = 'sauce maker',
+		level = 60,
+		production_time = td(minutes=45),
+		price_sell = 277,
+		img = '/assets/items/Olive_Oil.png'
+        )
+olive_oil.add_component(olive, 3)
+list_items.append(olive_oil)
+
+mayonnaise = hayday(
+		name= 'mayonnaise',
+		production_place = 'sauce maker',
+		level = 62,
+		production_time = td(minutes=15),
+		price_sell = 367,
+		img = '/assets/items/Mayonnaise.png'
+        )
+mayonnaise.add_component(egg, 4)
+mayonnaise.add_component(olive_oil, 1)
+list_items.append(mayonnaise)
+
+olive_dip = hayday(
+		name= 'olive dip',
+		production_place = 'sauce maker',
+		level = 66,
+		production_time = td(minutes=45),
+		price_sell = 468,
+		img = '/assets/items/Olive_Dip.png'
+        )
+olive_dip.add_component(olive, 3)
+olive_dip.add_component(bread, 2)
+olive_dip.add_component(fish_fillet, 1)
+olive_dip.add_component(lemon, 1)
+list_items.append(olive_dip)
+
+lemon_curd = hayday(
+		name= 'lemon curd',
+		production_place = 'sauce maker',
+		level = 66,
+		production_time = td(minutes=25),
+		price_sell =378,
+		img = '/assets/items/Lemon_Curd.png'
+        )
+lemon_curd.add_component(lemon, 2)
+lemon_curd.add_component(butter, 1)
+lemon_curd.add_component(egg, 2)
+lemon_curd.add_component(white_sugar, 1)
+list_items.append(lemon_curd)
+
+tomato_sauce = hayday(
+		name= 'tomate sauce',
+		production_place = 'sauce maker',
+		level = 69,
+		production_time = td(minutes=30),
+		price_sell =230,
+		img = '/assets/items/Tomato_Sauce.png'
+        )
+tomato_sauce.add_component(lemon, 1)
+tomato_sauce.add_component(brown_sugar, 1)
+tomato_sauce.add_component(tomato, 2)
+list_items.append(tomato_sauce)
+
+salsa = hayday(
+		name= 'salsa',
+		production_place = 'sauce maker',
+		level = 77,
+		production_time = td(minutes=20),
+		price_sell =252,
+		img = '/assets/items/Salsa.png'
+        )
+salsa.add_component(chili_pepper, 2)
+salsa.add_component(onion, 2)
+salsa.add_component(tomato, 2)
+list_items.append(salsa)
 #-----------------------------------------------------------
 #BBQ grill
 
@@ -1021,97 +1228,60 @@ winter_veggies.add_component(carrot, 2)
 winter_veggies.add_component(potato, 2)
 winter_veggies.add_component(pumpkin, 2)
 list_items.append(winter_veggies)
-#------------------------------------------------------------
-#Sauce Maker (Every item already included)
 
-soy_sauce = hayday(
-		name= 'soy sauce',
-		production_place = 'sauce maker',
-		level = 54,
-		production_time = td(hours=3),
-		price_sell = 154,
-		img = '/assets/items/Soy_Sauce.png'
-        )
-soy_sauce.add_component(soybean, 9)
-soy_sauce.add_component(wheat, 1)
-list_items.append(soy_sauce)
-
-olive_oil = hayday(
-		name= 'olive oil',
-		production_place = 'sauce maker',
-		level = 60,
-		production_time = td(minutes=45),
-		price_sell = 277,
-		img = '/assets/items/Olive_Oil.png'
-        )
-olive_oil.add_component(olive, 3)
-list_items.append(olive_oil)
-
-mayonnaise = hayday(
-		name= 'mayonnaise',
-		production_place = 'sauce maker',
-		level = 62,
-		production_time = td(minutes=15),
-		price_sell = 367,
-		img = '/assets/items/Mayonnaise.png'
-        )
-mayonnaise.add_component(egg, 4)
-mayonnaise.add_component(olive_oil, 1)
-list_items.append(mayonnaise)
-
-olive_dip = hayday(
-		name= 'olive dip',
-		production_place = 'sauce maker',
-		level = 66,
-		production_time = td(minutes=45),
-		price_sell = 468,
-		img = '/assets/items/Olive_Dip.png'
-        )
-olive_dip.add_component(olive, 3)
-olive_dip.add_component(bread, 2)
-olive_dip.add_component(fish_fillet, 1)
-olive_dip.add_component(lemon, 1)
-list_items.append(olive_dip)
-
-lemon_curd = hayday(
-		name= 'lemon curd',
-		production_place = 'sauce maker',
-		level = 66,
-		production_time = td(minutes=25),
-		price_sell =378,
-		img = '/assets/items/Lemon_Curd.png'
-        )
-lemon_curd.add_component(lemon, 2)
-lemon_curd.add_component(butter, 1)
-lemon_curd.add_component(egg, 2)
-lemon_curd.add_component(white_sugar, 1)
-list_items.append(lemon_curd)
-
-tomato_sauce = hayday(
-		name= 'tomate sauce',
-		production_place = 'sauce maker',
-		level = 69,
-		production_time = td(minutes=30),
-		price_sell =230,
-		img = '/assets/items/Tomato_Sauce.png'
-        )
-tomato_sauce.add_component(lemon, 1)
-tomato_sauce.add_component(brown_sugar, 1)
-tomato_sauce.add_component(tomato, 2)
-list_items.append(tomato_sauce)
-
-salsa = hayday(
-		name= 'salsa',
-		production_place = 'sauce maker',
-		level = 77,
+stuffed_peppers = hayday(
+		name = 'stuffed peppers',
+		production_place = 'bbq grill',
+		level = 80,
 		production_time = td(minutes=20),
-		price_sell =252,
-		img = '/assets/items/Salsa.png'
+		price_sell =  352,
+		img = '/assets/items/Stuffed_Peppers.png'
         )
-salsa.add_component(chili_pepper, 2)
-salsa.add_component(onion, 2)
-salsa.add_component(tomato, 2)
-list_items.append(salsa)
+stuffed_peppers.add_component(bell_pepper, 3)
+stuffed_peppers.add_component(bacon, 1)
+stuffed_peppers.add_component(rice, 3)
+stuffed_peppers.add_component(cheese, 1)
+list_items.append(stuffed_peppers)
+
+grilled_eggplant = hayday(
+		name = 'grilled eggplant',
+		production_place = 'bbq grill',
+		level = 90,
+		production_time = td(minutes=40),
+		price_sell =  324,
+		img = '/assets/items/Grilled_Eggplant.png'
+        )
+grilled_eggplant.add_component(eggplant, 3)
+grilled_eggplant.add_component(salsa, 1)
+list_items.append(grilled_eggplant)
+
+banana_pancakes = hayday(
+		name = 'banana pancakes',
+		production_place = 'bbq grill',
+		level = 94,
+		production_time = td(hours=1),
+		price_sell =  352,
+		img = '/assets/items/Banana_Pancakes.png'
+        )
+banana_pancakes.add_component(banana, 1)
+banana_pancakes.add_component(blackberry, 2)
+banana_pancakes.add_component(wheat, 3)
+banana_pancakes.add_component(cream, 1)
+list_items.append(banana_pancakes)
+
+fish_skewer = hayday(
+		name = 'fish skewer',
+		production_place = 'bbq grill',
+		level = 96,
+		production_time = td(minutes=30),
+		price_sell =  176,
+		img = '/assets/items/Fish_Skewer.png'
+        )
+fish_skewer.add_component(fish_fillet, 1)
+fish_skewer.add_component(mushroom, 3)
+fish_skewer.add_component(ginger, 1)
+fish_skewer.add_component(sesame, 2)
+list_items.append(fish_skewer)
 #-----------------------------------------------------------
 #Pie oven
 
@@ -1262,6 +1432,33 @@ peach_tart.add_component(egg, 2)
 peach_tart.add_component(peach,3)
 peach_tart.add_component(wheat,2)
 list_items.append(peach_tart)
+
+mushroom_pot_pie = hayday(
+		name = 'mushroom pot pie',
+		production_place = 'pie oven',
+		level = 97,
+		production_time = td(hours=1),
+		price_sell = 162,
+		img = '/assets/items/Mushroom_Pot_Pie.png'
+        )
+mushroom_pot_pie.add_component(mushroom, 3)
+mushroom_pot_pie.add_component(cabbage, 3)
+mushroom_pot_pie.add_component(wheat, 3)
+mushroom_pot_pie.add_component(egg, 2)
+list_items.append(mushroom_pot_pie)
+
+eggplant_parmesan = hayday(
+		name = 'eggplant parmesan',
+		production_place = 'pie oven',
+		level = 99,
+		production_time = td(minutes=45),
+		price_sell = 442,
+		img = '/assets/items/Eggplant_Parmesan.png'
+        )
+eggplant_parmesan.add_component(eggplant, 4)
+eggplant_parmesan.add_component(cheese, 1)
+eggplant_parmesan.add_component(tomato_sauce, 1)
+list_items.append(eggplant_parmesan)
 
 #-----------------------------------------------------------
 #Loom (Every item already  included)
@@ -1603,6 +1800,32 @@ lemon_cake.add_component(cream, 1)
 lemon_cake.add_component(wheat, 3)
 list_items.append(lemon_cake)
 
+fruit_cake = hayday(
+		name = 'fruit cake',
+		production_place = 'cake oven',
+		level = 89,
+		production_time = td(hours=3),
+		price_sell = 450,
+		img = '/assets/items/Fruit_Cake.png'
+        )
+fruit_cake.add_component(grapes, 2)
+fruit_cake.add_component(orange, 2)
+fruit_cake.add_component(cherry, 2)
+fruit_cake.add_component(wheat, 3)
+
+chocolate_roll = hayday(
+		name = 'chocolate roll',
+		production_place = 'cake oven',
+		level = 95,
+		production_time = td(hours=1, minutes=30),
+		price_sell = 604,
+		img = '/assets/items/Chocolate_Roll.png'
+        )
+chocolate_roll.add_component(cacao, 5)
+chocolate_roll.add_component(cream, 1)
+chocolate_roll.add_component(wheat, 3)
+chocolate_roll.add_component(mint, 3)
+list_items.append(chocolate_roll)
 #--------------------------------------------------------------------------------
 #Smelter (Every item already included)
 
@@ -1741,6 +1964,28 @@ orange_juice = hayday(
 orange_juice.add_component(orange, 2)
 list_items.append(orange_juice)
 
+grape_juice = hayday(
+		name = 'grape juice',
+		production_place = 'juice press',
+		level = 84,
+		production_time = td(hours=2, minutes=30),
+		price_sell = 104,
+		img = '/assets/items/Grape_Juice.png'
+        )
+grape_juice.add_component(grapes, 2)
+list_items.append(grape_juice)
+
+
+watermelon_juice = hayday(
+		name = 'watermelon juice',
+		production_place = 'juice press',
+		level = 92,
+		production_time = td(hours=1),
+		price_sell = 108,
+		img = '/assets/items/Watermelon_Juice.png'
+        )
+watermelon_juice.add_component(watermelon, 2)
+list_items.append(watermelon_juice)
 #------------------------------------------------------------
 #Ice cream maker
 
@@ -1836,6 +2081,46 @@ orange_sorbet.add_component(honey, 1)
 orange_sorbet.add_component(orange, 2)
 list_items.append(orange_sorbet)
 
+peach_ice_cream = hayday(
+		name = 'peach ice cream',
+		production_place = 'ice cream maker',
+		level = 83,
+		production_time = td(hours=3),
+		price_sell = 450,
+		img = '/assets/items/Peach_Ice_Cream.png'
+        )
+peach_ice_cream.add_component(cream, 1)
+peach_ice_cream.add_component(honey, 1)
+peach_ice_cream.add_component(peach, 2)
+list_items.append(peach_ice_cream)
+
+
+mint_ice_cream = hayday(
+		name = 'mint ice cream',
+		production_place = 'ice cream maker',
+		level = 85,
+		production_time = td(hours=2, minutes=15),
+		price_sell = 288,
+		img = '/assets/items/Mint_Ice_Cream.png'
+        )
+mint_ice_cream.add_component(cream, 1)
+mint_ice_cream.add_component(white_sugar, 1)
+mint_ice_cream.add_component(mint, 2)
+mint_ice_cream.add_component(cacao, 1)
+list_items.append(mint_ice_cream)
+
+banana_split = hayday(
+		name = 'banana split',
+		production_place = 'ice cream maker',
+		level = 96,
+		production_time = td(hours=3, minutes=30),
+		price_sell = 403,
+		img = '/assets/items/Banana_Split.png'
+        )
+banana_split.add_component(banana, 1)
+banana_split.add_component(cream, 1)
+banana_split.add_component(cherry, 3)
+list_items.append(banana_split)
 #------------------------------------------------------------
 #Jam maker
 
@@ -1916,6 +2201,28 @@ peach_jam = hayday(
 peach_jam.add_component(peach, 3)
 list_items.append(peach_jam)
 
+grape_jam = hayday(
+		name = 'grape jam',
+		production_place = 'jam maker',
+		level = 85,
+		production_time = td(hours=6, minutes=30),
+		price_sell = 162,
+		img = '/assets/items/Grape_Jam.png'
+        )
+grape_jam.add_component(grapes, 3)
+list_items.append(grape_jam)
+
+plum_jam = hayday(
+		name = 'plum jam',
+		production_place = 'jam maker',
+		level = 94,
+		production_time = td(hours=5),
+		price_sell = 385,
+		img = '/assets/items/Plum_Jam.png'
+        )
+plum_jam.add_component(plum, 3)
+list_items.append(plum_jam)
+
 #------------------------------------------------------------
 #Jeweler
 
@@ -1969,6 +2276,19 @@ iron_bracelet.add_component(silver_bar, 1)
 iron_bracelet.add_component(refined_coal, 2)
 iron_bracelet.add_component(iron_bar, 2)
 list_items.append(iron_bracelet)
+
+flower_pendant = hayday(
+		name = 'flower pendant',
+		production_place = 'jeweler',
+		level = 98,
+		production_time = td(hours=1),
+		price_sell = 698,
+		img = '/assets/items/Flower_Pendant.png'
+        )
+flower_pendant.add_component(peony, 3)
+flower_pendant.add_component(platinum_bar, 1)
+flower_pendant.add_component(gold_bar, 2)
+list_items.append(flower_pendant)
 
 #------------------------------------------------------------
 #Candy machine (Every item already included)
@@ -2154,6 +2474,19 @@ caramel_latte.add_component(coffee_bean, 2)
 caramel_latte.add_component(toffee, 1)
 caramel_latte.add_component(milk, 1)
 list_items.append(caramel_latte)
+
+iced_banana_latte = hayday(
+		name = 'iced banana latte',
+		production_place = 'coffee kiosk',
+		level = 88,
+		production_time = td(minutes=20),
+		price_sell = 277,
+		img = '/assets/items/Iced_Banana_Latte.png'
+        )
+iced_banana_latte.add_component(banana, 1)
+iced_banana_latte.add_component(coffee_bean, 2)
+iced_banana_latte.add_component(milk, 1)
+list_items.append(iced_banana_latte)
 #------------------------------------------------------------
 #Pasta maker (Every item already included)
 
@@ -2293,6 +2626,45 @@ potato_soup.add_component(onion, 2)
 potato_soup.add_component(milk, 1)
 list_items.append(potato_soup)
 
+bell_pepper_soup = hayday(
+		name = 'bell pepper soup',
+		production_place = 'soup kitchen',
+		level = 81,
+		production_time = td(hours=1),
+		price_sell = 439,
+		img = '/assets/items/Bell_Pepper_Soup.png'
+        )
+bell_pepper_soup.add_component(bread, 1)
+bell_pepper_soup.add_component(olive_oil, 1)
+bell_pepper_soup.add_component(chili_pepper, 1)
+bell_pepper_soup.add_component(bell_pepper, 2)
+list_items.append(bell_pepper_soup)
+
+broccoli_soup = hayday(
+		name = 'broccoli soup',
+		production_place = 'soup kitchen',
+		level = 87,
+		production_time = td(hours=1, minutes=30),
+		price_sell = 237,
+		img = '/assets/items/Broccoli_Soup.png'
+        )
+broccoli_soup.add_component(broccoli, 3)
+broccoli_soup.add_component(onion, 1)
+broccoli_soup.add_component(potato, 3)
+list_items.append(broccoli_soup)
+
+mushroom_soup = hayday(
+		name = 'mushroom soup',
+		production_place = 'soup kitchen',
+		level = 104,
+		production_time = td(hours=1, minutes=20),
+		price_sell = 176,
+		img = '/assets/items/Mushroom_Soup.png'
+        )
+mushroom_soup.add_component(mushroom, 3)
+mushroom_soup.add_component(milk, 1)
+mushroom_soup.add_component(onion, 2)
+list_items.append(mushroom_soup)
 #------------------------------------------------------------
 #Candle maker
 strawberry_candle = hayday(
@@ -2333,6 +2705,35 @@ lemon_candle = hayday(
 lemon_candle.add_component(beeswax, 1)
 lemon_candle.add_component(lemon, 2)
 list_items.append(lemon_candle)
+
+colorful_candles = hayday(
+		name= 'colorful candles',
+		production_place = 'candle maker',
+		level = 84,
+		production_time = td(hours=1, minutes=50),
+		price_sell = 324,
+		img = '/assets/items/Party_Candles.png'
+        )
+
+colorful_candles.add_component(beeswax, 1)
+colorful_candles.add_component(strawberry, 1)
+colorful_candles.add_component(carrot, 1)
+list_items.append(colorful_candles)
+
+floral_candle = hayday(
+		name= 'floral candle',
+		production_place = 'candle maker',
+		level = 95,
+		production_time = td(hours=2),
+		price_sell = 442,
+		img = '/assets/items/Floral_Candle.png'
+        )
+
+floral_candle.add_component(beeswax, 1)
+floral_candle.add_component(peony, 2)
+floral_candle.add_component(sunflower, 2)
+floral_candle.add_component(indigo, 2)
+list_items.append(floral_candle)
 
 #------------------------------------------------------------
 #Flower shop
@@ -2377,6 +2778,60 @@ gracious_bouquet.add_component(lily, 5)
 gracious_bouquet.add_component(gold_ore, 1)
 # bright_bouquet.add_component(diamond, 5)
 list_items.append(gracious_bouquet)
+
+candy_bouquet = hayday(
+		name= 'candy bouquet',
+		production_place = 'flower shop',
+		level = 90,
+		production_time = td(minutes=20),
+		price_sell = 554,
+		img = '/assets/items/Candy_Bouquet.png'
+        )
+candy_bouquet.add_component(peony, 3)
+candy_bouquet.add_component(caramel_apple, 1)
+candy_bouquet.add_component(toffee, 1)
+list_items.append(candy_bouquet)
+
+birthday_bouquet = hayday(
+		name= 'birthday bouquet',
+		production_place = 'flower shop',
+		level = 92,
+		production_time = td(minutes=20),
+		price_sell = 349,
+		img = '/assets/items/Birthday_Bouquet.png'
+        )
+birthday_bouquet.add_component(cherry_juice, 1)
+birthday_bouquet.add_component(peony, 3)
+birthday_bouquet.add_component(lily, 1)
+birthday_bouquet.add_component(indigo, 1)
+list_items.append(birthday_bouquet)
+
+soft_bouquet = hayday(
+		name= 'soft bouquet',
+		production_place = 'flower shop',
+		level = 93,
+		production_time = td(minutes=30),
+		price_sell = 298,
+		img = '/assets/items/Soft_Bouquet.png'
+        )
+soft_bouquet.add_component(peony, 4)
+soft_bouquet.add_component(cotton, 1)
+soft_bouquet.add_component(cotton_fabric, 1)
+list_items.append(soft_bouquet)
+
+veggie_bouquet = hayday(
+		name= 'veggie bouquet',
+		production_place = 'flower shop',
+		level = 106,
+		production_time = td(minutes=15),
+		price_sell = 352,
+		img = '/assets/items/Veggie_Bouquet.png'
+        )
+veggie_bouquet.add_component(broccoli, 3)
+veggie_bouquet.add_component(tomato, 3)
+veggie_bouquet.add_component(mushroom, 3)
+veggie_bouquet.add_component(cotton_fabric, 1)
+list_items.append(veggie_bouquet)
 #------------------------------------------------------------
 #Sushi bar
 
@@ -2433,6 +2888,19 @@ big_sushi_roll.add_component(rice, 20)
 big_sushi_roll.add_component(egg, 3)
 big_sushi_roll.add_component(lettuce, 5)
 list_items.append(big_sushi_roll)
+
+rice_ball = hayday(
+		name= 'rice ball',
+		production_place = 'sushi bar',
+		level = 110,
+		production_time = td(minutes=45),
+		price_sell = 464,
+		img = '/assets/items/Rice_Ball.png'
+        )
+rice_ball.add_component(rice, 20)
+rice_ball.add_component(sesame, 1)
+rice_ball.add_component(plum, 1)
+list_items.append(rice_ball)
 
 #------------------------------------------------------------
 #Salad bar
@@ -2545,6 +3013,48 @@ summer_rolls.add_component(lettuce, 1)
 summer_rolls.add_component(chili_pepper, 1)
 list_items.append(summer_rolls)
 
+fruit_salad = hayday(
+		name= 'fruit salad',
+		production_place = 'salad bar',
+		level = 82,
+		production_time = td(hours=2),
+		price_sell = 597,
+		img = '/assets/items/Fruit_Salad.png'
+        )
+fruit_salad.add_component(blackberry, 2)
+fruit_salad.add_component(honey, 1)
+fruit_salad.add_component(orange, 1)
+fruit_salad.add_component(strawberry, 3)
+list_items.append(fruit_salad)
+
+
+summer_salad = hayday(
+		name= 'summer salad',
+		production_place = 'salad bar',
+		level = 84,
+		production_time = td(hours=3),
+		price_sell = 554,
+		img = '/assets/items/Summer_Salad.png'
+        )
+summer_salad.add_component(goat_cheese, 1)
+summer_salad.add_component(onion, 3)
+summer_salad.add_component(peach, 1)
+summer_salad.add_component(tomato, 3)
+list_items.append(summer_salad)
+
+mushroom_salad = hayday(
+		name= 'mushroom salad',
+		production_place = 'salad bar',
+		level = 89,
+		production_time = td(hours=1),
+		price_sell = 216,
+		img = '/assets/items/Mushroom_Salad.png'
+        )
+mushroom_salad.add_component(mushroom, 3)
+mushroom_salad.add_component(lettuce, 1)
+mushroom_salad.add_component(potato, 2)
+mushroom_salad.add_component(bacon, 1)
+list_items.append(mushroom_salad)
 #------------------------------------------------------------
 #Sandwich bar
 
@@ -2630,6 +3140,32 @@ cucumber_sandwich.add_component(mayonnaise, 1)
 cucumber_sandwich.add_component(bread, 2)
 list_items.append(cucumber_sandwich)
 
+onion_melt = hayday(
+		name= 'onion melt',
+		production_place = 'sandwich bar',
+		level = 84,
+		production_time = td(hours=1, minutes=30),
+		price_sell = 417,
+		img = '/assets/items/Onion_Melt.png'
+        )
+onion_melt.add_component(corn_bread, 2)
+onion_melt.add_component(onion, 3)
+onion_melt.add_component(cheese, 1)
+list_items.append(onion_melt)
+
+
+goat_cheese_toast = hayday(
+		name= 'goat cheese toast',
+		production_place = 'sandwich bar',
+		level = 92,
+		production_time = td(minutes=50),
+		price_sell = 302,
+		img = '/assets/items/Goat_Cheese_Toast.png'
+        )
+goat_cheese_toast.add_component(grapes, 3)
+goat_cheese_toast.add_component(goat_cheese, 1)
+goat_cheese_toast.add_component(bread, 1)
+list_items.append(goat_cheese_toast)
 
 #------------------------------------------------------------
 #Smoothie Mixer
@@ -2686,6 +3222,72 @@ cucumber_smoothie.add_component(cucumber, 3)
 cucumber_smoothie.add_component(honey, 1)
 cucumber_smoothie.add_component(pineapple, 3)
 list_items.append(cucumber_smoothie)
+
+mixed_smoothie = hayday(
+		name = 'mixed smoothie',
+		production_place = 'smoothie mixer',
+		level = 88,
+		production_time = td(minutes=30),
+		price_sell = 504,
+		img = '/assets/items/Mixed_Smoothie.png'
+        )
+mixed_smoothie.add_component(lemon, 1)
+mixed_smoothie.add_component(orange, 2)
+mixed_smoothie.add_component(peach, 2)
+list_items.append(mixed_smoothie)
+
+black_sesame_smoothie = hayday(
+		name = 'black sesame smoothie',
+		production_place = 'smoothie mixer',
+		level = 93,
+		production_time = td(minutes=45),
+		price_sell = 313,
+		img = '/assets/items/Black_Sesame_Smoothie.png'
+        )
+black_sesame_smoothie.add_component(sesame, 3)
+black_sesame_smoothie.add_component(banana, 1)
+black_sesame_smoothie.add_component(goat_milk, 2)
+list_items.append(black_sesame_smoothie)
+
+cocoa_smoothie = hayday(
+		name = 'cocoa smoothie',
+		production_place = 'smoothie mixer',
+		level = 100,
+		production_time = td(minutes=40),
+		price_sell = 511,
+		img = '/assets/items/Cocoa_Smoothie.png'
+        )
+cocoa_smoothie.add_component(banana, 2)
+cocoa_smoothie.add_component(cacao, 3)
+cocoa_smoothie.add_component(milk, 1)
+list_items.append(cocoa_smoothie)
+
+plum_smoothie = hayday(
+		name = 'plum smoothie',
+		production_place = 'smoothie mixer',
+		level = 102,
+		production_time = td(minutes=35),
+		price_sell = 522,
+		img = '/assets/items/Plum_Smoothie.png'
+        )
+plum_smoothie.add_component(plum, 3)
+plum_smoothie.add_component(grapes, 2)
+plum_smoothie.add_component(mint, 1)
+plum_smoothie.add_component(honey, 1)
+list_items.append(plum_smoothie)
+
+caramel_latte = hayday(
+		name = 'caramel latte',
+		production_place = 'coffee kiosk',
+		level = 62,
+		production_time = td(minutes=15),
+		price_sell = 345,
+		img = '/assets/items/Caramel_Latte.png'
+        )
+caramel_latte.add_component(coffee_bean, 2)
+caramel_latte.add_component(toffee, 1)
+caramel_latte.add_component(milk, 1)
+list_items.append(caramel_latte)
 #------------------------------------------------------------
 # Wok kitchen
 
@@ -2714,6 +3316,34 @@ spicy_fish.add_component(chili_pepper, 3)
 spicy_fish.add_component(garlic, 5)
 spicy_fish.add_component(olive_oil, 1)
 list_items.append(spicy_fish)
+
+peanut_noodles = hayday(
+		name = 'peanut noodles',
+		production_place = 'wok kitchen',
+		level = 86,
+		production_time = td(minutes=45),
+		price_sell = 597,
+		img = '/assets/items/Peanut_Noodles.png'
+        )
+peanut_noodles.add_component(ginger, 1)
+peanut_noodles.add_component(rice_noodles, 1)
+peanut_noodles.add_component(soy_sauce, 1)
+peanut_noodles.add_component(peanuts, 1)
+list_items.append(peanut_noodles)
+
+tofu_stir_fry = hayday(
+		name = 'tofu stir fry',
+		production_place = 'wok kitchen',
+		level = 89,
+		production_time = td(hours=1, minutes=15),
+		price_sell = 306,
+		img = '/assets/items/Tofu_Stir_Fry.png'
+        )
+tofu_stir_fry.add_component(soybean, 3)
+tofu_stir_fry.add_component(onion, 3)
+tofu_stir_fry.add_component(broccoli, 3)
+tofu_stir_fry.add_component(sesame, 3)
+list_items.append(tofu_stir_fry)
 
 #------------------------------------------------------------
 # Hat maker
@@ -2756,6 +3386,18 @@ sun_hat.add_component(indigo, 1)
 sun_hat.add_component(duck_feather, 2)
 sun_hat.add_component(raspberry, 1)
 list_items.append(sun_hat)
+
+flower_crown = hayday(
+		name = 'flower crown',
+		production_place = 'hat maker',
+		level = 86,
+		production_time = td(hours=2),
+		price_sell = 331,
+		img = '/assets/items/Flower_Crown.png'
+        )
+flower_crown.add_component(peony, 5)
+flower_crown.add_component(cotton, 4)
+list_items.append(flower_crown)
 #------------------------------------------------------------
 # Pasta Kitchen
 
@@ -2801,6 +3443,59 @@ lobster_pasta.add_component(fresh_pasta, 3)
 lobster_pasta.add_component(tomato, 4)
 list_items.append(lobster_pasta)
 
+pasta_carbonara = hayday(
+		name = 'pasta carbonara',
+		production_place = 'pasta kitchen',
+		level= 83,
+		production_time = td(hours=2, minutes=30),
+		price_sell = 410,
+		img = '/assets/items/Pasta_Carbonara.png'
+)
+pasta_carbonara.add_component(fresh_pasta, 3)
+pasta_carbonara.add_component(bacon, 2)
+pasta_carbonara.add_component(egg, 1)
+pasta_carbonara.add_component(cheese, 1)
+list_items.append(pasta_carbonara)
+
+broccoli_pasta = hayday(
+		name = 'broccoli pasta',
+		production_place = 'pasta kitchen',
+		level= 83,
+		production_time = td(hours=1),
+		price_sell = 345,
+		img = '/assets/items/Broccoli_Pasta.png'
+)
+broccoli_pasta.add_component(broccoli, 3)
+broccoli_pasta.add_component(cheese, 1)
+broccoli_pasta.add_component(fresh_pasta, 3)
+list_items.append(broccoli_pasta)
+
+spicy_pasta = hayday(
+		name = 'spicy pasta',
+		production_place = 'pasta kitchen',
+		level= 87,
+		production_time = td(hours=1, minutes=30),
+		price_sell = 576,
+		img = '/assets/items/Spicy_Pasta.png'
+)
+spicy_pasta.add_component(fresh_pasta, 3)
+spicy_pasta.add_component(tomato_sauce, 1)
+spicy_pasta.add_component(chili_pepper, 3)
+spicy_pasta.add_component(onion, 2)
+list_items.append(spicy_pasta)
+
+mushroom_pasta = hayday(
+		name = 'mushroom pasta',
+		production_place = 'pasta kitchen',
+		level= 101,
+		production_time = td(hours=1, minutes=15),
+		price_sell = 280,
+		img = '/assets/items/Mushroom_Pasta.png'
+)
+mushroom_pasta.add_component(mushroom, 5)
+mushroom_pasta.add_component(fresh_pasta, 3)
+mushroom_pasta.add_component(goat_milk, 1)
+list_items.append(mushroom_pasta)
 #------------------------------------------------------------
 # Hot Dog Stand
 
@@ -2843,6 +3538,20 @@ corn_dog.add_component(corn, 4)
 corn_dog.add_component(olive_oil, 1)
 list_items.append(corn_dog)
 
+onion_dog = hayday(
+		name = 'onion dog',
+		production_place = 'hot dog stand',
+		level= 80,
+		production_time = td(hours=1, minutes=15),
+		price_sell =306,
+		img = '/assets/items/Onion_Dog.png'
+)
+onion_dog.add_component(bacon, 2)
+onion_dog.add_component(bread, 1)
+onion_dog.add_component(chili_pepper, 1)
+onion_dog.add_component(onion, 3)
+list_items.append(onion_dog)
+
 #------------------------------------------------------------
 # Donut Maker
 
@@ -2872,6 +3581,56 @@ sprinkled_donut.add_component(plain_donut, 1)
 sprinkled_donut.add_component(cacao, 2)
 list_items.append(sprinkled_donut)
 
+crunchy_donut = hayday(
+		name = 'crunchy donut',
+		production_place = 'donut maker',
+		level= 82,
+		production_time = td(minutes=30),
+		price_sell = 594,
+		img = '/assets/items/Crunchy_Donut.png'
+)
+crunchy_donut.add_component(plain_donut, 1)
+crunchy_donut.add_component(cacao, 1)
+crunchy_donut.add_component(peanuts, 1)
+list_items.append(crunchy_donut)
+
+cream_donut = hayday(
+		name = 'cream donut',
+		production_place = 'donut maker',
+		level= 86,
+		production_time = td(minutes=25),
+		price_sell = 230,
+		img = '/assets/items/Cream_Donut.png'
+)
+cream_donut.add_component(plain_donut, 1)
+cream_donut.add_component(cream, 1)
+cream_donut.add_component(brown_sugar, 1)
+list_items.append(cream_donut)
+
+bacon_donut = hayday(
+		name = 'bacon donut',
+		production_place = 'donut maker',
+		level= 88,
+		production_time = td(minutes=30),
+		price_sell = 388,
+		img = '/assets/items/Bacon_Donut.png'
+)
+bacon_donut.add_component(plain_donut, 1)
+bacon_donut.add_component(bacon, 3)
+bacon_donut.add_component(syrup, 1)
+list_items.append(bacon_donut)
+
+filled_donut = hayday(
+		name = 'filled donut',
+		production_place = 'donut maker',
+		level= 93,
+		production_time = td(minutes=35),
+		price_sell = 403,
+		img = '/assets/items/Filled_Donut.png'
+)
+filled_donut.add_component(plain_donut, 1)
+filled_donut.add_component(raspberry_jam, 1)
+list_items.append(filled_donut)
 #------------------------------------------------------------
 # Taco Kitchen
 
@@ -2901,3 +3660,279 @@ fish_taco.add_component(corn_bread, 2)
 fish_taco.add_component(fish_fillet, 1)
 fish_taco.add_component(lemon, 1)
 list_items.append(fish_taco)
+
+quesadillas = hayday(
+		name = 'quesadillas',
+		production_place = 'taco kitchen',
+		level= 82,
+		production_time = td(hours=1),
+		price_sell = 241,
+		img = '/assets/items/Quesadilla.png'
+)
+quesadillas.add_component(cheese, 1)
+quesadillas.add_component(chili_pepper, 2)
+quesadillas.add_component(wheat, 4)
+list_items.append(quesadillas)
+
+nachos = hayday(
+		name = 'nachos',
+		production_place = 'taco kitchen',
+		level= 87,
+		production_time = td(hours=1, minutes=15),
+		price_sell = 432,
+		img = '/assets/items/Nachos.png'
+)
+nachos.add_component(cheese, 1)
+nachos.add_component(corn, 4)
+nachos.add_component(salsa, 1)
+nachos.add_component(lemon, 1)
+list_items.append(nachos)
+#------------------------------------------------------------
+# Tea stand
+green_tea = hayday(
+		name = 'green tea',
+		production_place = 'tea stand',
+		level= 80,
+		production_time = td(minutes=30),
+		price_sell = 241,
+		img = '/assets/items/Green_Tea.png'
+)
+green_tea.add_component(tea_leaf, 5)
+list_items.append(green_tea)
+
+milk_tea = hayday(
+		name = 'milk tea',
+		production_place = 'tea stand',
+		level= 81,
+		production_time = td(minutes=45),
+		price_sell = 190,
+		img = '/assets/items/Milk_Tea.png'
+)
+milk_tea.add_component(tea_leaf, 3)
+milk_tea.add_component(milk, 1)
+list_items.append(milk_tea)
+
+honey_tea = hayday(
+		name = 'honey tea',
+		production_place = 'tea stand',
+		level= 83,
+		production_time = td(minutes=40),
+		price_sell = 313,
+		img = '/assets/items/Honey_Tea.png'
+)
+honey_tea.add_component(tea_leaf, 3)
+honey_tea.add_component(honey, 1)
+list_items.append(honey_tea)
+
+lemon_tea = hayday(
+		name = 'lemon tea',
+		production_place = 'tea stand',
+		level= 86,
+		production_time = td(minutes=20),
+		price_sell = 241,
+		img = '/assets/items/Lemon_Tea.png'
+)
+lemon_tea.add_component(tea_leaf, 3)
+lemon_tea.add_component(lemon, 1)
+list_items.append(lemon_tea)
+
+apple_ginger_tea = hayday(
+		name = 'apple ginger tea',
+		production_place = 'tea stand',
+		level= 88,
+		production_time = td(minutes=30),
+		price_sell = 169,
+		img = '/assets/items/Apple_Ginger_Tea.png'
+)
+apple_ginger_tea.add_component(ginger, 1)
+apple_ginger_tea.add_component(apple, 2)
+apple_ginger_tea.add_component(tea_leaf, 1)
+list_items.append(apple_ginger_tea)
+
+orange_tea = hayday(
+		name = 'orange tea',
+		production_place = 'tea stand',
+		level= 89,
+		production_time = td(minutes=40),
+		price_sell = 255,
+		img = '/assets/items/Orange_Tea.png'
+)
+orange_tea.add_component(orange, 1)
+orange_tea.add_component(tea_leaf, 3)
+list_items.append(orange_tea)
+
+iced_tea = hayday(
+		name = 'iced tea',
+		production_place = 'tea stand',
+		level= 92,
+		production_time = td(minutes=30),
+		price_sell = 252,
+		img = '/assets/items/Iced_Tea.png'
+)
+iced_tea.add_component(peach, 1)
+iced_tea.add_component(tea_leaf, 3)
+list_items.append(iced_tea)
+
+mint_tea = hayday(
+		name = 'mint tea',
+		production_place = 'tea stand',
+		level= 97,
+		production_time = td(minutes=35),
+		price_sell = 255,
+		img = '/assets/items/Mint_Tea.png'
+)
+mint_tea.add_component(tea_leaf, 3)
+mint_tea.add_component(watermelon, 1)
+mint_tea.add_component(mint, 3)
+list_items.append(mint_tea)
+
+#------------------------------------------------------------
+# Fondue Pot
+chocolate_fondue = hayday(
+		name = 'chocolate fondue',
+		production_place = 'fondue pot',
+		level= 81,
+		production_time = td(minutes=25),
+		price_sell = 626,
+		img = '/assets/items/Chocolate_Fondue.png'
+)
+chocolate_fondue.add_component(chocolate, 1)
+chocolate_fondue.add_component(strawberry, 3)
+list_items.append(chocolate_fondue)
+
+bacon_fondue = hayday(
+		name = 'bacon fondue',
+		production_place = 'fondue pot',
+		level= 86,
+		production_time = td(minutes=30),
+		price_sell = 507,
+		img = '/assets/items/Bacon_Fondue.png'
+)
+bacon_fondue.add_component(bacon, 3)
+bacon_fondue.add_component(broccoli, 1)
+bacon_fondue.add_component(bell_pepper, 1)
+bacon_fondue.add_component(olive_oil, 1)
+list_items.append(bacon_fondue)
+
+cheese_fondue = hayday(
+		name = 'cheese fondue',
+		production_place = 'fondue pot',
+		level= 91,
+		production_time = td(minutes=20),
+		price_sell = 493,
+		img = '/assets/items/Cheese_Fondue.png'
+)
+cheese_fondue.add_component(potato_bread, 1)
+cheese_fondue.add_component(cheese, 1)
+cheese_fondue.add_component(mushroom, 2)
+cheese_fondue.add_component(tomato, 1)
+list_items.append(cheese_fondue)
+#------------------------------------------------------------
+# Bath kiosk
+
+lemon_lotion = hayday(
+		name = 'lemon lotion',
+		production_place = 'bath kiosk',
+		level= 84,
+		production_time = td(hours=1, minutes=15),
+		price_sell = 403,
+		img = '/assets/items/Lemon_Lotion.png'
+)
+lemon_lotion.add_component(olive_oil, 1)
+lemon_lotion.add_component(lemon, 1)
+list_items.append(lemon_lotion)
+
+honey_soap = hayday(
+		name = 'honey soap',
+		production_place = 'bath kiosk',
+		level= 84,
+		production_time = td(hours=1),
+		price_sell = 327,
+		img = '/assets/items/Honey_Soap.png'
+)
+honey_soap.add_component(goat_milk, 1)
+honey_soap.add_component(cacao, 2)
+honey_soap.add_component(honeycomb, 1)
+list_items.append(honey_soap)
+
+exfoliating_soap = hayday(
+		name = 'exfoliating soap',
+		production_place = 'bath kiosk',
+		level= 93,
+		production_time = td(hours=1),
+		price_sell = 363,
+		img = '/assets/items/Exfoliating_Soap.png'
+)
+exfoliating_soap.add_component(cacao, 2)
+exfoliating_soap.add_component(coffee_bean, 2)
+exfoliating_soap.add_component(raspberry, 1)
+list_items.append(exfoliating_soap)
+
+honey_face_mask = hayday(
+		name = 'honey face mask',
+		production_place = 'bath kiosk',
+		level= 99,
+		production_time = td(hours=1, minutes=30),
+		price_sell = 320,
+		img = '/assets/items/Honey_Face_Mask.png'
+)
+honey_face_mask.add_component(egg, 2)
+honey_face_mask.add_component(honey, 1)
+honey_face_mask.add_component(lemon, 1)
+list_items.append(honey_face_mask)
+#------------------------------------------------------------
+#  Deep Fryer
+
+bacon_fries = hayday(
+		name = 'bacon fries',
+		production_place = 'deep fryer',
+		level= 87,
+		production_time = td(minutes=25),
+		price_sell = 302,
+		img = '/assets/items/Bacon_Fries.png'
+)
+bacon_fries.add_component(chili_pepper, 1)
+bacon_fries.add_component(bacon, 2)
+bacon_fries.add_component(potato, 4)
+bacon_fries.add_component(garlic, 1)
+list_items.append(bacon_fries)
+
+hand_pies = hayday(
+		name = 'hand pies',
+		production_place = 'deep fryer',
+		level= 91,
+		production_time = td(minutes=20),
+		price_sell = 295,
+		img = '/assets/items/Hand_Pies.png'
+)
+hand_pies.add_component(apple_jam, 1)
+hand_pies.add_component(egg, 2)
+hand_pies.add_component(wheat, 5)
+list_items.append(hand_pies)
+
+chili_poppers = hayday(
+		name = 'chili poppers',
+		production_place = 'deep fryer',
+		level= 98,
+		production_time = td(minutes=40),
+		price_sell = 406,
+		img = '/assets/items/Chili_Poppers.png'
+)
+chili_poppers.add_component(chili_pepper, 3)
+chili_poppers.add_component(wheat, 1)
+chili_poppers.add_component(bacon, 3)
+chili_poppers.add_component(cheese, 1)
+list_items.append(chili_poppers)
+
+fried_candy_bar = hayday(
+		name = 'fried candy bar',
+		production_place = 'deep fryer',
+		level= 100,
+		production_time = td(minutes=15),
+		price_sell = 658,
+		img = '/assets/items/Fried_Candy_Bar.png'
+)
+fried_candy_bar.add_component(cacao, 3)
+fried_candy_bar.add_component(cookie, 1)
+fried_candy_bar.add_component(peanuts, 3)
+list_items.append(fried_candy_bar)
