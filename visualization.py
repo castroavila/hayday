@@ -67,12 +67,25 @@ app.layout = html.Div([
                 options = [{'label': i, 'value':i} for i in df['place'].unique()],
                 value=['bakery'],
                 multi=True,
-                style = {'width':'50%'}
+                style = {'width':'80%'}
             ),
             html.Button('Update', id='button',
                         style={'align-items':'left'}        )
         ],
-        style = {'widht': '50%', 'display':'flex', 'align-items': 'center'}
+        style = {'widht': '100%', 'display':'flex', 'align-items': 'center'}
+    ),
+    html.Br(),
+    html.Br(),
+    html.Div(
+        [
+            dcc.Checklist(
+                id='options',
+                options=[
+                    {'label': 'Every place', 'value': 'everyplace'}
+                ],
+                value = []
+            )
+        ]
     ),
     #dcc.Graph(figure=cases), dcc.Graph(figure=deads)
     dcc.Graph(id='plot_place', figure={}),
@@ -162,5 +175,16 @@ def click_on(clickData):
 
 
         return item_img, [message]
+
+
+@app.callback(
+    Output('place', 'value'),
+    Input('options', 'value')
+)
+def check_options(options):
+    if 'everyplace' in options:
+        return  list(list_places())
+    else:
+        return ['bakery']
 
 app.run_server(debug=True, use_reloader=True)  # Turn off reloader if inside Jupyter
