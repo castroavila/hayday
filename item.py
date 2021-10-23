@@ -434,6 +434,16 @@ banana = hayday(
         )
 list_items.append(banana)
 
+passion_fruit = hayday(
+		name = 'passion fruit',
+		production_place = 'farm',
+		level = 88,
+		production_time = td(hours=1),
+		price_sell = 18,
+        img = '/assets/items/Passion_Fruit.png'
+        )
+list_items.append(passion_fruit)
+
 mushroom = hayday(
 		name = 'mushroom',
 		production_place = 'farm',
@@ -1087,6 +1097,19 @@ salsa.add_component(chili_pepper, 2)
 salsa.add_component(onion, 2)
 salsa.add_component(tomato, 2)
 list_items.append(salsa)
+
+tart_dressing = hayday(
+		name= 'tart dressing',
+		production_place = 'sauce maker',
+		level = 100,
+		production_time = td(minutes=30),
+		price_sell =288,
+		img = '/assets/items/Tart_Dressing.png'
+        )
+tart_dressing.add_component(passion_fruit, 2)
+tart_dressing.add_component(chili_pepper, 2)
+tart_dressing.add_component(honey, 2)
+list_items.append(tart_dressing)
 #-----------------------------------------------------------
 #BBQ grill
 
@@ -1432,6 +1455,19 @@ peach_tart.add_component(egg, 2)
 peach_tart.add_component(peach,3)
 peach_tart.add_component(wheat,2)
 list_items.append(peach_tart)
+
+passion_fruit_pie = hayday(
+		name = 'passion fruit pie',
+		production_place = 'pie oven',
+		level = 92,
+		production_time = td(minutes=50),
+		price_sell = 111,
+		img = '/assets/items/Passion_Fruit_Pie.png'
+        )
+passion_fruit_pie.add_component(passion_fruit, 3)
+passion_fruit_pie.add_component(wheat, 1)
+passion_fruit_pie.add_component(egg, 2)
+list_items.append(passion_fruit_pie)
 
 mushroom_pot_pie = hayday(
 		name = 'mushroom pot pie',
@@ -2222,6 +2258,17 @@ plum_jam = hayday(
         )
 plum_jam.add_component(plum, 3)
 list_items.append(plum_jam)
+
+passion_fruit_jam = hayday(
+		name = 'passion fruit jam',
+		production_place = 'jam maker',
+		level = 96,
+		production_time = td(hours=3, minutes=20),
+		price_sell = 118,
+        img = 'items/Passion_Fruit_Jam.png'
+        )
+passion_fruit_jam.add_component(passion_fruit, 3)
+list_items.append(passion_fruit_jam)
 
 #------------------------------------------------------------
 #Jeweler
@@ -3685,7 +3732,6 @@ nachos = hayday(
 nachos.add_component(cheese, 1)
 nachos.add_component(corn, 4)
 nachos.add_component(salsa, 1)
-nachos.add_component(lemon, 1)
 list_items.append(nachos)
 #------------------------------------------------------------
 # Tea stand
@@ -3783,7 +3829,7 @@ mint_tea = hayday(
 )
 mint_tea.add_component(tea_leaf, 3)
 mint_tea.add_component(watermelon, 1)
-mint_tea.add_component(mint, 3)
+mint_tea.add_component(mint, 1)
 list_items.append(mint_tea)
 
 #------------------------------------------------------------
@@ -3934,5 +3980,5 @@ fried_candy_bar = hayday(
 )
 fried_candy_bar.add_component(cacao, 3)
 fried_candy_bar.add_component(cookie, 1)
-fried_candy_bar.add_component(peanuts, 3)
+fried_candy_bar.add_component(peanuts, 1)
 list_items.append(fried_candy_bar)
