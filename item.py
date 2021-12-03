@@ -2011,6 +2011,17 @@ grape_juice = hayday(
 grape_juice.add_component(grapes, 2)
 list_items.append(grape_juice)
 
+passion_fruit_juice = hayday(
+		name = 'passion fruit juice',
+		production_place = 'juice press',
+		level = 88,
+		production_time = td(minutes=45),
+		price_sell = 104,
+		img = '/assets/items/Passion_Fruit_Juice.png'
+        )
+passion_fruit_juice.add_component(passion_fruit, 2)
+list_items.append(passion_fruit_juice)
+
 
 watermelon_juice = hayday(
 		name = 'watermelon juice',
@@ -2116,6 +2127,18 @@ orange_sorbet = hayday(
 orange_sorbet.add_component(honey, 1)
 orange_sorbet.add_component(orange, 2)
 list_items.append(orange_sorbet)
+
+affogato = hayday(
+		name = 'affogato',
+		production_place = 'ice cream maker',
+		level = 78,
+		production_time = td(minutes=20)
+		price_sell = 435,
+		img = '/assets/items/Affogato.png'
+        )
+affogato.add_component(vanilla_ice_cream, 1)
+affogato.add_component(espresso, 1)
+list_items.append(affogato)
 
 peach_ice_cream = hayday(
 		name = 'peach ice cream',
@@ -3982,3 +4005,60 @@ fried_candy_bar.add_component(cacao, 3)
 fried_candy_bar.add_component(cookie, 1)
 fried_candy_bar.add_component(peanuts, 1)
 list_items.append(fried_candy_bar)
+
+#------------------------------------------------------------
+#  Preservation Station
+
+pickles = hayday(
+		name = 'pickles',
+		production_place = 'preservation station',
+		level= 91,
+		production_time = td(hours=4),
+		price_sell = 270,
+        img = '/assets/items/Pickles.png'
+)
+pickles.add_component(cucumber, 3)
+pickles.add_component(onion, 2)
+pickles.add_component(lemon, 1)
+list_items.append(pickles)
+
+canned_fish = hayday(
+		name = 'canned fish',
+		production_place = 'preservation station',
+		level= 95,
+		production_time = td(hours=3, minutes=40),
+		price_sell = 471,
+        img = '/assets/items/Canned_Fish.png'
+)
+canned_fish.add_component(fish_fillet, 2)
+canned_fish.add_component(chili_pepper, 1)
+canned_fish.add_component(olive_oil, 1)
+list_items.append(canned_fish)
+
+kimchi = hayday(
+		name = 'kimchi',
+		production_place = 'preservation station',
+		level= 98,
+		production_time = td(hours=5),
+		price_sell = 219,
+        img = '/assets/items/Kimchi.png'
+)
+kimchi.add_component(cabbage, 5)
+kimchi.add_component(ginger, 1)
+kimchi.add_component(chili_pepper, 1)
+kimchi.add_component(garlic, 1)
+list_items.append(kimchi)
+
+dried_fruit = hayday(
+		name = 'dried fruit',
+		production_place = 'preservation station',
+		level= 102,
+		production_time = td(hours=3),
+		price_sell = 266,
+        img = '/assets/items/Dried_Fruit.png'
+)
+dried_fruit.add_component(grapes, 1)
+dried_fruit.add_component(raspberry, 1)
+dried_fruit.add_component(strawberry, 1)
+dried_fruit.add_component(orange, 1)
+list_items.append(dried_fruit)
