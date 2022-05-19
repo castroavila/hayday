@@ -486,6 +486,16 @@ plum = hayday(
         )
 list_items.append(plum)
 
+chickpea = hayday(
+    name = 'chickpea',
+    production_place = 'farm',
+    level = 95,
+    production_time = td(hours=1),
+    price_sell = 18,
+    img = '/assets/items/Chickpea.png'
+        )
+list_items.append(plum)
+
 #-----------------------------------------------------------
 #Animals food
 
@@ -1099,6 +1109,19 @@ salsa.add_component(chili_pepper, 2)
 salsa.add_component(onion, 2)
 salsa.add_component(tomato, 2)
 list_items.append(salsa)
+
+hummus = hayday(
+    name= 'hummus',
+    production_place = 'sauce maker',
+    level = 95,
+    production_time = td(minutes=30),
+    price_sell =277,
+    img = '/assets/items/Hummus.png'
+        )
+hummus.add_component(chickpea, 3)
+hummus.add_component(lemon, 2)
+hummus.add_component(garlic, 2)
+list_items.append(hummus)
 
 tart_dressing = hayday(
     name= 'tart dressing',
@@ -3239,6 +3262,19 @@ goat_cheese_toast.add_component(goat_cheese, 1)
 goat_cheese_toast.add_component(bread, 1)
 list_items.append(goat_cheese_toast)
 
+hummus_wrap = hayday(
+    name= 'hummus wrap',
+    production_place = 'sandwich bar',
+    level = 109,
+    production_time = td(minutes=30),
+    price_sell = 374,
+    img = '/assets/items/Hummus_Wrap.png'
+        )
+hummus_wrap.add_component(hummus, 1)
+hummus_wrap.add_component(bread, 1)
+hummus_wrap.add_component(lettuce, 1)
+list_items.append(hummus_wrap)
+
 #------------------------------------------------------------
 #Smoothie Mixer
 
@@ -3995,6 +4031,20 @@ chili_poppers.add_component(bacon, 3)
 chili_poppers.add_component(cheese, 1)
 list_items.append(chili_poppers)
 
+falafel = hayday(
+    name = 'falafel',
+    production_place = 'deep fryer',
+    level= 98,
+    production_time = td(minutes=55),
+    price_sell = 226,
+    img = '/assets/items/Falafel.png'
+)
+falafel.add_component(chickpea, 3)
+falafel.add_component(onion, 2)
+falafel.add_component(garlic, 2)
+falafel.add_component(chili_pepper, 1)
+list_items.append(falafel)
+
 fried_candy_bar = hayday(
     name = 'fried candy bar',
     production_place = 'deep fryer',
@@ -4007,6 +4057,20 @@ fried_candy_bar.add_component(cacao, 3)
 fried_candy_bar.add_component(cookie, 1)
 fried_candy_bar.add_component(peanuts, 1)
 list_items.append(fried_candy_bar)
+
+samosa = hayday(
+    name = 'samosa',
+    production_place = 'deep fryer',
+    level= 103,
+    production_time = td(hours=1, minutes=15),
+    price_sell = 223,
+    img = '/assets/items/Samosa.png'
+)
+samosa.add_component(chickpea, 2)
+samosa.add_component(wheat, 4)
+samosa.add_component(potato, 3)
+samosa.add_component(chili_pepper, 1)
+list_items.append(samosa)
 
 #------------------------------------------------------------
 #  Preservation Station
@@ -4064,3 +4128,74 @@ dried_fruit.add_component(raspberry, 1)
 dried_fruit.add_component(strawberry, 1)
 dried_fruit.add_component(orange, 1)
 list_items.append(dried_fruit)
+
+#------------------------------------------------------------
+#  Fudge shop
+rich_fudge = hayday(
+    name = 'rich fudge',
+    production_place = 'fudge shop',
+    level= 99,
+    production_time = td(hours=2),
+    price_sell = 644,
+    img = '/assets/items/Rich_Fudge.png'
+)
+rich_fudge.add_component(butter, 3)
+rich_fudge.add_component(cacao, 3)
+rich_fudge.add_component(white_sugar, 1)
+list_items.append(rich_fudge)
+
+mint_fudge = hayday(
+    name = 'mint fudge',
+    production_place = 'fudge shop',
+    level= 102,
+    production_time = td(hours=2, minutes=30),
+    price_sell = 522,
+    img = '/assets/items/Mint_Fudge.png'
+)
+mint_fudge.add_component(butter, 2)
+mint_fudge.add_component(cacao, 2)
+mint_fudge.add_component(white_sugar, 1)
+mint_fudge.add_component(mint, 3)
+list_items.append(mint_fudge)
+
+chili_fudge = hayday(
+    name = 'chili fudge',
+    production_place = 'fudge shop',
+    level= 104,
+    production_time = td(hours=2, minutes=50),
+    price_sell = 522,
+    img = '/assets/items/Chili_Fudge.png'
+)
+chili_fudge.add_component(butter, 2)
+chili_fudge.add_component(cacao, 2)
+chili_fudge.add_component(white_sugar, 1)
+chili_fudge.add_component(chili_pepper, 3)
+list_items.append(chili_fudge)
+
+lemon_fudge = hayday(
+    name = 'lemon fudge',
+    production_place = 'fudge shop',
+    level= 108,
+    production_time = td(hours=1, minutes=50),
+    price_sell = 590,
+    img = '/assets/items/Lemon_Fudge.png'
+)
+lemon_fudge.add_component(butter, 2)
+lemon_fudge.add_component(white_sugar, 2)
+lemon_fudge.add_component(milk, 3)
+lemon_fudge.add_component(lemon, 2)
+list_items.append(lemon_fudge)
+
+peanut_fudge = hayday(
+    name = 'peanut fudge',
+    production_place = 'fudge shop',
+    level= 111,
+    production_time = td(hours=1, minutes=30),
+    price_sell = 1141,
+    img = '/assets/items/Peanut_Fudge.png'
+)
+peanut_fudge.add_component(butter, 2)
+peanut_fudge.add_component(cacao, 2)
+peanut_fudge.add_component(white_sugar, 1)
+peanut_fudge.add_component(peanuts, 2)
+list_items.append(peanut_fudge)
