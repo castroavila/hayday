@@ -10,9 +10,6 @@
 """
 from data_vis.main_dash import *
 
-sys.path.append('../')
-from functions import  *
-df = generate_df()
 
 tab_pricing = html.Div([
     html.Div(

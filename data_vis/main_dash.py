@@ -17,6 +17,15 @@ from dash import html
 # import dash_html_components as html
 from plotly.subplots import make_subplots
 from dash.dependencies import Input, Output, State
+import dash_bootstrap_components as dbc
 import random
 import sys
-app = dash.Dash(__name__, assets_folder='../assets/')
+sys.path.append('../')
+from functions import  *
+from mapper_places import *
+
+df = generate_df()
+
+app = dash.Dash(__name__, external_stylesheets=[dbc.themes.GRID],
+                assets_folder='../assets/')
+app.config.suppress_callback_exceptions = True
