@@ -10,6 +10,7 @@
 
 """
 from data_vis.main_dash import *
+from build_graph import *
 
 
 tab_graph = html.Div(
@@ -36,8 +37,47 @@ tab_graph = html.Div(
                         ),
                     ],
                     style={'maxHeight': '200px', 'overflow': 'scroll',
-                           'height': '200px'}
+                           'height': '200px', 'border':'2px black solid',
+                           'margin-left': '20px'}
 
+                ),
+                html.Div(
+                    [
+                        cyto.Cytoscape(
+                            id='graph',
+                            layout={'name': 'preset'},
+                            style={'width': '100%', 'height': '400px'},
+                            stylesheet=[
+                                {
+                                    'selector': 'node',
+                                    'style': {
+                                        'content': 'data(label)',
+                                        'width': '100px',
+                                        'height': '100px',
+                                        # 'background-image-opacity': 0.,
+                                        'background-color': 'white',
+                                        'background-fit': 'cover',
+                                        'background-image': 'data(url)',
+                                        # 'background-width': '20%'
+                                    }
+                                },
+                                {
+                                    'selector': 'edge',
+                                    'style': {
+                                        'curve-style': 'bezier',
+                                        'control-point-step-size': 100,
+                                        'control-point-weight': 0.5,
+                                        'line-color': 'blue',
+                                        'target-arrow-color': 'blue',
+                                        'target-arrow-shape': 'triangle',
+                                        'width': 1
+                                    }
+                                },
+                            ],
+                        )
+                    ],
+                    style={'border':'2px black solid', 'width': '40%',
+                           'heigth': '400px', 'margin-left': '10px'}
                 )
 
             ],
@@ -59,7 +99,7 @@ tab_graph = html.Div(
     ],
     Input('place_from', 'value')
 )
-def update_graph(place_from):
+def update_option_list(place_from):
     items = list_products_at(place_from)
     options = {item.name: item.name for item in items}
     radio_items = []
@@ -80,4 +120,36 @@ def update_graph(place_from):
         }
         radio_items.append(radio_item)
     return mapper_places[place_from], radio_items
+
+@app.callback(
+    Output('graph', 'elements'),
+    Input('items_in_place', 'value'),
+    prevent_initial_call=True
+)
+def update_graph(item):
+
+    graph, positions  = get_ancestor_nodes_and_position(item)
+    elements = []
+
+    for label, pos in positions.items():
+        item = get_object(label)
+        img = item.img
+        element = {
+            # 'classes': 'terminal',
+            'data': {'id': label,
+                     'label': label,
+                     'url': img
+                     },
+            'position': {'x': 2.*pos[0], 'y': -2.*pos[1]},
+        }
+        elements.append(element)
+
+    # Edges
+    for edge in list(graph.edges()):
+        element = {
+            'data': {'source': edge[0], 'target': edge[1]}
+        }
+        elements.append(element)
+
+    return elements
 

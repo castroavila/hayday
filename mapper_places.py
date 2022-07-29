@@ -23,7 +23,7 @@ mapper_places = {
     'duck salon': '/assets/places/Duck_Salon_Stage6.png',
     'farm': '/assets/places/Field.png',
     'feed mill': '/assets/places/Feed_Mill.png',
-    # 'fishing lake': '/assets/places/Fishing_Hut.png',
+    'fishing lake': '/assets/places/Fishing_Hut.png',
     'flower shop': '/assets/places/Flower_Shop.png',
     'fondue pot': '/assets/places/Fondue_Pot.png',
     'fudge shop': '/assets/places/Fudge_Shop.png',
