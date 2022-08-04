@@ -494,7 +494,7 @@ chickpea = hayday(
     price_sell = 18,
     img = '/assets/items/Chickpea.png'
         )
-list_items.append(plum)
+list_items.append(chickpea)
 
 #-----------------------------------------------------------
 #Animals food
@@ -2166,7 +2166,7 @@ passion_fruit_jam = hayday(
     level = 96,
     production_time = td(hours=3, minutes=20),
     price_sell = 118,
-    img = 'items/Passion_Fruit_Jam.png'
+    img = '/assets/items/Passion_Fruit_Jam.png'
         )
 passion_fruit_jam.add_component(passion_fruit, 3)
 list_items.append(passion_fruit_jam)
