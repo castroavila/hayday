@@ -20,8 +20,8 @@ from functions import *
 
 dg = nx.DiGraph()
 for item in  list_items:
-    for component in item.components:
-        dg.add_edge(component[0].name, item.name, n_components=component[1])
+    for single_component in item.components.keys():
+        dg.add_edge(single_component.name, item.name, n_components=item.components[single_component])
 
 def get_ancestor_nodes_and_position(final_node):
     '''
