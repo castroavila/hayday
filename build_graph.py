@@ -58,3 +58,20 @@ def get_descendant_nodes_and_position(initial_node):
     position = graphviz_layout(sub_graph, prog='dot')
 
     return sub_graph, position
+
+def get_quantity(source, target):
+    '''
+    Return quantity needed of `source` to create `target.
+    Parameters:
+        source: str, item's name.
+        target: str, item's name.
+    '''
+
+    item_target = get_object(target)
+    if item_target.n_components > 0:
+        for item in item_target.components.keys():
+            if item.name == source:
+                quantity = item_target.components[item]
+                return quantity
+    else:
+        return None

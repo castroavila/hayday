@@ -45,7 +45,9 @@ tab_graph = html.Div(
                     [
                         cyto.Cytoscape(
                             id='graph',
-                            layout={'name': 'preset'},
+                            layout={'name': 'preset',
+                                    'animate': True,
+                                    },
                             style={'width': '100%', 'height': '400px'},
                             stylesheet=[
                                 {
@@ -64,6 +66,11 @@ tab_graph = html.Div(
                                 {
                                     'selector': 'edge',
                                     'style': {
+                                        'label': 'data(label)',
+                                        'color': 'green',
+                                        'font-style': 'italic',
+                                        'font-family': 'cursive',
+                                        'font-size': 30,
                                         'curve-style': 'bezier',
                                         'control-point-step-size': 100,
                                         'control-point-weight': 0.5,
@@ -74,6 +81,10 @@ tab_graph = html.Div(
                                     }
                                 },
                             ],
+                            minZoom=0.6,
+                            zoom=1,
+                            # userPanningEnabled=False,
+                            autolock=True
                         )
                     ],
                     style={'border':'2px black solid', 'width': '40%',
@@ -147,7 +158,11 @@ def update_graph(item):
     # Edges
     for edge in list(graph.edges()):
         element = {
-            'data': {'source': edge[0], 'target': edge[1]}
+            'data': {
+                'source': edge[0],
+                'target': edge[1],
+                'label': f'{get_quantity(edge[0], edge[1])}'
+            }
         }
         elements.append(element)
 
