@@ -46,7 +46,7 @@ tab_graph = html.Div(
                     ],
                     style={'maxHeight': '200px', 'overflow': 'scroll',
                            'height': '200px', 'border':'2px black solid',
-                           'margin-left': '20px'}
+                           'margin-left': '20px', 'background-color': 'white'}
 
                 ),
                 html.Div(
@@ -56,7 +56,8 @@ tab_graph = html.Div(
                             layout={'name': 'preset',
                                     'animate': True,
                                     },
-                            style={'width': '100%', 'height': '400px'},
+                            style={'width': '100%', 'height': '400px',
+                                   'background-color': 'white'},
                             stylesheet=[
                                 {
                                     'selector': 'node',
@@ -130,10 +131,12 @@ def update_option_list(place_from):
                              style={'padding-left':10}
                              ),
                     html.Div(item.name,
-                             style={'font-size':25, 'padding-left':10}
+                             style={'font-size':25, 'padding-left':10,
+                                    'color':'black'}
                              )
                 ],
-                style={'display': 'flex', 'align-items': 'center', 'justify-content': 'center'}
+                style={'display': 'flex', 'align-items': 'center',
+                       'justify-content': 'center'}
             ),
             'value': item.name,
         }
