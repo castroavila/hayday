@@ -17,6 +17,14 @@ tab_graph = html.Div(
     [
         html.Div(
             [
+                html.Img(src='/assets/logo/Banner.png',
+                         style={'height': '200px'}
+                         ),
+            ],
+            style={'textAlign': 'center'}
+        ),
+        html.Div(
+            [
                 html.Label('place:',
                            style={'width': '3%'}),
                 dcc.Dropdown(
