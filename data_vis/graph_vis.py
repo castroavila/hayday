@@ -104,7 +104,23 @@ tab_graph = html.Div(
                             minZoom=0.6,
                             zoom=1,
                             # userPanningEnabled=False,
-                            autolock=True
+                            autolock=True,
+                            zoomingEnabled=True,
+                            userZoomingEnabled=False,
+                        ),
+                        html.Div(
+                            [
+                                html.Label('zoom',
+                                           style={'margin-left': '5px'}
+                                           ),
+                                dcc.Slider(
+                                    id='slider_zoom',
+                                    min=1,
+                                    max=2,
+                                    step=0.1,
+                                    value=1.)
+                            ]
+
                         )
                     ],
                     style={'border':'2px black solid', 'width': '40%',
@@ -195,3 +211,10 @@ def update_graph(item):
 
     return elements
 
+@app.callback(
+    Output('graph', 'zoom'),
+    Input('slider_zoom', 'value'),
+    prevent_initial_call=True
+)
+def update_zoom_graph(value):
+    return value
