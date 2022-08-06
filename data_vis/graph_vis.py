@@ -25,29 +25,40 @@ tab_graph = html.Div(
         ),
         html.Div(
             [
-                html.Label('place:',
-                           style={'width': '3%'}),
-                dcc.Dropdown(
-                    id='place_from',
-                    options = [{'label': i, 'value':i} for i in df['place'].unique()],
-                    value='bakery',
-                    multi=False,
-                    style = {'width':'200px', 'align-items': 'left'}
-                ),
                 html.Div(
                     [
-                        dcc.RadioItems(
-                            id='items_in_place',
-                            options=[],
-                            value='',
-                            labelStyle ={'display': 'flex'},
-                            style={'height': '20%'}
+                        html.Div(
+                            [
+                                html.Label('place:',
+                                           style={'width': '6%'}),
+                                dcc.Dropdown(
+                                    id='place_from',
+                                    options = [{'label': i, 'value':i} for i in df['place'].unique()],
+                                    value='bakery',
+                                    multi=False,
+                                    style = {'width':'200px', 'align-items': 'left', 'margin-left': '30px'}
+                                ),
+                            ],
+                            style={'display': 'flex', 'width': '100%', 'align-items': 'center'}
                         ),
-                    ],
-                    style={'maxHeight': '200px', 'overflow': 'scroll',
-                           'height': '200px', 'border':'2px black solid',
-                           'margin-left': '20px', 'background-color': 'white'}
+                        html.Br(),
+                        html.Div(
+                            [
+                                dcc.RadioItems(
+                                    id='items_in_place',
+                                    options=[],
+                                    value='',
+                                    labelStyle ={'display': 'flex'},
+                                    style={'height': '20%'}
+                                ),
+                            ],
+                            style={'maxHeight': '400px', 'overflow': 'scroll',
+                                   'height': '100', 'border':'2px black solid',
+                                   'margin-left': '0px', 'background-color': 'white',
+                                   'width': '350px'}
 
+                        ),
+                    ]
                 ),
                 html.Div(
                     [
@@ -56,7 +67,7 @@ tab_graph = html.Div(
                             layout={'name': 'preset',
                                     'animate': True,
                                     },
-                            style={'width': '100%', 'height': '400px',
+                            style={'width': '100%', 'height': '600px',
                                    'background-color': 'white'},
                             stylesheet=[
                                 {
@@ -97,19 +108,24 @@ tab_graph = html.Div(
                         )
                     ],
                     style={'border':'2px black solid', 'width': '40%',
-                           'heigth': '400px', 'margin-left': '10px'}
-                )
-
-            ],
+                           'heigth': '600px', 'margin-left': '10px'}
+                ),
+                dcc.Graph(id='price',
+                        children=[],
+                          style={'border': '2px black solid',
+                                 'margin-left': '10px',
+                                 'height': '600px', 'width': '40%'}
+                        )
+],
             style = {'widht': '20%', 'display':'flex', 'align-items': 'center',
                      'height': '10%'}
-        ),
-        html.Br(),
-        html.Img(id='image_place',
-                 src='',
-                 style={'width': '25%', 'height':'50%'}
-                 )
-    ]
+            ),
+            html.Br(),
+            html.Img(id='image_place',
+                     src='',
+                     style={'width': '25%', 'height':'50%'}
+                     )
+            ]
 )
 
 @app.callback(
