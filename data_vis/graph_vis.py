@@ -53,12 +53,18 @@ tab_graph = html.Div(
                                 ),
                             ],
                             style={'maxHeight': '400px', 'overflow': 'scroll',
-                                   'height': '100', 'border':'2px black solid',
+                                   'height': '300px', 'border':'2px black solid',
                                    'margin-left': '0px', 'background-color': 'white',
                                    'width': '350px'}
 
                         ),
-                    ]
+                        html.Br(),
+                        html.Img(id='image_place',
+                                 src='',
+                                 style={'width': '350px'}
+                                 )
+                    ],
+                    style={'height': '600px'}
                 ),
                 html.Div(
                     [
@@ -136,11 +142,6 @@ tab_graph = html.Div(
             style = {'widht': '20%', 'display':'flex', 'align-items': 'center',
                      'height': '10%'}
             ),
-            html.Br(),
-            html.Img(id='image_place',
-                     src='',
-                     style={'width': '25%', 'height':'50%'}
-                     )
             ]
 )
 
