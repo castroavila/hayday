@@ -496,6 +496,17 @@ chickpea = hayday(
         )
 list_items.append(chickpea)
 
+mango = hayday(
+    name = 'mango',
+    production_place = 'farm',
+    level = 97,
+    production_time = td(days=1, hours=8),
+    price_sell = 100,
+    img = '/assets/items/Mango.png'
+        )
+list_items.append(mango)
+
+
 #-----------------------------------------------------------
 #Animals food
 
@@ -640,6 +651,7 @@ peanuts = hayday(
     price_sell = 234,
     img = '/assets/items/Peanuts.png'
         )
+list_items.append(peanuts)
 
 #------------------------------------------------------------
 #Honey extractor (Every item already included)
@@ -2058,6 +2070,17 @@ watermelon_juice = hayday(
         )
 watermelon_juice.add_component(watermelon, 2)
 list_items.append(watermelon_juice)
+
+mango_juice = hayday(
+    name = 'mango juice',
+    production_place = 'juice press',
+    level = 97,
+    production_time = td(minutes=50),
+    price_sell = 230,
+    img = '/assets/items/Mango_Juice.png'
+        )
+mango_juice.add_component(mango, 2)
+list_items.append(mango_juice)
 #------------------------------------------------------------
 #Jam maker
 
@@ -3934,6 +3957,20 @@ cheese_fondue.add_component(cheese, 1)
 cheese_fondue.add_component(mushroom, 2)
 cheese_fondue.add_component(tomato, 1)
 list_items.append(cheese_fondue)
+
+tropical_fondue = hayday(
+    name = 'tropical fondue',
+    production_place = 'fondue pot',
+    level= 100,
+    production_time = td(minutes=35),
+    price_sell = 417,
+    img = '/assets/items/Tropical_Fondue.png'
+)
+tropical_fondue.add_component(white_sugar, 1)
+tropical_fondue.add_component(cream, 2)
+tropical_fondue.add_component(pineapple, 3)
+tropical_fondue.add_component(mango, 2)
+list_items.append(tropical_fondue)
 #------------------------------------------------------------
 # Bath kiosk
 
@@ -4199,3 +4236,44 @@ peanut_fudge.add_component(cacao, 2)
 peanut_fudge.add_component(white_sugar, 1)
 peanut_fudge.add_component(peanuts, 2)
 list_items.append(peanut_fudge)
+
+#------------------------------------------------------------
+#  Yogurt Maker
+plain_yogurt = hayday(
+    name = 'plain yogurt',
+    production_place = 'yogurt maker ',
+    level= 103,
+    production_time = td(hours=2),
+    price_sell = 234,
+    img = '/assets/items/Plain_Yogurt.png'
+)
+plain_yogurt.add_component(butter, 2)
+plain_yogurt.add_component(milk, 3)
+list_items.append(plain_yogurt)
+
+strawberry_yogurt = hayday(
+    name = 'strawbery yogurt',
+    production_place = 'yogurt maker ',
+    level= 105,
+    production_time = td(minutes=40),
+    price_sell = 529,
+    img = '/assets/items/Strawberry_Yogurt.png'
+)
+strawberry_yogurt.add_component(plain_yogurt, 1)
+strawberry_yogurt.add_component(strawberry_jam, 1)
+list_items.append(strawberry_yogurt)
+
+tropical_yogurt = hayday(
+    name = 'tropical yogurt',
+    production_place = 'yogurt maker ',
+    level= 109,
+    production_time = td(hours=1),
+    price_sell = 457,
+    img = '/assets/items/Tropical_Yogurt.png'
+)
+tropical_yogurt.add_component(plain_yogurt, 1)
+tropical_yogurt.add_component(raspberry, 4)
+tropical_yogurt.add_component(passion_fruit, 1)
+tropical_yogurt.add_component(mango, 2)
+list_items.append(tropical_yogurt)
+
