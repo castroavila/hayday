@@ -506,6 +506,16 @@ mango = hayday(
         )
 list_items.append(mango)
 
+coconut = hayday(
+    name = 'mango',
+    production_place = 'farm',
+    level = 101,
+    production_time = td(days=1, hours=12),
+    price_sell = 108,
+    img = '/assets/items/Coconut.png'
+        )
+list_items.append(coconut)
+
 
 #-----------------------------------------------------------
 #Animals food
@@ -954,6 +964,19 @@ banana_bread.add_component(grapes, 2)
 banana_bread.add_component(wheat, 3)
 banana_bread.add_component(egg, 1)
 list_items.append(banana_bread)
+
+macaroon = hayday(
+    name = 'macaroon',
+    production_place = 'bakery',
+    level = 101,
+    production_time = td(minutes=30),
+    price_sell = 421,
+    img = '/assets/items/Macaroon.png'
+)
+macaroon.add_component(cacao, 1)
+macaroon.add_component(coconut, 2)
+macaroon.add_component(white_sugar, 2)
+list_items.append(macaroon)
 
 #-----------------------------------------------------------
 #Popcorn pot (Every item already included)
@@ -2605,6 +2628,18 @@ banana_split.add_component(banana, 1)
 banana_split.add_component(cream, 1)
 banana_split.add_component(cherry, 3)
 list_items.append(banana_split)
+
+coconut_ice_cream = hayday(
+    name = 'coconut ice cream',
+    production_place = 'ice cream maker',
+    level = 102,
+    production_time = td(minutes=15),
+    price_sell = 320,
+    img = '/assets/items/Coconut_Ice_Cream.png'
+        )
+coconut_ice_cream.add_component(coconut, 2)
+coconut_ice_cream.add_component(syrup, 1)
+list_items.append(coconut_ice_cream)
 #------------------------------------------------------------
 #Pasta maker (Every item already included)
 
@@ -3419,6 +3454,21 @@ caramel_latte.add_component(coffee_bean, 2)
 caramel_latte.add_component(toffee, 1)
 caramel_latte.add_component(milk, 1)
 list_items.append(caramel_latte)
+
+tropical_smoothie = hayday(
+    name = 'tropical smoothie',
+    production_place = 'smoothie mixer',
+    level = 104,
+    production_time = td(minutes=40),
+    price_sell = 475,
+    img = '/assets/items/Tropical_Smoothie.png'
+        )
+tropical_smoothie.add_component(coconut, 1)
+tropical_smoothie.add_component(banana, 1)
+tropical_smoothie.add_component(passion_fruit, 2)
+tropical_smoothie.add_component(mango, 2)
+list_items.append(tropical_smoothie)
+
 #------------------------------------------------------------
 # Wok kitchen
 
@@ -4277,3 +4327,45 @@ tropical_yogurt.add_component(passion_fruit, 1)
 tropical_yogurt.add_component(mango, 2)
 list_items.append(tropical_yogurt)
 
+#------------------------------------------------------------
+#  Stew Pot
+chickpea_stew = hayday(
+    name = 'chickpea stew',
+    production_place = 'stew pot',
+    level= 106,
+    production_time = td(hours=1, minutes=30),
+    price_sell = 284,
+    img = '/assets/items/Chickpea_Stew.png'
+)
+chickpea_stew.add_component(coconut, 1)
+chickpea_stew.add_component(tomato, 2)
+chickpea_stew.add_component(chickpea, 3)
+list_items.append(chickpea_stew)
+
+chili_stew = hayday(
+    name = 'chili stew',
+    production_place = 'stew pot',
+    level= 109,
+    production_time = td(hours=2),
+    price_sell = 370,
+    img = '/assets/items/Chili_Stew.png'
+)
+chili_stew.add_component(chili_pepper, 3)
+chili_stew.add_component(bacon, 2)
+chili_stew.add_component(onion, 2)
+chili_stew.add_component(cream, 1)
+list_items.append(chili_stew)
+
+winter_stew = hayday(
+    name = 'winter stew',
+    production_place = 'stew pot',
+    level= 112,
+    production_time = td(hours=2, minutes=20),
+    price_sell = 295,
+    img = '/assets/items/Winter_Stew.png'
+)
+winter_stew.add_component(bacon, 1)
+winter_stew.add_component(potato, 3)
+winter_stew.add_component(onion, 2)
+winter_stew.add_component(mushroom, 2)
+list_items.append(winter_stew)
