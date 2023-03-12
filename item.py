@@ -2481,6 +2481,19 @@ iced_banana_latte.add_component(banana, 1)
 iced_banana_latte.add_component(coffee_bean, 2)
 iced_banana_latte.add_component(milk, 1)
 list_items.append(iced_banana_latte)
+
+caramel_latte = hayday(
+    name = 'caramel latte',
+    production_place = 'coffee kiosk',
+    level = 62,
+    production_time = td(minutes=15),
+    price_sell = 345,
+    img = '/assets/items/Caramel_Latte.png'
+        )
+caramel_latte.add_component(coffee_bean, 2)
+caramel_latte.add_component(toffee, 1)
+caramel_latte.add_component(milk, 1)
+list_items.append(caramel_latte)
 #------------------------------------------------------------
 #Ice cream maker
 
@@ -3442,19 +3455,6 @@ plum_smoothie.add_component(mint, 1)
 plum_smoothie.add_component(honey, 1)
 list_items.append(plum_smoothie)
 
-caramel_latte = hayday(
-    name = 'caramel latte',
-    production_place = 'coffee kiosk',
-    level = 62,
-    production_time = td(minutes=15),
-    price_sell = 345,
-    img = '/assets/items/Caramel_Latte.png'
-        )
-caramel_latte.add_component(coffee_bean, 2)
-caramel_latte.add_component(toffee, 1)
-caramel_latte.add_component(milk, 1)
-list_items.append(caramel_latte)
-
 tropical_smoothie = hayday(
     name = 'tropical smoothie',
     production_place = 'smoothie mixer',
@@ -4291,7 +4291,7 @@ list_items.append(peanut_fudge)
 #  Yogurt Maker
 plain_yogurt = hayday(
     name = 'plain yogurt',
-    production_place = 'yogurt maker ',
+    production_place = 'yogurt maker',
     level= 103,
     production_time = td(hours=2),
     price_sell = 234,
@@ -4303,7 +4303,7 @@ list_items.append(plain_yogurt)
 
 strawberry_yogurt = hayday(
     name = 'strawbery yogurt',
-    production_place = 'yogurt maker ',
+    production_place = 'yogurt maker',
     level= 105,
     production_time = td(minutes=40),
     price_sell = 529,
@@ -4315,7 +4315,7 @@ list_items.append(strawberry_yogurt)
 
 tropical_yogurt = hayday(
     name = 'tropical yogurt',
-    production_place = 'yogurt maker ',
+    production_place = 'yogurt maker',
     level= 109,
     production_time = td(hours=1),
     price_sell = 457,
