@@ -507,7 +507,7 @@ mango = hayday(
 list_items.append(mango)
 
 coconut = hayday(
-    name = 'mango',
+    name = 'coconut',
     production_place = 'farm',
     level = 101,
     production_time = td(days=1, hours=12),
@@ -515,6 +515,16 @@ coconut = hayday(
     img = '/assets/items/Coconut.png'
         )
 list_items.append(coconut)
+
+guava = hayday(
+    name = 'guava',
+    production_place = 'farm',
+    level = 104,
+    production_time = td(days=1, hours=10),
+    price_sell = 111,
+    img = '/assets/items/Guava.png'
+        )
+list_items.append(guava)
 
 
 #-----------------------------------------------------------
@@ -2104,6 +2114,17 @@ mango_juice = hayday(
         )
 mango_juice.add_component(mango, 2)
 list_items.append(mango_juice)
+
+guava_juice = hayday(
+    name = 'guava juice',
+    production_place = 'juice press',
+    level = 104,
+    production_time = td(minutes=55),
+    price_sell = 252,
+    img = '/assets/items/Guava_Juice.png'
+        )
+guava_juice.add_component(guava, 2)
+list_items.append(guava_juice)
 #------------------------------------------------------------
 #Jam maker
 
@@ -2653,6 +2674,20 @@ coconut_ice_cream = hayday(
 coconut_ice_cream.add_component(coconut, 2)
 coconut_ice_cream.add_component(syrup, 1)
 list_items.append(coconut_ice_cream)
+
+fruit_sorbet = hayday(
+    name = 'fruit sorbet',
+    production_place = 'ice cream maker',
+    level = 106,
+    production_time = td(hours=1),
+    price_sell = 518,
+    img = '/assets/items/Fruit_Sorbet.png'
+        )
+fruit_sorbet.add_component(guava, 1)
+fruit_sorbet.add_component(passion_fruit, 1)
+fruit_sorbet.add_component(mango, 2)
+fruit_sorbet.add_component(white_sugar, 3)
+list_items.append(fruit_sorbet)
 #------------------------------------------------------------
 #Pasta maker (Every item already included)
 
@@ -4216,6 +4251,19 @@ dried_fruit.add_component(strawberry, 1)
 dried_fruit.add_component(orange, 1)
 list_items.append(dried_fruit)
 
+guava_compote = hayday(
+    name = 'guava compote',
+    production_place = 'preservation station',
+    level= 104,
+    production_time = td(hours=4, minutes=20),
+    price_sell = 421,
+    img = '/assets/items/Guava_Compote.png'
+)
+guava_compote.add_component(guava, 2)
+guava_compote.add_component(lemon, 1)
+guava_compote.add_component(white_sugar, 1)
+list_items.append(guava_compote)
+
 #------------------------------------------------------------
 #  Fudge shop
 rich_fudge = hayday(
@@ -4369,3 +4417,58 @@ winter_stew.add_component(potato, 3)
 winter_stew.add_component(onion, 2)
 winter_stew.add_component(mushroom, 2)
 list_items.append(winter_stew)
+#------------------------------------------------------------
+#  Cupcake maker
+plain_cupcake = hayday(
+    name = 'plain cupcake',
+    production_place = 'cupcake maker',
+    level= 109,
+    production_time = td(minutes=40),
+    price_sell = 280,
+    img = '/assets/items/Plain_Cupcake.png'
+)
+plain_cupcake.add_component(milk, 2)
+plain_cupcake.add_component(white_sugar, 3)
+plain_cupcake.add_component(egg, 1)
+plain_cupcake.add_component(wheat, 5)
+list_items.append(plain_cupcake)
+
+guava_cupcake = hayday(
+    name = 'guava cupcake',
+    production_place = 'cupcake maker',
+    level= 109,
+    production_time = td(hours=1, minutes=10),
+    price_sell = 583,
+    img = '/assets/items/Guava_Cupcake.png'
+)
+guava_cupcake.add_component(plain_cupcake, 1)
+guava_cupcake.add_component(guava, 2)
+guava_cupcake.add_component(cream, 1)
+list_items.append(guava_cupcake)
+
+tropical_cupcake = hayday(
+    name = 'tropical cupcake',
+    production_place = 'cupcake maker',
+    level= 112,
+    production_time = td(hours=1, minutes=30),
+    price_sell = 572,
+    img = '/assets/items/Tropical_Cupcake.png'
+)
+tropical_cupcake.add_component(plain_cupcake, 1)
+tropical_cupcake.add_component(pineapple, 3)
+tropical_cupcake.add_component(coconut, 2)
+list_items.append(tropical_cupcake)
+
+cookie_cupcake = hayday(
+    name = 'cookie cupcake',
+    production_place = 'cupcake maker',
+    level= 114,
+    production_time = td(hours=2),
+    price_sell = 712,
+    img = '/assets/items/Cookie_Cupcake.png'
+)
+cookie_cupcake.add_component(plain_cupcake, 1)
+cookie_cupcake.add_component(cream, 2)
+cookie_cupcake.add_component(cookie, 2)
+cookie_cupcake.add_component(cacao, 1)
+list_items.append(cookie_cupcake)

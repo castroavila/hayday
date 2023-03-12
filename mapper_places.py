@@ -54,6 +54,7 @@ mapper_places = {
     'tea stand': '/assets/places/Tea_Stand.png',
     'wok kitchen': '/assets/places/Wok_Kitchen.png',
     'yogurt maker': '/assets/places/Yogurt_Maker.png',
-    'stew pot': '/assets/places/Stew_Pot.png'
+    'stew pot': '/assets/places/Stew_Pot.png',
+    'cupcake maker': '/assets/places/Cupcake_Maker.png'
 }
 
