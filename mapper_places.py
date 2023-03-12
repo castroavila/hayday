@@ -52,6 +52,8 @@ mapper_places = {
     'sushi bar': '/assets/places/Sushi_Bar.png',
     'taco kitchen':' /assets/places/Taco_Kitchen.png',
     'tea stand': '/assets/places/Tea_Stand.png',
-    'wok kitchen': '/assets/places/Wok_Kitchen.png'
+    'wok kitchen': '/assets/places/Wok_Kitchen.png',
+    'yogurt maker': '/assets/places/Yogurt_Maker.png',
+    'stew pot': '/assets/places/Stew_Pot.png'
 }
 
