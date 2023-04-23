@@ -1,6 +1,5 @@
 #! /usr/bin/env python
 # -*- coding: utf-8 -*-
-# @author           : Manuel Castro Avila <castroavila_2004@hotmail.com>
 # @file             : functions.py
 # @created          : 18-Nov-2019
 #
@@ -10,22 +9,14 @@
 """
 
 #Functions to deal and handle the list of items
-
+import importlib
+import item
+importlib.reload(item)
 from  item import *
 import matplotlib.pyplot as plt
 import numpy as np
 import pandas as pd
 
-from  matplotlib.backends.backend_pdf import PdfPages
-#pp = PdfPages('producer_wells.pdf')
-#for producer in unique_producers:
-#    fig,_ = well_production(producer)
-#    pp.savefig(fig)
-#
-#pp.close()
-
-#cmap = fig.colorbar(axes, ax=ax )
-#cmap.set_label('DATE')
 
 print('# of item in list_items {:2d}'.format(len(list_items)))
 
@@ -41,15 +32,12 @@ def list_places():
     return unique_places
 
 def list_products_at(place):
-    print('Items produced at {:s}'.format(place))
-    print('{:20s} {:20s} {:20s}'.format('name', 'production time', 'sell price'))
+    items = []
     number = 1
     for item in list_items:
         if(place == item.production_place):
-            print('{:d} ---> {:20s} {:20d} {:20d}'.format(number, item.name, \
-                                                          item.price_sell, \
-                                                          item.price_sell))
-            number += 1
+            items.append(item)
+    return items
 
 def plot_time_vs_profit_at(place):
     time_and_profit_df = pd.DataFrame(columns=['production_time', 'profit',
@@ -90,17 +78,6 @@ def plot_time_vs_profit_at(place):
     return fig
     #plt.show()
 
-##Generate file every place
-#pp = PdfPages('places.pdf')
-#unique_places = list_places()
-#
-#for place in unique_places:
-#    print(place)
-#    fig = plot_time_vs_profit_at(place)
-#    pp.savefig(fig, bbox_inches='tight')
-#
-#pp.close()
-#df.sort_values(by=['place', 'prod_cost'], ascending=[True, False])
 def generate_df():
 
     df_items = pd.DataFrame(columns=['production_time', 'profit', 'item_name',
@@ -116,8 +93,6 @@ def generate_df():
                              'place':item.production_place }, \
                             ignore_index=True)
     return df_items
-
-# Given an item's name, return object
 
 def get_object(name):
     for item in list_items:
