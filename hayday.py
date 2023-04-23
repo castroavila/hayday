@@ -1,6 +1,5 @@
 #! /usr/bin/env python
 # -*- coding: utf-8 -*-
-# @author           : Manuel Castro Avila <castroavila_2004@hotmail.com>
 # @file             : hayday.py
 #
 
@@ -63,5 +62,19 @@ class hayday(object):
     def get_profit(self):
         return self.price_sell - self.get_production_price()
 
+    def get_profit_per_time(self):
+        '''
+        Return profit per hour.
+        '''
+        return self.get_profit()/(self.production_time.total_seconds()/3600.)
 
-
+    def summary(self):
+        '''
+        Print summary on item.
+        '''
+        print(f'name: {self.name}')
+        print(f'production time (h): {self.get_production_time()}')
+        print(f'price sell: {self.price_sell}')
+        print(f'production price: {self.get_production_price()}')
+        print('Components:')
+        self.get_components()
