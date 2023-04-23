@@ -10,7 +10,7 @@
 
 """
 mapper_places = {
-    'bakery' :'/assets/places/Bakery.png',
+    'bakery': '/assets/places/Bakery.png',
     'bath kiosk': '/assets/places/Bath_Kiosk.png',
     'bbq grill': '/assets/places/BBQ_Grill.png',
     'cake oven': '/assets/places/Cake_Oven.png',
@@ -29,7 +29,7 @@ mapper_places = {
     'fudge shop': '/assets/places/Fudge_Shop.png',
     'hat maker': '/assets/places/Hat_Maker.png',
     'honey extractor': '/assets/places/Honey_Extractor.png',
-    'hot dog stand' : '/assets/places/Hot_Dog_Stand.png',
+    'hot dog stand': '/assets/places/Hot_Dog_Stand.png',
     'ice cream maker': '/assets/places/Ice_Cream_Maker.png',
     'jam maker': '/assets/places/Jam_Maker.png',
     'jeweler': '/assets/places/Jeweler.png',
@@ -50,11 +50,10 @@ mapper_places = {
     'soup kitchen': '/assets/places/Soup_Kitchen.png',
     'sugar mill': '/assets/places/Sugar_Mill.png',
     'sushi bar': '/assets/places/Sushi_Bar.png',
-    'taco kitchen':' /assets/places/Taco_Kitchen.png',
+    'taco kitchen': ' /assets/places/Taco_Kitchen.png',
     'tea stand': '/assets/places/Tea_Stand.png',
     'wok kitchen': '/assets/places/Wok_Kitchen.png',
     'yogurt maker': '/assets/places/Yogurt_Maker.png',
     'stew pot': '/assets/places/Stew_Pot.png',
-    'cupcake maker': '/assets/places/Cupcake_Maker.png'
+    'cupcake maker': '/assets/places/Cupcake_Maker.png',
 }
-
