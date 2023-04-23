@@ -219,3 +219,41 @@ def update_graph(item):
 )
 def update_zoom_graph(value):
     return value
+
+
+@app.callback(
+    Output('price', 'figure'),
+    Input('place_from', 'value'),
+)
+def update_price_per_place(place):
+
+    items_at_place = list_products_at(place)
+    items_and_price = {}
+    items_and_production_cost= {}
+    for item in items_at_place:
+        items_and_price[item.name] = item.price_sell
+        items_and_production_cost[item.name] = item.get_production_price()
+
+
+    items_and_price = dict(sorted(items_and_price.items(), key=lambda item:
+                                  item[1], reverse=True))
+
+    # sort order
+    items_and_production_cost = {key: items_and_production_cost[key] for key in
+                                 items_and_price.keys()}
+    bar_sell_price = px.bar(
+        x=list(items_and_price.keys()),
+        y=list(items_and_price.values()),
+        color= np.array(list(items_and_price.values())) -
+        np.array(list(items_and_production_cost.values())),
+        # name='Sell',
+        labels={'x': 'Item', 'y': 'selling price', 'color': 'sell - cost'}
+    )
+    bar_sell_price.update_traces(textfont_size=60)
+    bar_cost_price = go.Bar(
+        x=list(items_and_production_cost.keys()),
+        y=list(items_and_production_cost.values()),
+        name='Cost'
+    )
+
+    return bar_sell_price
