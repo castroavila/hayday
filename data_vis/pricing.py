@@ -124,8 +124,8 @@ def click_on(clickData):
         message += f'time prod.: {item.production_time.seconds/3600} h\n'
         message += f'prod. cost: {item.get_production_price()} \n'
         message += '.......COMPONENTS......... \n'
-        for component in item.components:
-            message +=  f'{component[0].name}: {component[0].price_sell} x{component[1]} \n'
+        for item, quantity in item.components.items():
+            message +=  f'{item.name}: {item.price_sell} x{quantity} \n'
 
         return item_img, [message]
 

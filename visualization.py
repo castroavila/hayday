@@ -25,12 +25,16 @@ import sys
 # import dash_bootstrap_components as dbc
 # from data_vis.main_dash import *
 # from data_vis.pricing import *
-from data_vis.graph_vis import *
+from data_vis.graph_vis import tab_graph
+from data_vis.main_dash import app
 
 #Columns
 #['production_time', 'profit', 'item_name', 'price_sell', 'profit_per_hour',
 # 'prod_cost', 'place']
-
+colors = {
+    'background': '#111111',
+    'text': '#7FDBFF'
+}
 app.layout = tab_graph
 
 
