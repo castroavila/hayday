@@ -19,7 +19,7 @@ import numpy as np
 import pandas as pd
 
 
-print('# of item in list_items {:2d}'.format(len(list_items)))
+# print('# of item in list_items {:2d}'.format(len(list_items)))
 
 
 def list_places():
@@ -110,22 +110,22 @@ def generate_df():
             'place',
         ]
     )
+    
+    dfs = []
     for item in list_items:
-        df_items = df_items.append(
+        dfs.append(pd.DataFrame(
             {
-                'production_time': item.get_production_time(),
-                'profit': item.get_profit(),
-                'item_name': item.name,
-                'price_sell': item.price_sell,
-                'profit_per_hour': item.get_profit()
-                / item.get_production_time(),
-                'prod_cost': item.get_production_price(),
-                'place': item.production_place,
-            },
-            ignore_index=True,
-        )
+                'production_time': [item.get_production_time()],
+                'profit': [item.get_profit()],
+                'item_name': [item.name],
+                'price_sell': [item.price_sell],
+                'profit_per_hour': [item.get_profit() / item.get_production_time()],
+                'prod_cost': [item.get_production_price()],
+                'place': [item.production_place],
+            }
+        ))
+    df_items = pd.concat(dfs, ignore_index=True)
     return df_items
-
 
 def get_object(name):
     for item in list_items:
