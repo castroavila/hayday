@@ -110,9 +110,9 @@ def generate_df():
             'place',
         ]
     )
-    
     for item in list_items:
-        new_row = {
+        df_items = df_items.append(
+            {
                 'production_time': item.get_production_time(),
                 'profit': item.get_profit(),
                 'item_name': item.name,
@@ -122,7 +122,8 @@ def generate_df():
                 'prod_cost': item.get_production_price(),
                 'place': item.production_place,
             },
-        df_items = pd.concat([df_items, pd.DataFrame([new_row])], ignore_index=True)
+            ignore_index=True,
+        )
     return df_items
 
 
