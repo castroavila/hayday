@@ -523,6 +523,16 @@ guava = hayday(
 )
 list_items.append(guava)
 
+pomegranate = hayday(
+    name='pomegranate',
+    production_place='farm',
+    level=107,
+    production_time=td(days=1, hours=3),
+    price_sell=111,
+    img='/assets/items/Pomegranate.png',
+)
+list_items.append(pomegranate)
+
 
 # -----------------------------------------------------------
 # Animals food
@@ -1927,6 +1937,20 @@ chocolate_roll.add_component(cream, 1)
 chocolate_roll.add_component(wheat, 3)
 chocolate_roll.add_component(mint, 3)
 list_items.append(chocolate_roll)
+
+pomegranate_cake = hayday(
+    name='pomegranate cake',
+    production_place='cake oven',
+    level=108,
+    production_time=td(hours=2, minutes=40),
+    price_sell=316,
+    img='assets/items/Pomegranate_Cake.png',
+)
+pomegranate_cake.add_component(pomegranate, 1)
+pomegranate_cake.add_component(egg, 2)
+pomegranate_cake.add_component(cream, 2)
+pomegranate_cake.add_component(wheat, 6)
+list_items.append(pomegranate_cake)
 # --------------------------------------------------------------------------------
 # Smelter (Every item already included)
 
@@ -3996,6 +4020,18 @@ mint_tea.add_component(watermelon, 1)
 mint_tea.add_component(mint, 1)
 list_items.append(mint_tea)
 
+pomegrante_tea = hayday(
+    name='pomegranate tea',
+    production_place='tea stand',
+    level=107,
+    production_time=td(minutes=34),
+    price_sell=313,
+    img='/assets/items/Pomegranate_Tea.png',
+)
+pomegrante_tea.add_component(pomegranate, 1)
+pomegrante_tea.add_component(tea_leaf, 4)
+list_items.append(pomegrante_tea)
+
 # ------------------------------------------------------------
 # Fondue Pot
 chocolate_fondue = hayday(
@@ -4467,3 +4503,32 @@ cookie_cupcake.add_component(cream, 2)
 cookie_cupcake.add_component(cookie, 2)
 cookie_cupcake.add_component(cacao, 1)
 list_items.append(cookie_cupcake)
+
+# ------------------------------------------------------------
+#  Waffle maker
+plain_waffles = hayday(
+    name='plain waffles',
+    production_place='waffle maker',
+    level=114,
+    production_time=td(minutes=25),
+    price_sell=198,
+    img='/assets/items/Plain_Waffles.png',
+)
+plain_waffles.add_component(white_sugar, 2)
+plain_waffles.add_component(egg, 3)
+plain_waffles.add_component(wheat, 5)
+list_items.append(plain_waffles)
+
+berry_waffles = hayday(
+    name='berry waffles',
+    production_place='waffle maker',
+    level=114,
+    production_time=td(minutes=35),
+    price_sell=604,
+    img='/assets/items/Berry_Waffles.png',
+)
+berry_waffles.add_component(plain_waffles, 1)
+berry_waffles.add_component(syrup, 1)
+berry_waffles.add_component(raspberry, 3)
+berry_waffles.add_component(blackberry, 2)
+list_items.append(berry_waffles)
