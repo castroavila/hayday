@@ -111,19 +111,22 @@ def generate_df():
         ]
     )
     for item in list_items:
-        df_items = df_items.append(
-            {
-                'production_time': item.get_production_time(),
-                'profit': item.get_profit(),
-                'item_name': item.name,
-                'price_sell': item.price_sell,
-                'profit_per_hour': item.get_profit()
-                / item.get_production_time(),
-                'prod_cost': item.get_production_price(),
-                'place': item.production_place,
-            },
-            ignore_index=True,
+        tmp_df = pd.DataFrame.from_records(
+            [
+                {
+                    'production_time': item.get_production_time(),
+                    'profit': item.get_profit(),
+                    'item_name': item.name,
+                    'price_sell': item.price_sell,
+                    'profit_per_hour': item.get_profit()
+                    / item.get_production_time(),
+                    'prod_cost': item.get_production_price(),
+                    'place': item.production_place,
+                }
+            ]
         )
+
+        df_items = pd.concat([df_items, tmp_df], ignore_index=True)
     return df_items
 
 
