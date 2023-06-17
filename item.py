@@ -3275,6 +3275,21 @@ mushroom_salad.add_component(lettuce, 1)
 mushroom_salad.add_component(potato, 2)
 mushroom_salad.add_component(bacon, 1)
 list_items.append(mushroom_salad)
+
+orange_salad = hayday(
+    name='orange salad',
+    production_place='salad bar',
+    level=117,
+    production_time=td(minutes=45),
+    price_sell=558,
+    img='/assets/items/Orange_Salad.png',
+)
+orange_salad.add_component(cheese, 1)
+orange_salad.add_component(lettuce, 3)
+orange_salad.add_component(pomegranate, 1)
+orange_salad.add_component(orange, 2)
+list_items.append(orange_salad)
+
 # ------------------------------------------------------------
 # Sandwich bar
 
@@ -4532,3 +4547,17 @@ berry_waffles.add_component(syrup, 1)
 berry_waffles.add_component(raspberry, 3)
 berry_waffles.add_component(blackberry, 2)
 list_items.append(berry_waffles)
+
+chocolate_waffles = hayday(
+    name='chocolate waffles',
+    production_place='waffle maker',
+    level=117,
+    production_time=td(minutes=40),
+    price_sell=637,
+    img='/assets/items/Chocolate_Waffles.png',
+)
+chocolate_waffles.add_component(plain_waffles, 1)
+chocolate_waffles.add_component(cacao, 2)
+chocolate_waffles.add_component(strawberry, 3)
+chocolate_waffles.add_component(banana, 1)
+list_items.append(chocolate_waffles)
