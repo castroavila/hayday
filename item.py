@@ -533,6 +533,16 @@ pomegranate = hayday(
 )
 list_items.append(pomegranate)
 
+asparagus = hayday(
+    name='asparagus',
+    production_place='farm',
+    level=49,
+    production_time=td(hours=6),
+    price_sell=43,
+    img='/assets/items/Asparagus.png',
+)
+list_items.append(asparagus)
+
 
 # -----------------------------------------------------------
 # Animals food
@@ -1380,6 +1390,20 @@ fish_skewer.add_component(mushroom, 3)
 fish_skewer.add_component(ginger, 1)
 fish_skewer.add_component(sesame, 2)
 list_items.append(fish_skewer)
+
+grilled_asparagus = hayday(
+    name='grilled asparagus',
+    production_place='bbq grill',
+    level=67,
+    production_time=td(hours=1, minutes=15),
+    price_sell=486,
+    img='/assets/items/Grilled_Asparagus.png',
+)
+grilled_asparagus.add_component(asparagus, 5)
+grilled_asparagus.add_component(bacon, 3)
+grilled_asparagus.add_component(lemon, 1)
+list_items.append(grilled_asparagus)
+
 # -----------------------------------------------------------
 # Pie oven
 
@@ -1570,6 +1594,20 @@ eggplant_parmesan.add_component(eggplant, 4)
 eggplant_parmesan.add_component(cheese, 1)
 eggplant_parmesan.add_component(tomato_sauce, 1)
 list_items.append(eggplant_parmesan)
+
+asparagus_quiche = hayday(
+    name='asparagus quiche',
+    production_place='pie oven',
+    level=49,
+    production_time=td(hours=2),
+    price_sell=302,
+    img='/assets/items/Asparagus_Quiche.png',
+)
+asparagus_quiche.add_component(asparagus, 2)
+asparagus_quiche.add_component(egg, 2)
+asparagus_quiche.add_component(cheese, 1)
+asparagus_quiche.add_component(wheat, 4)
+list_items.append(asparagus_quiche)
 
 # -----------------------------------------------------------
 # Loom (Every item already  included)
@@ -2885,6 +2923,19 @@ mushroom_soup.add_component(mushroom, 3)
 mushroom_soup.add_component(milk, 1)
 mushroom_soup.add_component(onion, 2)
 list_items.append(mushroom_soup)
+
+asparagus_soup = hayday(
+    name='asparagus soup',
+    production_place='soup kitchen',
+    level=51,
+    production_time=td(hours=1),
+    price_sell=255,
+    img='/assets/items/Asparagus_Soup.png',
+)
+asparagus_soup.add_component(asparagus, 3)
+asparagus_soup.add_component(cream, 2)
+list_items.append(asparagus_soup)
+
 # ------------------------------------------------------------
 # Candle maker
 strawberry_candle = hayday(
@@ -4561,3 +4612,61 @@ chocolate_waffles.add_component(cacao, 2)
 chocolate_waffles.add_component(strawberry, 3)
 chocolate_waffles.add_component(banana, 1)
 list_items.append(chocolate_waffles)
+
+breakfast_waffles = hayday(
+    name='breakfast waffles',
+    production_place='waffle maker',
+    level=119,
+    production_time=td(minutes=45),
+    price_sell=424,
+    img='/assets/items/Breakfast_Waffles.png',
+)
+breakfast_waffles.add_component(plain_waffles, 1)
+breakfast_waffles.add_component(bacon, 2)
+breakfast_waffles.add_component(egg, 1)
+breakfast_waffles.add_component(asparagus, 2)
+list_items.append(breakfast_waffles)
+
+# ------------------------------------------------------------
+#  Omelet station
+
+colourful_omelet = hayday(
+    name='colourful omelet',
+    production_place='omelet station',
+    level=77,
+    production_time=td(hours=1),
+    price_sell=136,
+    img='/assets/items/Colourful_Omelet.png',
+)
+colourful_omelet.add_component(egg, 2)
+colourful_omelet.add_component(carrot, 2)
+colourful_omelet.add_component(bell_pepper, 1)
+colourful_omelet.add_component(cabbage, 1)
+list_items.append(colourful_omelet)
+
+spring_omelet = hayday(
+    name='spring omelet',
+    production_place='omelet station',
+    level=77,
+    production_time=td(minutes=40),
+    price_sell=230,
+    img='/assets/items/Spring_Omelet.png',
+)
+spring_omelet.add_component(egg, 2)
+spring_omelet.add_component(asparagus, 2)
+spring_omelet.add_component(butter, 1)
+list_items.append(spring_omelet)
+
+cheese_omelet = hayday(
+    name='cheese omelet',
+    production_place='omelet station',
+    level=79,
+    production_time=td(hours=1, minutes=30),
+    price_sell=464,
+    img='/assets/items/Cheese_Omelet.png',
+)
+cheese_omelet.add_component(egg, 3)
+cheese_omelet.add_component(cheese, 2)
+cheese_omelet.add_component(tomato, 2)
+cheese_omelet.add_component(onion, 1)
+list_items.append(cheese_omelet)
