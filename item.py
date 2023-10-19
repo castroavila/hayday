@@ -4442,7 +4442,7 @@ plain_yogurt = hayday(
     price_sell=234,
     img='/assets/items/Plain_Yogurt.png',
 )
-plain_yogurt.add_component(butter, 2)
+plain_yogurt.add_component(cream, 2)
 plain_yogurt.add_component(milk, 3)
 list_items.append(plain_yogurt)
 
