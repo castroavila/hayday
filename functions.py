@@ -9,11 +9,65 @@
 """
 
 # Functions to deal and handle the list of items
-import importlib
-import item
+# import importlib
+# import item
 
-importlib.reload(item)
-from item import *
+# importlib.reload(item)
+from src.crops import *
+from src.animal_food import *
+from src.animals import *
+from src.honey_extractor import *
+from src.fish import *
+from src.duck_salon import *
+from src.sugar_mill import *
+from src.dairy import *
+from src.bakery import *
+from src.popcorn_pot import *
+from src.sauce_maker import *
+from src.bbq_grill import *
+from src.pie_oven import *
+from src.loom import *
+from src.sewing_machine import *
+from src.mine import *
+from src.pie_oven import *
+from src.cake_oven import *
+from src.smelter import *
+from src.juice_press import *
+from src.jam_maker import *
+from src.jeweler import *
+from src.candine_machine import *
+from src.coffee_kiosk import *
+from src.ice_cream_maker import *
+from src.pasta_maker import *
+from src.soup_kitchen import *
+from src.candle_maker import *
+from src.flower_shop import *
+from src.sushi_bar import *
+from src.salad_bar import *
+from src.sandwich_bar import *
+from src.smoothie_mixer import *
+from src.smoothie_mixer import *
+from src.smoothie_mixer import *
+from src.smoothie_mixer import *
+from src.smoothie_mixer import *
+from src.smoothie_mixer import *
+from src.wok_kitchen import *
+from src.hat_maker import *
+from src.pasta_kitchen import *
+from src.hot_dog_stand import *
+from src.donut_maker import *
+from src.taco_kitchen import *
+from src.tea_stand import *
+from src.fondue_pot import *
+from src.bath_kiosk import *
+from src.deep_fryer import *
+from src.preservation_station import *
+from src.fudge_shop import *
+from src.yogurt_maker import *
+from src.stew_pot import *
+from src.cupcake_maker import *
+from src.waffle_maker import *
+from src.omelet_station import *
 import matplotlib.pyplot as plt
 import numpy as np
 import pandas as pd
