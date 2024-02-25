@@ -68,6 +68,8 @@ from src.stew_pot import *
 from src.cupcake_maker import *
 from src.waffle_maker import *
 from src.omelet_station import *
+from src.porridge_bar import *
+from src.pottery_studio import *
 import matplotlib.pyplot as plt
 import numpy as np
 import pandas as pd

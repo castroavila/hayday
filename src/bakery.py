@@ -25,6 +25,8 @@ from .crops import (
     grapes,
     cacao,
     coconut,
+    pineapple,
+    oats,
 )
 from .animals import egg
 from .dairy import cheese, butter
@@ -188,3 +190,17 @@ macaroon.add_component(cacao, 1)
 macaroon.add_component(coconut, 2)
 macaroon.add_component(white_sugar, 2)
 list_items.append(macaroon)
+
+pineaple_coconut_bars = hayday(
+    name='pineaple coconut bars',
+    production_place='bakery',
+    level=120,
+    production_time=td(minutes=40),
+    price_sell=284,
+    img='/assets/items/Pineapple_Coconut_Bars.png',
+)
+pineaple_coconut_bars.add_component(coconut, 1)
+pineaple_coconut_bars.add_component(white_sugar, 2)
+pineaple_coconut_bars.add_component(oats, 3)
+pineaple_coconut_bars.add_component(pineapple, 2)
+list_items.append(pineaple_coconut_bars)

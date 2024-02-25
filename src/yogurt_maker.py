@@ -14,7 +14,8 @@ from .hayday import hayday
 from .main import list_items
 from .dairy import cream, milk
 from .jam_maker import strawberry_jam
-from .crops import raspberry, passion_fruit, mango
+from .crops import raspberry, passion_fruit, mango, oats, blackberry
+from .honey_extractor import honey
 
 
 plain_yogurt = hayday(
@@ -54,3 +55,17 @@ tropical_yogurt.add_component(raspberry, 4)
 tropical_yogurt.add_component(passion_fruit, 1)
 tropical_yogurt.add_component(mango, 2)
 list_items.append(tropical_yogurt)
+
+breakfast_bowl = hayday(
+    name='breakfast bowl',
+    production_place='yogurt maker',
+    level=119,
+    production_time=td(minutes=50),
+    price_sell=604,
+    img='/assets/items/Breakfast_Bowl.png',
+)
+breakfast_bowl.add_component(plain_yogurt, 1)
+breakfast_bowl.add_component(oats, 4)
+breakfast_bowl.add_component(honey, 1)
+breakfast_bowl.add_component(blackberry, 2)
+list_items.append(breakfast_bowl)

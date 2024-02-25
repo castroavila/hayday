@@ -533,3 +533,23 @@ asparagus = hayday(
     img='/assets/items/Asparagus.png',
 )
 list_items.append(asparagus)
+
+oats = hayday(
+    name='oats',
+    production_place='farm',
+    level=119,
+    production_time=td(minutes=7),
+    price_sell=7,
+    img='/assets/items/Oats.png',
+)
+list_items.append(oats)
+
+clay = hayday(
+    name='clay',
+    production_place='farm',
+    level=94,
+    production_time=td(hours=1, minutes=50),
+    price_sell=18,
+    img='/assets/items/Clay.png',
+)
+list_items.append(clay)

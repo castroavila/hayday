@@ -13,7 +13,15 @@ from datetime import timedelta as td
 from .hayday import hayday
 from .main import list_items
 from .sauce_maker import olive_oil
-from .crops import lemon, cacao, coffee_bean, raspberry
+from .crops import (
+    lemon,
+    cacao,
+    coffee_bean,
+    raspberry,
+    oats,
+    pomegranate,
+    coconut,
+)
 from .dairy import goat_milk
 from .animals import egg
 from .honey_extractor import honey, honeycomb
@@ -68,3 +76,16 @@ honey_face_mask.add_component(egg, 2)
 honey_face_mask.add_component(honey, 1)
 honey_face_mask.add_component(lemon, 1)
 list_items.append(honey_face_mask)
+
+rich_soap = hayday(
+    name='rich soap',
+    production_place='bath kiosk',
+    level=121,
+    production_time=td(hours=1, minutes=10),
+    price_sell=266,
+    img='/assets/items/Rich_Soap.png',
+)
+rich_soap.add_component(oats, 2)
+rich_soap.add_component(pomegranate, 1)
+rich_soap.add_component(coconut, 1)
+list_items.append(rich_soap)
