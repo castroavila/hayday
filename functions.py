@@ -70,6 +70,7 @@ from src.waffle_maker import *
 from src.omelet_station import *
 from src.porridge_bar import *
 from src.pottery_studio import *
+from src.milkshake_bar import *
 import matplotlib.pyplot as plt
 import numpy as np
 import pandas as pd

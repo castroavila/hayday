@@ -60,4 +60,5 @@ mapper_places = {
     'omelet station': '/assets/places/Omelet_Station.png',
     'porridge bar': '/assets/places/Porridge_Bar.png',
     'pottery studio': '/assets/places/Pottery_Studio.png',
+    'milkshake bar': '/assets/places/Milkshake_Bar.png',
 }
