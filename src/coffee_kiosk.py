@@ -15,7 +15,7 @@ from .main import list_items
 from .crops import coffee_bean, cacao, raspberry, banana
 from .sugar_mill import white_sugar
 from .dairy import cream, milk
-from .candine_machine import toffee
+from .candy_machine import toffee
 
 espresso = hayday(
     name='espresso',

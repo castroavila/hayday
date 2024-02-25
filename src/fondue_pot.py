@@ -21,7 +21,7 @@ from .crops import (
     pineapple,
     mango,
 )
-from .candine_machine import chocolate
+from .candy_machine import chocolate
 from .animals import bacon
 from .sauce_maker import olive_oil
 from .bakery import potato_bread

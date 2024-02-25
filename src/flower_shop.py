@@ -25,7 +25,7 @@ from .crops import (
 )
 from .mine import iron_ore, gold_ore
 from .loom import cotton_fabric
-from .candine_machine import caramel_apple, toffee
+from .candy_machine import caramel_apple, toffee
 from .juice_press import cherry_juice
 
 rustic_bouquet = hayday(

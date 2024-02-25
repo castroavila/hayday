@@ -1,7 +1,7 @@
 #! /usr/bin/env python
 # -*- coding: utf-8 -*-
 # @author           : Manuel Castro Avila <castroavila_2004@hotmail.com>
-# @file             : candine_machine.py
+# @file             : candy_machine.py
 # @created          : 29-Oct-2023
 # @company          : Home
 #

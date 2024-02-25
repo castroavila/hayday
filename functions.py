@@ -35,7 +35,7 @@ from src.smelter import *
 from src.juice_press import *
 from src.jam_maker import *
 from src.jeweler import *
-from src.candine_machine import *
+from src.candy_machine import *
 from src.coffee_kiosk import *
 from src.ice_cream_maker import *
 from src.pasta_maker import *
