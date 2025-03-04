@@ -22,9 +22,11 @@ from .crops import (
     watermelon,
     mint,
     pomegranate,
+    chamomile,
 )
 from .dairy import milk
 from .honey_extractor import honey
+from .animals import honeycomb
 
 
 green_tea = hayday(
@@ -135,3 +137,15 @@ pomegrante_tea = hayday(
 pomegrante_tea.add_component(pomegranate, 1)
 pomegrante_tea.add_component(tea_leaf, 4)
 list_items.append(pomegrante_tea)
+
+chamomile_tea = hayday(
+    name='chamomile tea',
+    production_place='tea stand',
+    level=100,
+    production_time=td(minutes=20),
+    price_sell=144,
+    img='/assets/items/Chamomile_Tea.png',
+)
+chamomile_tea.add_component(chamomile, 5)
+chamomile_tea.add_component(honeycomb, 1)
+list_items.append(chamomile_tea)

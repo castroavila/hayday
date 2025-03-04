@@ -553,3 +553,13 @@ clay = hayday(
     img='/assets/items/Clay.png',
 )
 list_items.append(clay)
+
+chamomile = hayday(
+    name='chamomile',
+    production_place='farm',
+    level=45,
+    production_time=td(minutes=20),
+    price_sell=10,
+    img='/assets/items/Chamomile.png',
+)
+list_items.append(chamomile)

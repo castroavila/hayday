@@ -61,4 +61,6 @@ mapper_places = {
     'porridge bar': '/assets/places/Porridge_Bar.png',
     'pottery studio': '/assets/places/Pottery_Studio.png',
     'milkshake bar': '/assets/places/Milkshake_Bar.png',
+    'essential oils lab': '/assets/places/Essential_Oils_Lab.png',
+    'perfumerie': '/assets/places/Perfumerie.png',
 }

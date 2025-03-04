@@ -14,7 +14,7 @@ from .hayday import hayday
 from .main import list_items
 from .loom import cotton_fabric
 from .animals import wool
-from .crops import raspberry, indigo, pumpkin
+from .crops import raspberry, indigo, pumpkin, wheat, chamomile
 from .duck_salon import duck_feather
 
 
@@ -79,3 +79,16 @@ blanket.add_component(cotton_fabric, 3)
 blanket.add_component(duck_feather, 5)
 blanket.add_component(pumpkin, 1)
 list_items.append(blanket)
+
+soothing_pad = hayday(
+    name='soothing pad',
+    production_place='sewing machine',
+    level=45,
+    production_time=td(hours=1),
+    price_sell=324,
+    img='/assets/items/Soothing_Pad.png',
+)
+soothing_pad.add_component(cotton_fabric, 2)
+soothing_pad.add_component(wheat, 5)
+soothing_pad.add_component(chamomile, 5)
+list_items.append(soothing_pad)
