@@ -6,9 +6,7 @@
 # @company          : Home
 #
 
-"""
-
-"""
+""" """
 import plotly.graph_objects as go
 import plotly.express as px
 import dash
@@ -36,6 +34,4 @@ colors = {'background': '#111111', 'text': '#7FDBFF'}
 app.layout = tab_graph
 
 
-app.run_server(
-    debug=True, use_reloader=True
-)  # Turn off reloader if inside Jupyter
+app.run(debug=True, use_reloader=True)
