@@ -152,7 +152,6 @@ tab_graph = html.Div(
                 ),
                 dcc.Graph(
                     id='price',
-                    children=[],
                     style={
                         'border': '2px black solid',
                         'margin-left': '10px',
