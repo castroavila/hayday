@@ -563,3 +563,13 @@ chamomile = hayday(
     img='/assets/items/Chamomile.png',
 )
 list_items.append(chamomile)
+
+blueberry = hayday(
+    name='blueberry',
+    production_place='farm',
+    level=30,
+    production_time=td(days=1, hours=10),
+    price_sell=82,
+    img='/assets/items/Blueberry.png',
+)
+list_items.append(blueberry)

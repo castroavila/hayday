@@ -12,8 +12,8 @@
 from datetime import timedelta as td
 from .hayday import hayday
 from .main import list_items
-from .sugar_mill import white_sugar, syrup
-from .animals import egg, bacon
+from .sugar_mill import white_sugar, syrup, brown_sugar
+from .animals import egg, bacon, milk
 from .crops import (
     wheat,
     raspberry,
@@ -22,6 +22,9 @@ from .crops import (
     strawberry,
     banana,
     asparagus,
+    blueberry,
+    onion,
+    lemon,
 )
 
 plain_waffles = hayday(
@@ -78,3 +81,31 @@ breakfast_waffles.add_component(bacon, 2)
 breakfast_waffles.add_component(egg, 1)
 breakfast_waffles.add_component(asparagus, 2)
 list_items.append(breakfast_waffles)
+
+blueberry_chutney = hayday(
+    name='blueberry chutney',
+    production_place='waffle maker',
+    level=70,
+    production_time=td(hours=4),
+    price_sell=579,
+    img='/assets/items/Blueberry_Chutney.png',
+)
+blueberry_chutney.add_component(onion, 1)
+blueberry_chutney.add_component(brown_sugar, 1)
+blueberry_chutney.add_component(blueberry, 3)
+blueberry_chutney.add_component(lemon, 1)
+list_items.append(blueberry_chutney)
+
+blueberry_waffles = hayday(
+    name='blueberry waffles',
+    production_place='waffle maker',
+    level=118,
+    production_time=td(minutes=42),
+    price_sell=669,
+    img='assets/items/Blueberry_Waffles.png',
+)
+blueberry_waffles.add_component(plain_waffles, 1)
+blueberry_waffles.add_component(milk, 1)
+blueberry_waffles.add_component(cacao, 2)
+blueberry_waffles.add_component(blueberry, 3)
+list_items.append(blueberry_waffles)
